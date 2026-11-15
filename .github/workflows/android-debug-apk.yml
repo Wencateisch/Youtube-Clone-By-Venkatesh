@@ -1,0 +1,41 @@
+name: Build Android Debug APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - 'www/**'
+      - 'capacitor.config.json'
+      - '.github/workflows/android-debug-apk.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: android/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
