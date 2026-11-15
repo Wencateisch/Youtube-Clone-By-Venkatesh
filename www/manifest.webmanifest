@@ -1,0 +1,19 @@
+{
+  "name": "YouTube Clone",
+  "short_name": "YT Clone",
+  "description": "A super fluid and responsive YouTube-style video explorer.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0f0f0f",
+  "theme_color": "#0f0f0f",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

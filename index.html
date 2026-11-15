@@ -1,59 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
-    <link rel="stylesheet" type="text/css" href="your_website_domain/css_root/flaticon.css">
-
-    <title>Youtube</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="./index.css">
-</head>
-
-<body>
-    <div id="navBar">
-        
-        <div id="logo">
-            <i class="fas fa-bars"></i>
-            <img src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" onclick="HomeButton()" alt="YouTube">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f0f0f" />
+    <meta name="description" content="A responsive YouTube-style video explorer." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="apple-touch-icon" href="./icon.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <title>YouTube Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header id="navBar" class="nav-bar">
+      <div class="nav-top">
+        <div id="logo" class="nav-left">
+          <button class="brand" type="button" onclick="HomeButton()" aria-label="Go to home">
+            <span class="brand-mark" aria-hidden="true"><i class="fab fa-youtube"></i></span>
+            <span class="brand-text">YouTube</span>
+          </button>
         </div>
-        
-        <div id="center">
-            
-            <div id="search">
-                <input type="text" id="video" placeholder="Search for videos">
-                <span onclick="searchVideos()">
-                    <i class="fas fa-search "></i>
-                </span>
-            </div>
-
+        <div id="end" class="nav-right">
+          <button class="icon-btn hide-mobile" type="button" onclick="AllowCam()" aria-label="Use camera">
+            <i class="fas fa-video" aria-hidden="true"></i>
+          </button>
+          <button class="icon-btn hide-mobile" type="button" aria-label="Notifications">
+            <i class="fas fa-bell" aria-hidden="true"></i>
+          </button>
+          <button class="icon-btn" type="button" onclick="searchVideos()" aria-label="Search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </button>
+          <button class="icon-btn avatar" type="button" aria-label="Account">
+            <i class="fas fa-user-circle" aria-hidden="true"></i>
+          </button>
         </div>
-       
-        <div id="end">
-        <i onclick="AllowMic()" class="fas fa-microphone"></i>
-        <i onclick="AllowCam()" class="fas fa-video"></i>
-        <i id="menu" onclick="toggleMenu()" class="fas fa-th">
-            <ul id="menu-box" style="display: none">
-              <li><a class="hidden" href="index.html">YouTube TV</a></li>
-              <li><a class="hidden" href="animal.html">YouTube Music</a></li>
-              <li><a class="hidden" href="pictures.html">YouTube Kids</a></li>
-              <li><a class="hidden" href="pictures.html">YouTube for Artists</a></li>
-            </ul>
-        </i>
-        <i class="fas fa-bell"></i>
-        <i class="fas fa-user-circle"></i>
-        </div>
+      </div>
 
+      <div id="center" class="nav-center">
+        <form id="search" class="search" role="search" onsubmit="return false;">
+          <input
+            type="text"
+            id="video"
+            name="q"
+            placeholder="Search YouTube"
+            autocomplete="off"
+            inputmode="search"
+            aria-label="Search videos"
+          />
+          <button type="button" id="clear-search" class="clear-btn" aria-label="Clear search" hidden>
+            <i class="fas fa-times-circle" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="search-btn" onclick="searchVideos()" aria-label="Search">
+            <i class="fas fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="chips" id="chips" aria-label="Categories">
+        <button class="chip active" type="button" data-q="artificial intelligence">All</button>
+        <button class="chip" type="button" data-q="music">Music</button>
+        <button class="chip" type="button" data-q="gaming">Gaming</button>
+        <button class="chip" type="button" data-q="news">News</button>
+        <button class="chip" type="button" data-q="live">Live</button>
+        <button class="chip" type="button" data-q="coding">Coding</button>
+        <button class="chip" type="button" data-q="movies">Movies</button>
+        <button class="chip" type="button" data-q="sports">Sports</button>
+      </div>
+    </header>
+
+    <main class="page">
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <section id="videodiv" class="video-grid" aria-label="Videos"></section>
+    </main>
+
+    <div id="player-modal" class="player-modal" hidden>
+      <div class="player-sheet" role="dialog" aria-modal="true" aria-label="Video player">
+        <div class="player-handle" aria-hidden="true"></div>
+        <div class="player-bar">
+          <button id="player-close" class="icon-btn" type="button" aria-label="Close player">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="player-meta">
+            <div id="player-title" class="player-title"></div>
+            <div id="player-channel" class="player-channel"></div>
+          </div>
+        </div>
+        <div class="player-frame-wrap">
+          <iframe id="player-frame" class="player-frame" title="Video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="player-actions">
+          <button class="pill-btn" type="button"><i class="fas fa-thumbs-up"></i><span>Like</span></button>
+          <button class="pill-btn" type="button"><i class="fas fa-share"></i><span>Share</span></button>
+          <button class="pill-btn" type="button"><i class="fas fa-bookmark"></i><span>Save</span></button>
+        </div>
+      </div>
     </div>
 
-    <div id="videodiv"></div>
+    <nav class="bottom-nav" aria-label="Primary">
+      <button class="bn-item active" type="button" onclick="HomeButton()"><i class="fas fa-home"></i><span>Home</span></button>
+      <button class="bn-item" type="button" onclick="focusSearch()"><i class="fas fa-compass"></i><span>Explore</span></button>
+      <button class="bn-item" type="button" onclick="focusSearch()"><i class="fas fa-plus-square"></i><span>Create</span></button>
+      <button class="bn-item" type="button" onclick="searchByChip('subscriptions trending')"><i class="fas fa-play-circle"></i><span>Subs</span></button>
+      <button class="bn-item" type="button"><i class="fas fa-photo-video"></i><span>Library</span></button>
+    </nav>
 
-</body>
-
+    <script src="./index.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js").catch(() => {});
+        });
+      }
+    </script>
+  </body>
 </html>
-
-<script src="./index.js"></script>
