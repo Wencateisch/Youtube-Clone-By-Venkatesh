@@ -1,0 +1,74 @@
+name: Publish Android APK release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.0.0'
+          accept-android-sdk-licenses: true
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --no-daemon
+
+      - name: Publish to GitHub Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          VERSION="${GITHUB_REF_NAME}"
+          # Manual runs arrive with a branch name instead of a tag, so fall back to
+          # the package version plus a timestamp.
+          if [[ ! "$VERSION" =~ ^v[0-9] ]]; then
+            VERSION="v$(node -p "require('./package.json').version")-$(date +%Y%m%d%H%M%S)"
+          fi
+
+          FILE="YouTubeClone-${VERSION}.apk"
+          cp android/app/build/outputs/apk/debug/app-debug.apk "$FILE"
+
+          if gh release view "$VERSION" > /dev/null 2>&1; then
+            gh release upload "$VERSION" "$FILE" --clobber
+          else
+            gh release create "$VERSION" "$FILE" \
+              --title "YouTube Clone $VERSION" \
+              --generate-notes
+          fi
+
+          echo "Published https://github.com/${GITHUB_REPOSITORY}/releases/tag/${VERSION}"
