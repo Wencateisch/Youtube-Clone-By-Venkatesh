@@ -6,5 +6,12 @@
   "server": {
     "androidScheme": "https",
     "cleartext": true
+  },
+  "plugins": {
+    "SystemBars": {
+      "style": "DARK",
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover"
+    }
   }
 }

@@ -288,6 +288,16 @@ function closePlayer() {
   document.body.style.overflow = "";
 }
 
+// Android hardware/gesture back support. The native shell calls this before it
+// closes the app; returning true means "handled - keep the app open".
+window.__onAndroidBack = function () {
+  if (playerModal && !playerModal.hidden) {
+    closePlayer();
+    return true;
+  }
+  return false;
+};
+
 function AllowMic() {
   if (!navigator.mediaDevices?.getUserMedia) {
     setStatus("Microphone access is not supported in this browser.", true);
