@@ -7,14 +7,22 @@ const statusEl = document.getElementById("status");
 const searchInput = document.getElementById("video");
 const clearBtn = document.getElementById("clear-search");
 const chipsEl = document.getElementById("chips");
-const playerModal = document.getElementById("player-modal");
+const playerEl = document.getElementById("player");
+const playerVideoWrap = document.querySelector(".player-video-wrap");
+const playerFrameHolder = document.getElementById("player-frame-holder");
 const playerFrame = document.getElementById("player-frame");
 const playerTitle = document.getElementById("player-title");
 const playerChannel = document.getElementById("player-channel");
-const playerClose = document.getElementById("player-close");
+const playerCollapse = document.getElementById("player-collapse");
+const playerSuggest = document.getElementById("player-suggest");
+const zoomToggle = document.getElementById("zoom-toggle");
 
 let lastQuery = DEFAULT_QUERY;
 let lastController = null;
+let currentResults = [];
+let zoomEnabled = false;
+let playerScrollY = 0;
+let resizeObserver = null;
 
 function setStatus(message, isError = false, showRetry = false) {
   if (!statusEl) return;
@@ -192,6 +200,7 @@ async function fetchVideos(query) {
   lastQuery = q;
   if (lastController) lastController.abort();
   lastController = new AbortController();
+  window.scrollTo(0, 0);
 
   const url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&maxResults=${MAX_RESULTS}&q=${encodeURIComponent(
     q
@@ -210,6 +219,7 @@ async function fetchVideos(query) {
     }
 
     const items = Array.isArray(data.items) ? data.items : [];
+    currentResults = items;
     await enrichDurations(items);
     renderVideos(items);
     if (items.length) {
@@ -253,7 +263,7 @@ async function HomeButton() {
   updateClearBtn();
   setActiveChip(DEFAULT_QUERY);
   await fetchVideos(DEFAULT_QUERY);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0);
 }
 
 function focusSearch() {
@@ -269,29 +279,211 @@ async function searchByChip(query) {
   updateClearBtn();
   setActiveChip(q);
   await fetchVideos(q);
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  window.scrollTo(0, 0);
+}
+
+function toVideoId(item) {
+  if (!item) return null;
+  const id = item.id;
+  if (id && typeof id === "object" && id.videoId) return id.videoId;
+  if (typeof id === "string") return id;
+  return null;
+}
+
+function suggestionFromItem(item, currentVideoId) {
+  const videoId = toVideoId(item);
+  if (!videoId || videoId === currentVideoId) return null;
+  const sn = item.snippet || {};
+  const thumb =
+    sn.thumbnails?.high?.url ||
+    sn.thumbnails?.medium?.url ||
+    sn.thumbnails?.default?.url ||
+    `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+  return {
+    videoId,
+    title: sn.title || "YouTube video",
+    channel: sn.channelTitle || "Unknown channel",
+    thumb,
+    duration: item._duration || "",
+    publishedAt: sn.publishedAt,
+  };
+}
+
+function buildSuggestionElement(s) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "ps-item";
+  btn.setAttribute("aria-label", `Play ${s.title}`);
+  btn.innerHTML = `
+    <div class="thumb-wrap">
+      <img class="thumb" src="${s.thumb}" alt="" loading="lazy" decoding="async" />
+      <span class="duration-badge">${s.duration ? s.duration : '<i class="fas fa-play" aria-hidden="true"></i>'}</span>
+    </div>
+    <div class="meta">
+      <div class="meta-text">
+        <h3 class="title"></h3>
+        <p class="channel"></p>
+      </div>
+    </div>`;
+  const titleEl = btn.querySelector(".title");
+  titleEl.textContent = s.title;
+  const channelEl = btn.querySelector(".channel");
+  if (channelEl) channelEl.textContent = s.channel;
+  btn.addEventListener("click", () => openPlayer(s.videoId, s.title, s.channel));
+  return btn;
+}
+
+async function loadFallbackSuggestions(videoId) {
+  try {
+    const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=12&key=${API_KEY}`;
+    const res = await fetch(url);
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) return [];
+    const items = (Array.isArray(data.items) ? data.items : []).map((v) => ({
+      id: v.id,
+      snippet: v.snippet,
+      _duration: "",
+    }));
+    const list = [];
+    for (const item of items) {
+      const s = suggestionFromItem(item, videoId);
+      if (s) list.push(s);
+      if (list.length >= 12) break;
+    }
+    return list;
+  } catch (_) {
+    return [];
+  }
+}
+
+async function renderSuggestions(items, currentVideoId) {
+  const container = playerSuggest;
+  if (!container) return;
+  const list = [];
+  for (const item of items || []) {
+    const s = suggestionFromItem(item, currentVideoId);
+    if (s) list.push(s);
+    if (list.length >= 12) break;
+  }
+  if (!list.length) {
+    const fallback = await loadFallbackSuggestions(currentVideoId);
+    if (!fallback.length) return;
+    return renderSuggestions(fallback, currentVideoId);
+  }
+  container.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  for (const s of list) fragment.appendChild(buildSuggestionElement(s));
+  container.appendChild(fragment);
+}
+
+function lockLandscape() {
+  try {
+    const sp = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.ScreenOrientation;
+    if (sp && typeof sp.lock === "function") {
+      return Promise.resolve(sp.lock({ orientation: "landscape" })).catch(() => {});
+    }
+  } catch (_) { /* fall through to the Web API */ }
+  try {
+    if (screen.orientation && screen.orientation.lock) {
+      return Promise.resolve(screen.orientation.lock({ orientation: "landscape" })).catch(() => {});
+    }
+  } catch (_) { /* unsupported */ }
+  return Promise.resolve();
+}
+
+function unlockOrientation() {
+  try {
+    const sp = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.ScreenOrientation;
+    if (sp && typeof sp.unlock === "function") {
+      sp.unlock();
+      return;
+    }
+  } catch (_) { /* ignore */ }
+  try {
+    if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock();
+  } catch (_) { /* ignore */ }
+}
+
+function isPlayerFullscreen() {
+  const fsEl = document.fullscreenElement || document.webkitFullscreenElement;
+  if (!fsEl) return false;
+  if (fsEl === playerFrame) return true;
+  try {
+    return Boolean(playerFrame && playerFrame.contains && playerFrame.contains(fsEl));
+  } catch (_) {
+    return false;
+  }
+}
+
+function handleFullscreenChange() {
+  if (isPlayerFullscreen()) lockLandscape();
+  else unlockOrientation();
+}
+
+function layoutVideoBox() {
+  const wrap = playerVideoWrap;
+  const holder = playerFrameHolder;
+  if (!wrap || !holder) return;
+  const rect = wrap.getBoundingClientRect();
+  const w = rect.width;
+  const h = rect.height;
+  if (!w || !h) return;
+  if (zoomEnabled) {
+    holder.style.width = `${Math.round(w)}px`;
+    holder.style.height = `${Math.round(h)}px`;
+    return;
+  }
+  const fitH = (w * 9) / 16;
+  const H = Math.min(fitH, h);
+  const W = (H * 16) / 9;
+  holder.style.width = `${Math.round(W)}px`;
+  holder.style.height = `${Math.round(H)}px`;
+}
+
+function setupPlayerLayout() {
+  if (!playerVideoWrap) return;
+  if (resizeObserver) {
+    resizeObserver.disconnect();
+    resizeObserver = null;
+  }
+  if (typeof ResizeObserver !== "undefined") {
+    resizeObserver = new ResizeObserver(() => layoutVideoBox());
+    resizeObserver.observe(playerVideoWrap);
+  }
+  window.addEventListener("resize", () => layoutVideoBox());
+  window.addEventListener("orientationchange", () => setTimeout(layoutVideoBox, 0));
 }
 
 function openPlayer(videoId, title, channel) {
-  if (!playerModal || !playerFrame) return;
-  playerFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+  if (!playerEl || !playerFrame) return;
+  const resolvedId = toVideoId({ id: { videoId } }) || videoId;
+  playerFrame.src = `https://www.youtube.com/embed/${resolvedId}?autoplay=1&playsinline=1&rel=0`;
   if (playerTitle) playerTitle.textContent = title || "YouTube video";
   if (playerChannel) playerChannel.textContent = channel || "";
-  playerModal.hidden = false;
+  renderSuggestions(currentResults, resolvedId);
+  playerEl.hidden = false;
   document.body.style.overflow = "hidden";
+  playerScrollY = window.scrollY;
+  window.scrollTo(0, 0);
+  setupPlayerLayout();
+  requestAnimationFrame(() => layoutVideoBox());
 }
 
 function closePlayer() {
-  if (!playerModal || !playerFrame) return;
+  if (!playerEl || !playerFrame) return;
   playerFrame.src = "";
-  playerModal.hidden = true;
+  playerEl.hidden = true;
   document.body.style.overflow = "";
+  unlockOrientation();
+  const y = playerScrollY || 0;
+  playerScrollY = 0;
+  window.scrollTo(0, y);
 }
 
 // Android hardware/gesture back support. The native shell calls this before it
 // closes the app; returning true means "handled - keep the app open".
 window.__onAndroidBack = function () {
-  if (playerModal && !playerModal.hidden) {
+  if (playerEl && !playerEl.hidden) {
     closePlayer();
     return true;
   }
@@ -346,10 +538,21 @@ if (clearBtn && searchInput) {
   updateClearBtn();
 }
 
-if (playerClose) playerClose.addEventListener("click", closePlayer);
-if (playerModal) {
-  playerModal.addEventListener("click", (e) => {
-    if (e.target === playerModal) closePlayer();
+if (playerCollapse) playerCollapse.addEventListener("click", closePlayer);
+if (playerEl) {
+  playerEl.addEventListener("click", (e) => {
+    if (e.target === playerEl) closePlayer();
+  });
+}
+document.addEventListener("fullscreenchange", handleFullscreenChange);
+document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+if (zoomToggle) {
+  zoomToggle.addEventListener("click", () => {
+    zoomEnabled = !zoomEnabled;
+    const on = zoomEnabled;
+    zoomToggle.setAttribute("aria-checked", on ? "true" : "false");
+    zoomToggle.setAttribute("aria-pressed", on ? "true" : "false");
+    layoutVideoBox();
   });
 }
 document.addEventListener("keydown", (e) => {
