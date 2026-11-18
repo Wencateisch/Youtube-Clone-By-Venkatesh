@@ -3,12 +3,26 @@ apply plugin: 'com.android.application'
 android {
     namespace = "com.venkatesh.youtubeclone"
     compileSdk = rootProject.ext.compileSdkVersion
+
+    // A checked-in signing key so every CI run signs with the SAME certificate.
+    // GitHub Actions otherwise generates a fresh debug keystore per runner,
+    // which makes Android refuse upgrades with "package conflicts with an
+    // existing package".
+    signingConfigs {
+        debug {
+            storeFile file('ytclone-debug.jks')
+            storePassword 'android'
+            keyAlias 'ytclone'
+            keyPassword 'android'
+        }
+    }
+
     defaultConfig {
         applicationId "com.venkatesh.youtubeclone"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 5
+        versionName "1.5.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -17,8 +31,12 @@ android {
         }
     }
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
         release {
             minifyEnabled false
+            signingConfig signingConfigs.debug
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
