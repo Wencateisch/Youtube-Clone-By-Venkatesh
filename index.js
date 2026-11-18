@@ -63,6 +63,9 @@ let playerScrollY = 0;
 let resizeObserver = null;
 let backgroundPlaying = false;
 let pipEl = null;
+let videoQueue = [];
+let queueMode = false;
+let queueAutoPlay = true; // Auto-play next video
 
 /* ------------------------- small utilities ------------------------- */
 
@@ -576,13 +579,74 @@ function buildSuggestionElement(s) {
       <div class="meta-text">
         <h3 class="title"></h3>
         <p class="channel"></p>
+        <span class="queue-indicator" style="font-size:0.7em;color:var(--accent);margin-left:auto;opacity:0;"></span>
       </div>
     </div>`;
   btn.querySelector(".title").textContent = s.title;
   const channelEl = btn.querySelector(".channel");
   if (channelEl) channelEl.textContent = s.channel;
-  btn.addEventListener("click", () => openPlayer(s.videoId, s.title, s.channel, s.thumb));
+  const indicator = btn.querySelector(".queue-indicator");
+  if (videoQueue.length > 0) {
+    indicator.textContent = "▶";
+    indicator.style.opacity = "0.7";
+  }
+  btn.addEventListener("click", () => {
+    // Add to queue and play if not already playing
+    if (!mediaPlaying || playerEl.hidden) {
+      addQueue(s.videoId, s.title, s.channel, s.thumb);
+    }
+    openPlayer(s.videoId, s.title, s.channel, s.thumb);
+  });
   return btn;
+}
+
+/* ------------------------- queue management ------------------------- */
+
+function addQueue(videoId, title, channel, thumb) {
+  const existingIdx = videoQueue.findIndex(v => v.videoId === videoId);
+  if (existingIdx >= 0 && existingIdx === 0) return; // Already at front
+  if (existingIdx >= 0) videoQueue.splice(existingIdx, 1);
+  videoQueue.push({ videoId, title, channel, thumb });
+  updateQueueUI();
+}
+
+function playNextInQueue() {
+  if (videoQueue.length === 0) {
+    queueMode = false;
+    return;
+  }
+  const next = videoQueue.shift();
+  openPlayer(next.videoId, next.title, next.channel, next.thumb);
+}
+
+function toggleQueueMode() {
+  queueMode = !queueMode;
+  if (queueMode && videoQueue.length > 0 && mediaPlaying && !playerEl.hidden) {
+    // Already playing, will auto-play next
+  } else if (queueMode && videoQueue.length > 0 && !mediaPlaying) {
+    // Not playing, play the first in queue
+    const next = videoQueue.shift();
+    openPlayer(next.videoId, next.title, next.channel, next.thumb);
+  }
+  updateQueueUI();
+}
+
+function updateQueueUI() {
+  // Update suggestion items to show queue indicator
+  if (!playerSuggest) return;
+  const items = playerSuggest.querySelectorAll(".ps-item");
+  items.forEach((item, idx) => {
+    const indicator = item.querySelector(".queue-indicator");
+    if (indicator && videoQueue.length > 0) {
+      if (idx === 0 && queueMode) {
+        indicator.textContent = "▶";
+        indicator.style.opacity = "0.7";
+      } else {
+        indicator.textContent = "";
+        indicator.style.opacity = "0";
+      }
+    }
+  });
 }
 
 async function loadFallbackSuggestions(videoId) {
@@ -956,6 +1020,8 @@ if (clearBtn && searchInput) {
 
 if (playerCollapse) playerCollapse.addEventListener("click", closePlayer);
 if (audioToggle) audioToggle.addEventListener("click", () => setAudioMode(!audioMode));
+const queueToggleEl = document.getElementById("queue-toggle");
+if (queueToggleEl) queueToggleEl.addEventListener("click", () => toggleQueueMode());
 if (audioPlay) audioPlay.addEventListener("click", togglePlayback);
 if (miniToggle) miniToggle.addEventListener("click", enterMini);
 if (miniPlay) miniPlay.addEventListener("click", togglePlayback);
