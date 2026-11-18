@@ -725,7 +725,7 @@ function layoutVideoBox() {
     return;
   }
   // Desktop theatre: the video fills the stage, not the grid tile width.
-  const wide = window.matchMedia && window.matchMedia("(orientation: landscape)").matches;
+  const wide = window.matchMedia && window.matchMedia("(min-width: 901px), (orientation: landscape)").matches;
   let W = Math.min((h * 16) / 9, w, wide ? w : currentTileWidth || w);
   let H = (W * 9) / 16;
   if (H < 200) {
