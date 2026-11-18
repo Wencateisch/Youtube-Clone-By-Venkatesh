@@ -61,6 +61,8 @@ let mediaPlaying = false;
 let currentTileWidth = 0;
 let playerScrollY = 0;
 let resizeObserver = null;
+let backgroundPlaying = false;
+let pipEl = null;
 
 /* ------------------------- small utilities ------------------------- */
 
@@ -759,6 +761,19 @@ function setAudioMode(on) {
   if (audioPanel) audioPanel.hidden = !audioMode;
   if (audioToggle) audioToggle.setAttribute("aria-pressed", audioMode ? "true" : "false");
   if (!audioMode && !miniActive) requestAnimationFrame(() => layoutVideoBox());
+  // Enable/disable background playback via Screen Orientation plugin
+  try {
+    const so = window.Capacitor?.Plugins?.ScreenOrientation;
+    if (so) {
+      if (audioMode) {
+        // Keep screen orientation locked for audio mode
+        backgroundPlaying = true;
+      } else {
+        backgroundPlaying = false;
+        // Unlock orientation when exiting audio mode
+      }
+    }
+  } catch (_) {}
 }
 
 function enterMini() {
@@ -851,10 +866,30 @@ function closePlayer() {
   window.scrollTo(0, y);
 }
 
-// Android hardware/gesture back support: full player first, then mini player.
+// Android hardware/gesture back support: full player -> PiP -> mini player.
 window.__onAndroidBack = function () {
   if (!profilePanel || profilePanel.hidden) {
     if (playerEl && !playerEl.hidden) {
+      // Try PiP first before closing
+      if (pipToggle && pipToggle.getAttribute("aria-pressed") === "false" && !miniActive) {
+        // Enter PiP mode on back press
+        const src = playerFrame ? playerFrame.src : "";
+        if (src) {
+          try {
+            const pipEl = document.createElement("div");
+            pipEl.style.cssText = "position:fixed;bottom:12px;right:12px;width:280px;height:157px;background:#000;border-radius:12px;z-index:9999;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);";
+            const pipIframe = document.createElement("iframe");
+            pipIframe.src = src;
+            pipIframe.allow = "autoplay; picture-in-picture";
+            pipIframe.style.cssText = "width:100%;height:100%;border:none;";
+            pipEl.appendChild(pipIframe);
+            document.body.appendChild(pipEl);
+            window.piPEl = pipEl;
+            pipToggle.setAttribute("aria-pressed", "true");
+            return true;
+          } catch (e) { /* fall through */ }
+        }
+      }
       closePlayer();
       return true;
     }
@@ -940,12 +975,32 @@ if (zoomToggle) {
     zoomToggle.setAttribute("aria-checked", on ? "true" : "false");
     zoomToggle.setAttribute("aria-pressed", on ? "true" : "false");
     layoutVideoBox();
+    // Apply zoom to fill when enabled
+    if (on && playerFrameHolder) {
+      playerFrameHolder.classList.add("zoomed");
+    } else if (playerFrameHolder) {
+      playerFrameHolder.classList.remove("zoomed");
+    }
   });
 }
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     if (profilePanel && !profilePanel.hidden) closeProfile();
-    else closePlayer();
+    else if (playerEl && !playerEl.hidden && !miniActive && zoomEnabled) {
+      // Exit zoom-to-fill mode instead of closing player
+      zoomEnabled = false;
+      if (zoomToggle) {
+        zoomToggle.setAttribute("aria-checked", "false");
+        zoomToggle.setAttribute("aria-pressed", "false");
+      }
+      if (playerFrameHolder) playerFrameHolder.classList.remove("zoomed");
+      layoutVideoBox();
+    } else if (playerEl && !playerEl.hidden && !miniActive && pipToggle && pipToggle.getAttribute("aria-pressed") === "true") {
+      // Exit PiP
+      pipToggle.click();
+    } else {
+      closePlayer();
+    }
   }
 });
 
@@ -987,7 +1042,10 @@ if (pipToggle) pipToggle.addEventListener("click", async () => {
     if (pipToggle.getAttribute("aria-pressed") === "true") {
       pipToggle.setAttribute("aria-pressed", "false");
       // Exiting PiP - video stays in player
-      if (window.piPEl) window.piPEl.hidden = true;
+      if (window.piPEl) {
+        window.piPEl.remove();
+        window.piPEl = null;
+      }
     } else {
       const pipEl = document.createElement("div");
       pipEl.style.cssText = "position:fixed;bottom:12px;right:12px;width:280px;height:157px;background:#000;border-radius:12px;z-index:9999;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);";
