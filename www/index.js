@@ -322,7 +322,7 @@ async function loadConfig() {
     homeLink.addEventListener("click", (e) => {
       e.preventDefault();
       openExternal(CONFIG.homeUrl);
-    }, { once: true });
+    });
   }
   const stored = storeGet("ytclone.homeQuery", null);
   homeQuery = stored && typeof stored === "string" && stored.trim() ? stored : buildHomeQuery();
@@ -722,7 +722,9 @@ function layoutVideoBox() {
     holder.style.height = `${Math.round(h)}px`;
     return;
   }
-  let W = Math.min((h * 16) / 9, w, currentTileWidth || w);
+  // Desktop theatre: the video fills the stage, not the grid tile width.
+  const wide = window.matchMedia && window.matchMedia("(orientation: landscape)").matches;
+  let W = Math.min((h * 16) / 9, w, wide ? w : currentTileWidth || w);
   let H = (W * 9) / 16;
   if (H < 200) {
     H = Math.min(200, h);
