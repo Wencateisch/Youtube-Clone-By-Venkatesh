@@ -1,9 +1,10 @@
-const CACHE_NAME = "yt-clone-v3";
+const CACHE_NAME = "yt-clone-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./index.css",
   "./index.js",
+  "./config.json",
   "./manifest.webmanifest",
   "./icon.svg"
 ];

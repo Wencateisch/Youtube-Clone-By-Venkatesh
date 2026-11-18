@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "sync": "npx cap sync",
-        "copy:web": "powershell -NoProfile -Command Copy-Item index.html,index.css,index.js,manifest.webmanifest,icon.svg,sw.js -Destination www -Force",
+        "copy:web": "powershell -NoProfile -Command Copy-Item index.html,index.css,index.js,config.json,manifest.webmanifest,icon.svg,sw.js -Destination www -Force",
         "android": "npx cap open android",
         "start": "npx serve www"
     },
@@ -26,6 +26,7 @@
         "@capacitor/core": "^8.6.2"
     },
     "dependencies": {
+        "@capacitor/browser": "^8.0.5",
         "@capacitor/screen-orientation": "^8.0.2"
     }
 }
