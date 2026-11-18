@@ -582,7 +582,7 @@ function buildSuggestionElement(s) {
 
 async function loadFallbackSuggestions(videoId) {
   try {
-    const res = await fetch(apiUrl("videos", { part: "snippet", chart: "mostPopular", maxResults: 12 }));
+    const res = await fetch(apiUrl("videos", { part: "snippet", chart: "mostPopular", maxResults: 20 }));
     const data = await res.json().catch(() => ({}));
     if (!res.ok) return [];
     const items = (Array.isArray(data.items) ? data.items : []).map((v) => ({
@@ -594,7 +594,7 @@ async function loadFallbackSuggestions(videoId) {
     for (const item of items) {
       const s = suggestionFromItem(item, videoId);
       if (s) list.push(s);
-      if (list.length >= 12) break;
+      if (list.length >= 20) break;
     }
     return list;
   } catch (_) {
@@ -609,7 +609,7 @@ async function renderSuggestions(items, currentVideoId) {
   for (const item of items || []) {
     const s = suggestionFromItem(item, currentVideoId);
     if (s) list.push(s);
-    if (list.length >= 12) break;
+    if (list.length >= 20) break;
   }
   if (!list.length) {
     const fallback = await loadFallbackSuggestions(currentVideoId);
@@ -713,6 +713,8 @@ function layoutVideoBox() {
   const wrap = playerVideoWrap;
   const holder = playerFrameHolder;
   if (!wrap || !holder || miniActive || audioMode) return;
+  // Mini / audio modes are styled by CSS classes only. The iframe is never
+  // detached or re-created, so switching modes cannot restart playback.
   const rect = wrap.getBoundingClientRect();
   const w = rect.width;
   const h = rect.height;
@@ -749,42 +751,39 @@ function setupPlayerLayout() {
 
 function setAudioMode(on) {
   audioMode = Boolean(on);
+  // CSS sizes the frame in audio mode; no inline style and no src change.
   if (playerEl) playerEl.classList.toggle("audio-mode", audioMode);
   if (audioPanel) audioPanel.hidden = !audioMode;
   if (audioToggle) audioToggle.setAttribute("aria-pressed", audioMode ? "true" : "false");
-  if (playerFrameHolder) {
-    if (audioMode) {
-      playerFrameHolder.style.width = "240px";
-      playerFrameHolder.style.height = "200px";
-    } else {
-      layoutVideoBox();
-    }
-  }
+  if (!audioMode && !miniActive) requestAnimationFrame(() => layoutVideoBox());
 }
 
 function enterMini() {
-  if (!playerEl || playerEl.hidden || !miniSlot || !playerFrameHolder) return;
+  if (!playerEl || playerEl.hidden) return;
   setAudioMode(false);
   measureTile();
-  miniSlot.appendChild(playerFrameHolder);
-  playerFrameHolder.style.width = "100%";
-  playerFrameHolder.style.height = "100%";
+  miniActive = true;
+  playerEl.classList.add("mini");
   if (miniTitle) miniTitle.textContent = (playerTitle && playerTitle.textContent) || "YouTube video";
   if (miniEl) miniEl.hidden = false;
-  playerEl.hidden = true;
-  miniActive = true;
   document.body.style.overflow = "";
   unlockOrientation();
   const y = playerScrollY || 0;
   playerScrollY = 0;
   window.scrollTo(0, y);
+  requestAnimationFrame(() => {
+    if (playerFrameHolder) {
+      playerFrameHolder.style.width = "100%";
+      playerFrameHolder.style.height = "100%";
+    }
+  });
   setMediaPlaying(mediaPlaying);
 }
 
 function exitMini(showFullPlayer = true) {
   if (!miniActive) return;
   miniActive = false;
-  if (playerVideoWrap && playerFrameHolder) playerVideoWrap.appendChild(playerFrameHolder);
+  playerEl.classList.remove("mini");
   if (miniEl) miniEl.hidden = true;
   if (showFullPlayer && playerEl) {
     playerEl.hidden = false;
@@ -838,7 +837,7 @@ function closePlayer() {
   playerFrame.src = "";
   setMediaPlaying(false);
   miniActive = false;
-  if (playerVideoWrap && playerFrameHolder) playerVideoWrap.appendChild(playerFrameHolder);
+  playerEl.classList.remove("mini");
   if (miniEl) miniEl.hidden = true;
   setAudioMode(false);
   playerEl.hidden = true;
