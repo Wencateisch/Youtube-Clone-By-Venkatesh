@@ -1,0 +1,10 @@
+{
+  "apiBase": "https://youtube.googleapis.com/youtube/v3",
+  "apiKey": "AIzaSyDC-ej1rqEn_Ia92E1g3MyK-eJACxNTMFU",
+  "defaultQuery": "artificial intelligence",
+  "maxResults": 24,
+  "appName": "YouTube Clone",
+  "homeUrl": "./",
+  "backendUrl": "",
+  "releasesApi": "https://api.github.com/repos/Wencateisch/Youtube-Clone-By-Venkatesh/releases/latest"
+}

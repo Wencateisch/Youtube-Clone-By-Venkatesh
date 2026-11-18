@@ -6,7 +6,8 @@ const DEFAULT_CONFIG = {
   defaultQuery: "artificial intelligence",
   maxResults: 24,
   appName: "YouTube Clone",
-  homeUrl: "https://wencateisch.github.io/Youtube-Clone-By-Venkatesh/",
+  homeUrl: "./",
+  backendUrl: "",
   releasesApi:
     "https://api.github.com/repos/Wencateisch/Youtube-Clone-By-Venkatesh/releases/latest",
 };
@@ -41,6 +42,8 @@ const miniToggle = document.getElementById("mini-toggle");
 const miniExpand = document.getElementById("mini-expand");
 const miniClose = document.getElementById("mini-close");
 const profilePanel = document.getElementById("profile-panel");
+const pipToggle = document.getElementById("pip-toggle");
+const googleLoginBtn = document.getElementById("google-login-btn");
 const profileNameInput = document.getElementById("profile-name");
 const brandText = document.getElementById("brand-text");
 const profileBtn = document.getElementById("profile-btn");
@@ -975,5 +978,45 @@ const updatesBtn = document.getElementById("updates-btn");
 if (updatesBtn) updatesBtn.addEventListener("click", () => { openProfile(); checkForUpdates(); });
 const libraryBtn = document.getElementById("library-btn");
 if (libraryBtn) libraryBtn.addEventListener("click", openProfile);
+
+// PiP support
+if (pipToggle) pipToggle.addEventListener("click", async () => {
+  if (!pipToggle || !playerFrame || playerEl.hidden) return;
+  try {
+    const src = playerFrame.src;
+    if (pipToggle.getAttribute("aria-pressed") === "true") {
+      pipToggle.setAttribute("aria-pressed", "false");
+      // Exiting PiP - video stays in player
+      if (window.piPEl) window.piPEl.hidden = true;
+    } else {
+      const pipEl = document.createElement("div");
+      pipEl.style.cssText = "position:fixed;bottom:12px;right:12px;width:280px;height:157px;background:#000;border-radius:12px;z-index:9999;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);";
+      const pipIframe = document.createElement("iframe");
+      pipIframe.src = src;
+      pipIframe.allow = "autoplay; picture-in-picture";
+      pipIframe.style.cssText = "width:100%;height:100%;border:none;";
+      pipEl.appendChild(pipIframe);
+      document.body.appendChild(pipEl);
+      window.piPEl = pipEl;
+      pipToggle.setAttribute("aria-pressed", "true");
+    }
+  } catch (e) {
+    console.error("PiP error:", e);
+  }
+});
+
+// Google login support
+if (googleLoginBtn) googleLoginBtn.addEventListener("click", async () => {
+  if (!CONFIG.backendUrl) {
+    setStatus("Backend not configured");
+    return;
+  }
+  try {
+    const url = `${CONFIG.backendUrl.replace(/\/$/, "")}/api/auth/google`;
+    window.location.href = url;
+  } catch (e) {
+    setStatus("Login failed: " + e.message);
+  }
+});
 
 loadConfig();

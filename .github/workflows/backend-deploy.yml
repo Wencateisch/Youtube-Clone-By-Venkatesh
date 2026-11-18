@@ -1,0 +1,45 @@
+name: Deploy Backend
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'server/**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Test server
+        run: |
+          npm start &
+          sleep 5
+          curl -f http://localhost:8080/api/config
+          curl -f http://localhost:8080/api/feed/home
+
+  deploy-railway:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+    steps:
+      - name: Deploy to Railway
+        uses: nickyout/railway-deploy@v3
+        with:
+          railway_service_id: ${{ secrets.RAILWAY_SERVICE_ID }}
+          railway_token: ${{ secrets.RAILWAY_TOKEN }}

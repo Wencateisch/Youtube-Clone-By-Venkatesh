@@ -3,6 +3,9 @@ node_modules/
 *.log
 npm-debug.log*
 
+# Backend database
+server/data/
+
 # Capacitor / Android build outputs
 android/.gradle/
 android/build/

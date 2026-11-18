@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "youtube-clone-frontend",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "www"],
+      "port": 3000
+    }
+  ]
+}

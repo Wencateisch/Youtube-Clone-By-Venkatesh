@@ -1,0 +1,12 @@
+{
+  "name": "youtube-clone-backend",
+  "version": "1.0.0",
+  "description": "Backend for the YouTube clone: Google login, user preferences and a dynamic home feed.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {}
+}
