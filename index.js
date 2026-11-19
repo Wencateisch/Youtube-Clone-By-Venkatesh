@@ -61,11 +61,21 @@ let mediaPlaying = false;
 let currentTileWidth = 0;
 let playerScrollY = 0;
 let resizeObserver = null;
-let backgroundPlaying = false;
-let pipEl = null;
 let videoQueue = [];
 let queueMode = false;
 let queueAutoPlay = true; // Auto-play next video
+
+// The Android shell exposes a one-method bridge so it knows whether audio is
+// actually playing. It only keeps the WebView alive in the background while
+// this is true, instead of burning battery whenever the app is minimised.
+function notifyPlaybackActive(active) {
+  try {
+    const bridge = window.AndroidPlayback;
+    if (bridge && typeof bridge.setPlaybackActive === "function") {
+      bridge.setPlaybackActive(Boolean(active));
+    }
+  } catch (_) { /* web build: no bridge */ }
+}
 
 /* ------------------------- small utilities ------------------------- */
 
@@ -475,6 +485,11 @@ async function fetchVideos(query) {
     currentResults = items;
     await enrichDurations(items);
     renderVideos(items);
+    // Keep an already-open player's Up-next rail filled. Opening a video while
+    // the first feed request is still in flight used to leave a blank rail.
+    if (items.length && playerEl && !playerEl.hidden) {
+      renderSuggestions(items, currentPlayerVideoId());
+    }
     if (items.length) {
       setStatus(q === homeQuery ? "Recommended for you" : `Results for "${q}"`);
     }
@@ -671,6 +686,15 @@ async function loadFallbackSuggestions(videoId) {
   }
 }
 
+function currentPlayerVideoId() {
+  try {
+    const m = playerFrame && playerFrame.src ? playerFrame.src.match(/\/embed\/([^?&/]+)/) : null;
+    return m ? m[1] : "";
+  } catch (_) {
+    return "";
+  }
+}
+
 async function renderSuggestions(items, currentVideoId) {
   const container = playerSuggest;
   if (!container) return;
@@ -751,6 +775,7 @@ function ytCommand(func) {
 
 function setMediaPlaying(playing) {
   mediaPlaying = Boolean(playing);
+  notifyPlaybackActive(mediaPlaying);
   const icon = mediaPlaying ? "fa-pause" : "fa-play";
   const label = mediaPlaying ? "Pause" : "Play";
   for (const btn of [miniPlay, audioPlay]) {
@@ -819,25 +844,20 @@ function setupPlayerLayout() {
 }
 
 function setAudioMode(on) {
+  // Audio mode and the floating mini player are mutually exclusive layouts.
+  // Leaving mini here keeps the two class switches from fighting.
+  if (on && miniActive) {
+    exitMini(false);
+    if (playerEl && !playerEl.hidden) document.body.style.overflow = "hidden";
+  }
   audioMode = Boolean(on);
   // CSS sizes the frame in audio mode; no inline style and no src change.
   if (playerEl) playerEl.classList.toggle("audio-mode", audioMode);
   if (audioPanel) audioPanel.hidden = !audioMode;
   if (audioToggle) audioToggle.setAttribute("aria-pressed", audioMode ? "true" : "false");
   if (!audioMode && !miniActive) requestAnimationFrame(() => layoutVideoBox());
-  // Enable/disable background playback via Screen Orientation plugin
-  try {
-    const so = window.Capacitor?.Plugins?.ScreenOrientation;
-    if (so) {
-      if (audioMode) {
-        // Keep screen orientation locked for audio mode
-        backgroundPlaying = true;
-      } else {
-        backgroundPlaying = false;
-        // Unlock orientation when exiting audio mode
-      }
-    }
-  } catch (_) {}
+  // Background audio is handled natively: the Android shell keeps the WebView
+  // alive while mediaPlaying is true (see notifyPlaybackActive / MainActivity).
 }
 
 function enterMini() {
@@ -846,6 +866,7 @@ function enterMini() {
   measureTile();
   miniActive = true;
   playerEl.classList.add("mini");
+  if (pipToggle) pipToggle.setAttribute("aria-pressed", "true");
   if (miniTitle) miniTitle.textContent = (playerTitle && playerTitle.textContent) || "YouTube video";
   if (miniEl) miniEl.hidden = false;
   document.body.style.overflow = "";
@@ -866,6 +887,7 @@ function exitMini(showFullPlayer = true) {
   if (!miniActive) return;
   miniActive = false;
   playerEl.classList.remove("mini");
+  if (pipToggle) pipToggle.setAttribute("aria-pressed", "false");
   if (miniEl) miniEl.hidden = true;
   if (showFullPlayer && playerEl) {
     playerEl.hidden = false;
@@ -920,6 +942,7 @@ function closePlayer() {
   setMediaPlaying(false);
   miniActive = false;
   playerEl.classList.remove("mini");
+  if (pipToggle) pipToggle.setAttribute("aria-pressed", "false");
   if (miniEl) miniEl.hidden = true;
   setAudioMode(false);
   playerEl.hidden = true;
@@ -930,39 +953,16 @@ function closePlayer() {
   window.scrollTo(0, y);
 }
 
-// Android hardware/gesture back support: full player -> PiP -> mini player.
+// Android back: full player -> floating mini player, then a second back closes.
+// Both steps are CSS-only, so the iframe is never re-created and audio continues.
 window.__onAndroidBack = function () {
-  if (!profilePanel || profilePanel.hidden) {
-    if (playerEl && !playerEl.hidden) {
-      // Try PiP first before closing
-      if (pipToggle && pipToggle.getAttribute("aria-pressed") === "false" && !miniActive) {
-        // Enter PiP mode on back press
-        const src = playerFrame ? playerFrame.src : "";
-        if (src) {
-          try {
-            const pipEl = document.createElement("div");
-            pipEl.style.cssText = "position:fixed;bottom:12px;right:12px;width:280px;height:157px;background:#000;border-radius:12px;z-index:9999;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);";
-            const pipIframe = document.createElement("iframe");
-            pipIframe.src = src;
-            pipIframe.allow = "autoplay; picture-in-picture";
-            pipIframe.style.cssText = "width:100%;height:100%;border:none;";
-            pipEl.appendChild(pipIframe);
-            document.body.appendChild(pipEl);
-            window.piPEl = pipEl;
-            pipToggle.setAttribute("aria-pressed", "true");
-            return true;
-          } catch (e) { /* fall through */ }
-        }
-      }
-      closePlayer();
-      return true;
-    }
-    if (miniActive) {
-      closePlayer();
-      return true;
-    }
-  } else {
+  if (profilePanel && !profilePanel.hidden) {
     closeProfile();
+    return true;
+  }
+  if (playerEl && !playerEl.hidden) {
+    if (miniActive) closePlayer();
+    else enterMini();
     return true;
   }
   return false;
@@ -1034,6 +1034,15 @@ if (playerEl) {
 }
 document.addEventListener("fullscreenchange", handleFullscreenChange);
 document.addEventListener("webkitfullscreenchange", handleFullscreenChange);
+
+// Some Android WebViews suspend the embed while the app is hidden. When the
+// user comes back, resume instead of leaving them on a frozen frame. This
+// never fires if they paused the video themselves (mediaPlaying is false).
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState !== "visible") return;
+  if (!mediaPlaying || !playerFrame || !playerFrame.src) return;
+  setTimeout(() => ytCommand("playVideo"), 300);
+});
 if (zoomToggle) {
   zoomToggle.addEventListener("click", () => {
     zoomEnabled = !zoomEnabled;
@@ -1061,9 +1070,9 @@ document.addEventListener("keydown", (e) => {
       }
       if (playerFrameHolder) playerFrameHolder.classList.remove("zoomed");
       layoutVideoBox();
-    } else if (playerEl && !playerEl.hidden && !miniActive && pipToggle && pipToggle.getAttribute("aria-pressed") === "true") {
-      // Exit PiP
-      pipToggle.click();
+    } else if (playerEl && !playerEl.hidden && miniActive) {
+      // Leave the floating player and return to full theatre view.
+      exitMini(true);
     } else {
       closePlayer();
     }
@@ -1100,34 +1109,16 @@ if (updatesBtn) updatesBtn.addEventListener("click", () => { openProfile(); chec
 const libraryBtn = document.getElementById("library-btn");
 if (libraryBtn) libraryBtn.addEventListener("click", openProfile);
 
-// PiP support
-if (pipToggle) pipToggle.addEventListener("click", async () => {
-  if (!pipToggle || !playerFrame || playerEl.hidden) return;
-  try {
-    const src = playerFrame.src;
-    if (pipToggle.getAttribute("aria-pressed") === "true") {
-      pipToggle.setAttribute("aria-pressed", "false");
-      // Exiting PiP - video stays in player
-      if (window.piPEl) {
-        window.piPEl.remove();
-        window.piPEl = null;
-      }
-    } else {
-      const pipEl = document.createElement("div");
-      pipEl.style.cssText = "position:fixed;bottom:12px;right:12px;width:280px;height:157px;background:#000;border-radius:12px;z-index:9999;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.5);";
-      const pipIframe = document.createElement("iframe");
-      pipIframe.src = src;
-      pipIframe.allow = "autoplay; picture-in-picture";
-      pipIframe.style.cssText = "width:100%;height:100%;border:none;";
-      pipEl.appendChild(pipIframe);
-      document.body.appendChild(pipEl);
-      window.piPEl = pipEl;
-      pipToggle.setAttribute("aria-pressed", "true");
-    }
-  } catch (e) {
-    console.error("PiP error:", e);
-  }
-});
+// Picture in picture reuses the mini player. The old implementation created a
+// second iframe with the same URL, which restarted the video from 0:00 — the
+// exact behaviour we must avoid. Now only a CSS class changes.
+if (pipToggle) {
+  pipToggle.addEventListener("click", () => {
+    if (!playerEl || playerEl.hidden) return;
+    if (miniActive) exitMini(true);
+    else enterMini();
+  });
+}
 
 // Google login support
 if (googleLoginBtn) googleLoginBtn.addEventListener("click", async () => {

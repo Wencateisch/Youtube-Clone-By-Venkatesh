@@ -233,16 +233,20 @@ img { max-width: 100%; display: block; }
 @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
 /* ---------- Theatre mode: full-page video takeover ---------- */
+/* Explicit offsets instead of the `inset` shorthand: a few Android WebView
+   builds in the wild still do not parse it, which left the player un-anchored. */
 .player {
-  position: fixed; inset: 0; z-index: 200;
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 200;
   background: var(--bg);
   display: flex; flex-direction: column;
   padding-top: var(--inset-top);
   overflow: hidden;
 }
 .player[hidden] { display: none !important; }
+/* The video area must never shrink: with 20 suggestions the rail's content
+   would otherwise steal height from the player on a phone. */
 .player-stage {
-  flex: 0 1 auto; min-height: 0; min-width: 0;
+  flex: 0 0 auto; min-height: 0; min-width: 0;
   position: relative;
   display: flex; flex-direction: column;
 }
@@ -256,7 +260,7 @@ img { max-width: 100%; display: block; }
   background: var(--player-void); overflow: hidden;
 }
 .player-frame-holder.zoomed { aspect-ratio: auto; width: 100%; height: 100%; }
-.player-frame { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.player-frame { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; border: 0; display: block; }
 .player-collapse {
   position: absolute; top: 10px; right: 10px; z-index: 6;
   width: 38px; height: 38px; border-radius: 50%;
@@ -362,10 +366,12 @@ img { max-width: 100%; display: block; }
   #player { flex-direction: row; }
   .player-stage {
     flex: 0 0 auto; min-width: 0;
+    width: min(calc((100vh - var(--inset-top)) * 16 / 9), calc(100% - 244px));
     width: min(calc((100dvh - var(--inset-top)) * 16 / 9), calc(100% - 244px));
   }
   .player-video-wrap {
-    position: absolute; inset: 0; width: 100%; aspect-ratio: auto;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; aspect-ratio: auto;
     align-items: center; justify-content: center;
   }
   .player-rail {
@@ -381,10 +387,12 @@ img { max-width: 100%; display: block; }
   #player { flex-direction: row; }
   .player-stage {
     flex: 0 0 auto; min-width: 0;
+    width: min(calc((100vh - var(--inset-top)) * 16 / 9), calc(100% - 324px));
     width: min(calc((100dvh - var(--inset-top)) * 16 / 9), calc(100% - 324px));
   }
   .player-video-wrap {
-    position: absolute; inset: 0; width: 100%; aspect-ratio: auto;
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; aspect-ratio: auto;
     align-items: center; justify-content: center;
   }
   .player-rail {
@@ -426,10 +434,24 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Audio mode: player stays visible at its minimum size ---------- */
 /* Class-based, not :has() — older Android WebViews do not support :has(). */
-.player.audio-mode .player-video-wrap { width: 100%; aspect-ratio: auto; min-height: 260px; }
+/* Audio mode is always the stacked layout: on a landscape phone the side-by-side
+   theatre split would squeeze the panel into a ~160px column. */
+#player.audio-mode { flex-direction: column; }
+#player.audio-mode .player-stage {
+  position: relative; top: auto; right: auto; bottom: auto; left: auto;
+  width: 100%; flex: 0 0 auto;
+}
+.player.audio-mode .player-video-wrap {
+  position: relative; top: auto; right: auto; bottom: auto; left: auto;
+  width: 100%; aspect-ratio: auto; min-height: 300px;
+}
+#player.audio-mode .player-rail {
+  margin: var(--space-2) 0 0; min-width: 0;
+  border-top: 1px solid var(--border); border-left: 0;
+}
 .audio-panel {
   color: var(--text);
-  position: absolute; inset: 0; z-index: 4;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 4;
   display: flex; align-items: center; gap: var(--space-4);
   padding: var(--space-5) calc(280px + var(--space-5)) var(--space-5) var(--space-5);
   background: var(--surface);
@@ -444,15 +466,24 @@ img { max-width: 100%; display: block; }
 .audio-kicker { margin: 0 0 var(--space-2); font-size: .8rem; color: var(--muted); }
 .audio-title { margin: 0 0 var(--space-2); font-size: clamp(1.1rem, 2.4vw, 1.8rem); line-height: 1.2; text-wrap: balance; }
 .audio-channel { margin: 0; font-size: .9rem; color: var(--muted); }
-/* Audio mode keeps the real player visible at YouTube's minimum size.
+/* Audio mode keeps the real player visible at YouTube's minimum size, above the
+   album art (z-index), so it is obvious the video is still running.
    Sizing is CSS-only, so toggling never touches the iframe or its src. */
 .player.audio-mode .player-frame-holder {
-  position: absolute; right: 12px; bottom: 12px;
+  z-index: 5; position: absolute; right: 12px; bottom: 12px;
   width: 240px !important; height: 200px !important;
 }
 @media (max-width: 700px) {
-  .audio-panel { flex-direction: column; align-items: flex-start; padding: var(--space-4) var(--space-4) 220px; }
-  .audio-art { width: 110px; height: 110px; flex-basis: 110px; font-size: 40px; }
+  .player.audio-mode .player-video-wrap { min-height: 480px; }
+  .audio-panel {
+    flex-direction: column; align-items: flex-start; gap: var(--space-3);
+    padding: var(--space-4) var(--space-4) 216px;
+  }
+  .audio-art { width: 88px; height: 88px; flex-basis: 88px; font-size: 34px; }
+  .audio-title {
+    font-size: 1.05rem;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
   .player.audio-mode .player-frame-holder { left: 16px; right: auto; bottom: 16px; }
 }
 
@@ -462,19 +493,21 @@ img { max-width: 100%; display: block; }
    The whole #player becomes the mini window: no position:fixed nested inside
    another position:fixed element, which some Android WebViews mis-render. */
 #player.mini {
-  inset: auto 12px calc(76px + var(--inset-bottom)) auto;
-  width: 280px; height: 200px;
+  top: auto; left: auto;
+  right: 12px; bottom: calc(76px + var(--inset-bottom));
+  width: 280px; height: 200px; max-width: calc(100vw - 24px);
   padding-top: 0;
   background: var(--player-void);
   border-radius: 12px; overflow: hidden;
   box-shadow: var(--shadow); pointer-events: auto;
 }
 #player.mini .player-stage {
-  position: relative; inset: auto;
+  position: relative;
   width: 100%; height: 100%; flex: 1 1 auto;
 }
 #player.mini .player-video-wrap {
-  position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto;
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  width: 100%; height: 100%; aspect-ratio: auto;
 }
 #player.mini .player-rail { display: none; }
 #player.mini .player-collapse { top: 6px; right: 6px; }
@@ -500,14 +533,14 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Local profile + dynamic links ---------- */
 .modal-backdrop {
-  position: fixed; inset: 0; z-index: 240;
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 240;
   background: var(--modal-bg);
   display: flex; align-items: center; justify-content: center; padding: var(--space-4);
 }
 .modal-backdrop[hidden] { display: none !important; }
 .modal-card {
   color: var(--text);
-  width: min(520px, 100%); max-height: min(90dvh, 760px); overflow-y: auto;
+  width: min(520px, 100%); max-height: min(90vh, 760px); max-height: min(90dvh, 760px); overflow-y: auto;
   background: var(--surface);
   border-radius: 16px; padding: var(--space-4); box-shadow: var(--shadow);
 }

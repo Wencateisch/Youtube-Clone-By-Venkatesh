@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./index.css?v=1.6.0" />
   </head>
   <body>
     <header id="navBar" class="nav-bar">
@@ -31,6 +31,9 @@
           </button>
         </div>
         <div id="end" class="nav-right">
+          <button class="icon-btn hide-mobile" type="button" id="google-login-btn" aria-label="Sign in with Google">
+            <i class="fab fa-google" aria-hidden="true"></i>
+          </button>
           <button class="icon-btn hide-mobile" type="button" id="updates-btn" aria-label="Check for updates">
             <i class="fas fa-download" aria-hidden="true"></i>
           </button>
@@ -117,6 +120,12 @@
           <button id="audio-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Audio mode">
             <i class="fas fa-headphones" aria-hidden="true"></i>
           </button>
+          <button id="queue-toggle" class="icon-btn" type="button" aria-label="Queue mode">
+            <i class="fas fa-list" aria-hidden="true"></i>
+          </button>
+          <button id="pip-toggle" class="icon-btn" type="button" aria-label="Picture in picture">
+            <i class="fas fa-picture-in-picture" aria-hidden="true"></i>
+          </button>
           <button id="mini-toggle" class="icon-btn" type="button" aria-label="Mini player">
             <i class="fas fa-window-minimize" aria-hidden="true"></i>
           </button>
@@ -183,13 +192,33 @@
       <button class="bn-item" type="button" id="library-btn"><i class="fas fa-photo-video"></i><span>Library</span></button>
     </nav>
 
-    <script src="./index.js"></script>
+    <script src="./index.js?v=1.6.0"></script>
     <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("./sw.js").catch(() => {});
+      // The APK ships its assets inside the app, so a cache-first service
+      // worker only ever serves the *previous* APK's CSS/JS. Inside the native
+      // shell we therefore unregister any old worker and wipe its caches, then
+      // never register again. The web build keeps the offline cache.
+      (function () {
+        var cap = window.Capacitor;
+        var isNative = !!(cap && cap.isNativePlatform && cap.isNativePlatform());
+        if (!("serviceWorker" in navigator)) return;
+
+        if (isNative) {
+          navigator.serviceWorker.getRegistrations()
+            .then(function (regs) { regs.forEach(function (r) { r.unregister(); }); })
+            .catch(function () {});
+          if (window.caches && caches.keys) {
+            caches.keys()
+              .then(function (keys) { keys.forEach(function (k) { caches.delete(k); }); })
+              .catch(function () {});
+          }
+          return;
+        }
+
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js").catch(function () {});
         });
-      }
+      })();
     </script>
   </body>
 </html>

@@ -4,6 +4,7 @@
   "defaultQuery": "artificial intelligence",
   "maxResults": 24,
   "appName": "YouTube Clone",
-  "homeUrl": "https://wencateisch.github.io/Youtube-Clone-By-Venkatesh/",
+  "homeUrl": "./",
+  "backendUrl": "",
   "releasesApi": "https://api.github.com/repos/Wencateisch/Youtube-Clone-By-Venkatesh/releases/latest"
 }

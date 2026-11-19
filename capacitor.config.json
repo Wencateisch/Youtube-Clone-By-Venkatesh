@@ -5,6 +5,7 @@
   "bundledWebRuntime": false,
   "server": {
     "androidScheme": "https",
+    "hostname": "ytclone.localhost",
     "cleartext": true
   },
   "plugins": {
