@@ -3,6 +3,11 @@
 const DEFAULT_CONFIG = {
   apiBase: "https://youtube.googleapis.com/youtube/v3",
   apiKey: "AIzaSyDC-ej1rqEn_Ia92E1g3MyK-eJACxNTMFU",
+  // Extra keys from separate Google Cloud projects. Search quota is per
+  // project, so a second key doubles the daily allowance without code changes.
+  apiKeys: [],
+  // Empty means "infer from the device language" (e.g. en-IN -> IN).
+  regionCode: "",
   defaultQuery: "artificial intelligence",
   maxResults: 24,
   appName: "YouTube Clone",
@@ -147,10 +152,117 @@ function uid() {
   return `p${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
 }
 
-function apiUrl(endpoint, params) {
+function apiKeys() {
+  const list = [CONFIG.apiKey, ...(Array.isArray(CONFIG.apiKeys) ? CONFIG.apiKeys : [])]
+    .filter((k) => typeof k === "string" && k.trim());
+  return [...new Set(list)];
+}
+
+let apiKeyIndex = 0;
+
+function apiUrl(endpoint, params, key) {
   const base = String(CONFIG.apiBase || DEFAULT_CONFIG.apiBase).replace(/\/$/, "");
-  const search = new URLSearchParams({ ...params, key: CONFIG.apiKey });
+  const keys = apiKeys();
+  const search = new URLSearchParams({ ...params, key: key || keys[apiKeyIndex] || CONFIG.apiKey });
   return `${base}/${endpoint}?${search.toString()}`;
+}
+
+function regionCode() {
+  if (CONFIG.regionCode) return String(CONFIG.regionCode).toUpperCase();
+  const m = String(navigator.language || "").match(/-([A-Za-z]{2})$/);
+  return m ? m[1].toUpperCase() : "";
+}
+
+// Google puts the machine reason in error.errors[0].reason and the raw message
+// carries the project number. That message must never reach the screen, so
+// every failure becomes one plain sentence here.
+function apiErrorText(reason, status) {
+  switch (reason) {
+    case "quotaExceeded":
+    case "dailyLimitExceeded":
+      return "YouTube's search limit is used up for today.";
+    case "keyInvalid":
+    case "badRequest":
+      return "The video feed is misconfigured (invalid API key).";
+    case "accessNotConfigured":
+      return "The YouTube Data API is not enabled for this key.";
+    case "ipRefererBlocked":
+      return "This API key does not allow this app or domain.";
+    case "rateLimitExceeded":
+    case "userRateLimitExceeded":
+      return "YouTube is rate limiting requests. Try again in a moment.";
+    case "forbidden":
+      return "YouTube refused this request.";
+    default:
+      if (status === 404) return "The video feed was not found.";
+      if (status >= 500) return "YouTube is having trouble right now.";
+      if (status === 403) return "YouTube refused this request.";
+      return "Couldn't load videos. Check your connection and try again.";
+  }
+}
+
+function isQuotaReason(reason) {
+  return reason === "quotaExceeded" || reason === "dailyLimitExceeded";
+}
+
+// Every API call goes through here. A quota failure moves to the next
+// configured key and retries; any other failure stops at once, so one broken
+// key cannot burn through the rest of the list.
+async function fetchApi(endpoint, params, signal) {
+  const keys = apiKeys();
+  if (!keys.length) throw new Error("No API key is configured.");
+  const start = apiKeyIndex;
+  let lastError = null;
+  for (let attempt = 0; attempt < keys.length; attempt += 1) {
+    const index = (start + attempt) % keys.length;
+    const res = await fetch(apiUrl(endpoint, params, keys[index]), { signal });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok) {
+      apiKeyIndex = index;
+      return data;
+    }
+    const reason = String(data?.error?.errors?.[0]?.reason || data?.error?.status || "");
+    lastError = new Error(apiErrorText(reason, res.status));
+    lastError.code = reason;
+    lastError.status = res.status;
+    if (!isQuotaReason(reason)) throw lastError;
+  }
+  throw lastError;
+}
+
+/* ------------------------- search cache ------------------------- */
+
+// Search is the expensive endpoint (100 quota units per call), so a query
+// answered once is reused for six hours and still serves as an offline rescue
+// after it expires.
+const SEARCH_CACHE_TTL = 6 * 60 * 60 * 1000;
+const SEARCH_CACHE_MAX = 12;
+
+function searchCacheKey(q) {
+  return String(q || "").trim().toLowerCase();
+}
+
+function searchCacheAll() {
+  const raw = storeGet("ytclone.searchCache", {});
+  return raw && typeof raw === "object" && !Array.isArray(raw) ? raw : {};
+}
+
+function readSearchCache(q, { allowStale = false } = {}) {
+  const entry = searchCacheAll()[searchCacheKey(q)];
+  if (!entry || !Array.isArray(entry.items) || !entry.items.length) return null;
+  const age = Date.now() - Number(entry.at || 0);
+  if (!allowStale && age > SEARCH_CACHE_TTL) return null;
+  return { items: entry.items, at: Number(entry.at || 0), stale: age > SEARCH_CACHE_TTL };
+}
+
+function writeSearchCache(q, items) {
+  if (!items || !items.length) return;
+  const all = searchCacheAll();
+  all[searchCacheKey(q)] = { at: Date.now(), items: items.slice(0, CONFIG.maxResults || 24) };
+  const kept = Object.entries(all)
+    .sort((a, b) => Number(b[1].at || 0) - Number(a[1].at || 0))
+    .slice(0, SEARCH_CACHE_MAX);
+  storeSet("ytclone.searchCache", Object.fromEntries(kept));
 }
 
 function setStatus(message, isError = false, showRetry = false) {
@@ -545,10 +657,7 @@ async function enrichDurations(items) {
   const ids = items.map((i) => i?.id?.videoId).filter(Boolean);
   if (!ids.length) return items;
   try {
-    const url = apiUrl("videos", { part: "contentDetails", id: ids.join(",") });
-    const res = await fetch(url);
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) return items;
+    const data = await fetchApi("videos", { part: "contentDetails", id: ids.join(",") });
     const map = new Map((data.items || []).map((v) => [v.id, parseISODuration(v.contentDetails?.duration)]));
     items.forEach((i) => {
       const id = i?.id?.videoId;
@@ -561,11 +670,12 @@ async function enrichDurations(items) {
 }
 
 async function fetchPopularItems(max = 24) {
-  // A separate quota bucket from search. When the daily search limit is spent
-  // the home feed can still show something instead of an error page.
-  const res = await fetch(apiUrl("videos", { part: "snippet,contentDetails", chart: "mostPopular", maxResults: max }));
-  if (!res.ok) throw new Error(`Popular request failed (${res.status})`);
-  const data = await res.json().catch(() => ({}));
+  // A different quota bucket from search: 1 unit per call instead of 100, and
+  // it is not part of the "Search Queries" daily limit at all.
+  const params = { part: "snippet,contentDetails", chart: "mostPopular", maxResults: max };
+  const region = regionCode();
+  if (region) params.regionCode = region;
+  const data = await fetchApi("videos", params);
   return (Array.isArray(data.items) ? data.items : [])
     .map((v) => {
       const videoId = typeof v.id === "string" ? v.id : v.id && v.id.videoId;
@@ -584,62 +694,102 @@ function friendlyFetchError(err) {
   if (/failed to fetch|networkerror|load failed|network request failed/i.test(raw)) {
     return "Couldn't reach YouTube. Check your connection and try again.";
   }
-  return raw || "Unable to load videos. Check your connection and try again.";
+  return raw || "Couldn't load videos. Check your connection and try again.";
+}
+
+function showFeed(items, message, { error = false, retry = false } = {}) {
+  currentResults = items;
+  renderVideos(items);
+  if (items.length && playerEl && !playerEl.hidden) {
+    renderSuggestions(items, currentPlayerVideoId());
+  }
+  if (message) setStatus(message, error, retry);
+}
+
+// Home is a browse view, not a search: it reads the popular feed, which costs
+// 1 quota unit per call. That leaves the whole daily search allowance for the
+// queries the user actually types.
+async function fetchHome() {
+  if (lastController) lastController.abort();
+  lastController = new AbortController();
+  window.scrollTo(0, 0);
+  setStatus("Loading videos...");
+  showSkeletons(8);
+  try {
+    const items = await fetchPopularItems(CONFIG.maxResults);
+    if (!items.length) throw new Error("The popular feed came back empty.");
+    showFeed(items, "Popular right now");
+  } catch (err) {
+    if (err && err.name === "AbortError") return;
+    const saved = readSearchCache(homeQuery, { allowStale: true });
+    if (saved) {
+      showFeed(saved.items, "Showing saved videos. Check your connection to refresh.");
+      return;
+    }
+    if (grid) renderEmpty("Couldn't load videos", "Check your connection and try again.");
+    setStatus(friendlyFetchError(err), true, true);
+    console.error("Failed to load the home feed:", err);
+  }
 }
 
 async function fetchVideos(query) {
-  const q = (query || "").trim() || homeQuery;
+  const q = (query || "").trim() || CONFIG.defaultQuery;
   lastQuery = q;
   if (lastController) lastController.abort();
   lastController = new AbortController();
   window.scrollTo(0, 0);
 
-  const url = apiUrl("search", {
-    part: "snippet",
-    type: "video",
-    maxResults: CONFIG.maxResults,
-    q,
-  });
+  const cached = readSearchCache(q);
+  if (cached) {
+    showFeed(cached.items, `Results for "${q}"`);
+    return;
+  }
 
   setStatus("Loading videos...");
   showSkeletons(8);
 
   try {
-    const res = await fetch(url, { signal: lastController.signal });
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      const apiMsg = data?.error?.message || `Request failed (${res.status})`;
-      throw new Error(apiMsg);
-    }
+    const data = await fetchApi(
+      "search",
+      { part: "snippet", type: "video", maxResults: CONFIG.maxResults, q },
+      lastController.signal
+    );
     const items = Array.isArray(data.items) ? data.items : [];
     currentResults = items;
     await enrichDurations(items);
-    renderVideos(items);
-    // Keep an already-open player's Up-next rail filled. Opening a video while
-    // the first feed request is still in flight used to leave a blank rail.
-    if (items.length && playerEl && !playerEl.hidden) {
-      renderSuggestions(items, currentPlayerVideoId());
-    }
-    if (items.length) {
-      setStatus(q === homeQuery ? "Recommended for you" : `Results for "${q}"`);
-    }
+    writeSearchCache(q, items);
+    showFeed(items, items.length ? `Results for "${q}"` : "");
   } catch (err) {
     if (err && err.name === "AbortError") return;
-    if (q === homeQuery) {
-      // Home should never be a dead end. Popular videos come from a different
-      // quota bucket, so this usually succeeds while search is limited.
-      try {
-        const popular = await fetchPopularItems(CONFIG.maxResults);
-        if (popular.length) {
-          currentResults = popular;
-          renderVideos(popular);
-          if (playerEl && !playerEl.hidden) renderSuggestions(popular, currentPlayerVideoId());
-          setStatus("Search is at its daily limit — showing popular videos instead.");
-          return;
-        }
-      } catch (_) { /* fall through to the error state */ }
+    // Rescue order: this query's saved results, then popular videos whose
+    // title/channel matches the words, then popular videos with an honest
+    // label. The user never sees Google's raw quota text.
+    const saved = readSearchCache(q, { allowStale: true });
+    if (saved) {
+      showFeed(saved.items, `Search is limited today — showing saved results for "${q}".`);
+      return;
     }
-    if (grid) renderEmpty("Couldn't load videos", "Check your connection or API key, then try again.");
+    try {
+      const popular = await fetchPopularItems(50);
+      const tokens = q.toLowerCase().split(/\s+/).filter((t) => t.length > 2);
+      const matches = tokens.length
+        ? popular.filter((v) => {
+            const text = `${(v.snippet && v.snippet.title) || ""} ${(v.snippet && v.snippet.channelTitle) || ""}`.toLowerCase();
+            return tokens.some((t) => text.includes(t));
+          })
+        : [];
+      const items = (matches.length ? matches : popular).slice(0, CONFIG.maxResults || 24);
+      if (items.length) {
+        showFeed(
+          items,
+          matches.length
+            ? `Search is limited today — popular matches for "${q}".`
+            : "Search is limited today — showing popular videos."
+        );
+        return;
+      }
+    } catch (_) { /* fall through to the error state */ }
+    if (grid) renderEmpty("Couldn't load videos", "Check your connection and try again.");
     setStatus(friendlyFetchError(err), true, true);
     console.error("Failed to load videos:", err);
   }
@@ -655,7 +805,7 @@ function setActiveChip(query) {
 }
 
 function display() {
-  return fetchVideos(homeQuery);
+  return fetchHome();
 }
 
 async function searchVideos() {
@@ -672,8 +822,7 @@ async function HomeButton() {
   if (searchInput) searchInput.value = "";
   updateClearBtn();
   setActiveChip(CONFIG.defaultQuery);
-  homeQuery = storeGet("ytclone.homeQuery", CONFIG.defaultQuery) || CONFIG.defaultQuery;
-  await fetchVideos(homeQuery);
+  await fetchHome();
   window.scrollTo(0, 0);
 }
 
@@ -685,8 +834,13 @@ function focusSearch() {
 }
 
 async function searchByChip(query) {
-  const q = (query || "").trim() || CONFIG.defaultQuery;
-  if (searchInput) searchInput.value = q === CONFIG.defaultQuery ? "" : q;
+  const q = (query || "").trim();
+  // "All" is the browse view; only a real query spends search quota.
+  if (!q || q === CONFIG.defaultQuery) {
+    await HomeButton();
+    return;
+  }
+  if (searchInput) searchInput.value = q;
   updateClearBtn();
   setActiveChip(q);
   await fetchVideos(q);
@@ -759,9 +913,10 @@ function buildSuggestionElement(s) {
 
 async function loadFallbackSuggestions(videoId) {
   try {
-    const res = await fetch(apiUrl("videos", { part: "snippet", chart: "mostPopular", maxResults: 20 }));
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) return [];
+    const params = { part: "snippet", chart: "mostPopular", maxResults: 20 };
+    const region = regionCode();
+    if (region) params.regionCode = region;
+    const data = await fetchApi("videos", params);
     const items = (Array.isArray(data.items) ? data.items : []).map((v) => ({
       id: v.id,
       snippet: v.snippet,
@@ -1326,9 +1481,21 @@ function setFill(on) {
   if (zoomToggle) {
     zoomToggle.setAttribute("aria-checked", String(next));
     zoomToggle.setAttribute("aria-pressed", String(next));
-    zoomToggle.setAttribute("aria-label", next ? "Exit fill" : "Fill the screen");
+    zoomToggle.setAttribute("aria-label", next ? "Exit full screen" : "Fill the screen");
     const icon = zoomToggle.querySelector("i");
     if (icon) icon.className = next ? "fas fa-compress" : "fas fa-expand";
+  }
+  if (next) {
+    // A filled 16:9 video belongs in landscape: portrait fill has to crop most
+    // of the frame. Ask the device to turn, then keep the cover math in sync
+    // while the rotation lands (the ResizeObserver also fires, but Android
+    // reports the new size a beat late).
+    lockLandscape();
+    [80, 260, 600].forEach((delay) => {
+      setTimeout(() => { if (fillMode) layoutFill(); }, delay);
+    });
+  } else {
+    unlockOrientation();
   }
   requestAnimationFrame(() => {
     if (next) layoutFill();
@@ -1644,12 +1811,29 @@ document.addEventListener("visibilitychange", () => {
   setTimeout(() => ytCommand("playVideo"), 300);
 });
 
-window.addEventListener("resize", () => { measureTile(); if (fillMode) layoutFill(); else layoutVideoBox(); });
-window.addEventListener("orientationchange", () => setTimeout(() => {
+function relayoutPlayer() {
   measureTile();
   if (fillMode) layoutFill();
   else layoutVideoBox();
-}, 0));
+}
+
+window.addEventListener("resize", relayoutPlayer);
+window.addEventListener("orientationchange", () => {
+  // Android reports the rotated size a beat after the event, so settle twice.
+  setTimeout(relayoutPlayer, 60);
+  setTimeout(relayoutPlayer, 320);
+});
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", relayoutPlayer);
+}
+try {
+  if (screen.orientation && typeof screen.orientation.addEventListener === "function") {
+    screen.orientation.addEventListener("change", () => {
+      setTimeout(relayoutPlayer, 60);
+      setTimeout(relayoutPlayer, 320);
+    });
+  }
+} catch (_) { /* unsupported */ }
 
 /* queue sheet wiring */
 if (queueHeaderBtn) queueHeaderBtn.addEventListener("click", () => openQueueSheet("queue"));
