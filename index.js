@@ -21,6 +21,7 @@ const clearBtn = document.getElementById("clear-search");
 const chipsEl = document.getElementById("chips");
 const playerEl = document.getElementById("player");
 const playerVideoWrap = document.querySelector(".player-video-wrap");
+const playerInfo = document.querySelector(".player-info");
 const playerFrameHolder = document.getElementById("player-frame-holder");
 const playerFrame = document.getElementById("player-frame");
 const playerTitle = document.getElementById("player-title");
@@ -49,11 +50,37 @@ const profileBtn = document.getElementById("profile-btn");
 const homeLink = document.getElementById("home-link");
 const updatesInfo = document.getElementById("updates-info");
 const historyList = document.getElementById("history-list");
+const fillGrab = document.getElementById("fill-grab");
+const railQueue = document.getElementById("rail-queue");
+
+const queueSheet = document.getElementById("queue-sheet");
+const queueDialog = document.getElementById("queue-dialog");
+const queueClose = document.getElementById("queue-close");
+const queuePanel = document.getElementById("queue-panel");
+const playlistsPanel = document.getElementById("playlists-panel");
+const queueList = document.getElementById("queue-list");
+const queueEmpty = document.getElementById("queue-empty");
+const queueCount = document.getElementById("queue-count");
+const queuePlay = document.getElementById("queue-play");
+const queueSave = document.getElementById("queue-save");
+const queueClear = document.getElementById("queue-clear");
+const queueHeaderBtn = document.getElementById("queue-header-btn");
+const queueHeaderBadge = document.getElementById("queue-header-badge");
+const queueBadge = document.getElementById("queue-badge");
+const queueTabQueue = document.getElementById("tab-queue");
+const queueTabPlaylists = document.getElementById("tab-playlists");
+const playlistList = document.getElementById("playlist-list");
+const playlistsEmpty = document.getElementById("playlists-empty");
+const playlistCount = document.getElementById("playlist-count");
+const playlistForm = document.getElementById("playlist-form");
+const playlistName = document.getElementById("playlist-name");
+const toastRegion = document.getElementById("toast-region");
 
 let lastQuery = homeQuery;
 let lastController = null;
 let currentResults = [];
-let zoomEnabled = false;
+let currentSuggestions = [];
+let fillMode = false;
 let audioMode = false;
 let miniActive = false;
 let mediaPlaying = false;
@@ -61,9 +88,11 @@ let currentTileWidth = 0;
 let playerScrollY = 0;
 let resizeObserver = null;
 let frameReadyTimer = 0;
-let videoQueue = [];
-let queueMode = false;
-let queueAutoPlay = true; // Auto-play next video
+let sheetReturnFocus = null;
+let sheetLockedScroll = null;
+let endedFor = "";
+let playerOpenedAt = 0;
+let listeningTimer = 0;
 
 // The Android shell exposes a one-method bridge so it knows whether audio is
 // actually playing. It only keeps the WebView alive in the background while
@@ -114,6 +143,10 @@ function storeSet(key, value) {
   }
 }
 
+function uid() {
+  return `p${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
+}
+
 function apiUrl(endpoint, params) {
   const base = String(CONFIG.apiBase || DEFAULT_CONFIG.apiBase).replace(/\/$/, "");
   const search = new URLSearchParams({ ...params, key: CONFIG.apiKey });
@@ -135,6 +168,34 @@ function setStatus(message, isError = false, showRetry = false) {
     btn.addEventListener("click", () => fetchVideos(lastQuery));
     statusEl.appendChild(btn);
   }
+}
+
+// A keyed toast is reused: adding five videos in a row updates one message
+// instead of stacking five bars over the video.
+function showToast(message, icon = "fa-check", key = "") {
+  if (!toastRegion) return;
+  let el = key ? toastRegion.querySelector(`.toast[data-key="${key}"]`) : null;
+  if (el) {
+    const span = el.querySelector("span");
+    const glyph = el.querySelector("i");
+    if (span) span.textContent = message;
+    if (glyph) glyph.className = `fas ${icon}`;
+    el.classList.remove("is-leaving");
+  } else {
+    const live = toastRegion.querySelectorAll(".toast:not(.is-leaving)");
+    if (live.length >= 2) live[0].remove();
+    el = document.createElement("div");
+    el.className = "toast";
+    if (key) el.dataset.key = key;
+    el.innerHTML = `<i class="fas ${icon}" aria-hidden="true"></i><span></span>`;
+    el.querySelector("span").textContent = message;
+    toastRegion.appendChild(el);
+  }
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => {
+    el.classList.add("is-leaving");
+    el._timer = setTimeout(() => el.remove(), 280);
+  }, 2200);
 }
 
 function updateClearBtn() {
@@ -179,6 +240,15 @@ function initials(name) {
   const parts = String(name || "").trim().split(/\s+/).filter(Boolean);
   if (!parts.length) return "Y";
   return parts.slice(0, 2).map((p) => p[0].toUpperCase()).join("");
+}
+
+function thumbFor(sn, videoId) {
+  return (
+    sn.thumbnails?.high?.url ||
+    sn.thumbnails?.medium?.url ||
+    sn.thumbnails?.default?.url ||
+    `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+  );
 }
 
 /* ------------------------- profile + history ------------------------- */
@@ -274,10 +344,10 @@ function closeProfile() {
 }
 
 function saveProfile() {
-  const name = profileNameInput ? profileNameInput.value.trim() : "";
-  storeSet("ytclone.profile", { name });
+  const name = (profileNameInput && profileNameInput.value.trim()) || "";
+  storeSet("ytclone.profile", name ? { name } : {});
   if (profileBtn) {
-    profileBtn.classList.add("profile-initials");
+    profileBtn.classList.toggle("profile-initials", Boolean(name));
     profileBtn.innerHTML = "";
     profileBtn.textContent = name ? initials(name) : "?";
     profileBtn.setAttribute("aria-label", name ? `Profile: ${name}` : "Open local profile");
@@ -410,28 +480,29 @@ function renderVideos(items = []) {
   }
 
   const fragment = document.createDocumentFragment();
-  for (const item of videos) {
+  videos.forEach((item, index) => {
     const videoId = item.id.videoId;
     const sn = item.snippet || {};
     const title = decodeEntities(sn.title) || "YouTube video";
     const channel = decodeEntities(sn.channelTitle) || "Unknown channel";
     const when = timeAgo(sn.publishedAt);
     const duration = item._duration || "";
-    const sub = [when].filter(Boolean).join(" • ") || "Tap to play";
-    const thumb =
-      sn.thumbnails?.high?.url ||
-      sn.thumbnails?.medium?.url ||
-      sn.thumbnails?.default?.url ||
-      `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+    const sub = [when].filter(Boolean).join(" · ") || "Tap to play";
+    const thumb = thumbFor(sn, videoId);
 
-    const card = document.createElement("button");
-    card.type = "button";
+    const card = document.createElement("div");
     card.className = "video-item";
+    card.setAttribute("role", "button");
+    card.setAttribute("tabindex", "0");
     card.setAttribute("aria-label", `Play ${title}`);
+    card.style.setProperty("--i", String(Math.min(index, 9)));
     card.innerHTML = `
       <div class="thumb-wrap">
         <img class="thumb" src="${thumb}" alt="" loading="lazy" decoding="async" />
         <span class="duration-badge">${duration ? "" : '<i class="fas fa-play" aria-hidden="true"></i>'}</span>
+        <button class="queue-add" type="button" aria-label="Add to queue">
+          <i class="fas fa-plus" aria-hidden="true"></i>
+        </button>
       </div>
       <div class="meta">
         <div class="avatar-dot"></div>
@@ -450,9 +521,23 @@ function renderVideos(items = []) {
     const av = card.querySelector(".avatar-dot");
     av.textContent = initials(channel);
     av.setAttribute("aria-hidden", "true");
+    const payload = { videoId, title, channel, thumb, duration };
     card.addEventListener("click", () => openPlayer(videoId, title, channel, thumb));
+    card.addEventListener("keydown", (event) => {
+      if (event.target !== card) return;
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openPlayer(videoId, title, channel, thumb);
+      }
+    });
+    const add = card.querySelector(".queue-add");
+    add.setAttribute("aria-label", `Add ${title} to queue`);
+    add.addEventListener("click", (event) => {
+      event.stopPropagation();
+      addToQueue(payload);
+    });
     fragment.appendChild(card);
-  }
+  });
   grid.appendChild(fragment);
 }
 
@@ -473,6 +558,33 @@ async function enrichDurations(items) {
     /* ignore enrichment failures */
   }
   return items;
+}
+
+async function fetchPopularItems(max = 24) {
+  // A separate quota bucket from search. When the daily search limit is spent
+  // the home feed can still show something instead of an error page.
+  const res = await fetch(apiUrl("videos", { part: "snippet,contentDetails", chart: "mostPopular", maxResults: max }));
+  if (!res.ok) throw new Error(`Popular request failed (${res.status})`);
+  const data = await res.json().catch(() => ({}));
+  return (Array.isArray(data.items) ? data.items : [])
+    .map((v) => {
+      const videoId = typeof v.id === "string" ? v.id : v.id && v.id.videoId;
+      if (!videoId) return null;
+      return {
+        id: { videoId },
+        snippet: v.snippet || {},
+        _duration: parseISODuration(v.contentDetails && v.contentDetails.duration),
+      };
+    })
+    .filter(Boolean);
+}
+
+function friendlyFetchError(err) {
+  const raw = err && err.message ? String(err.message) : "";
+  if (/failed to fetch|networkerror|load failed|network request failed/i.test(raw)) {
+    return "Couldn't reach YouTube. Check your connection and try again.";
+  }
+  return raw || "Unable to load videos. Check your connection and try again.";
 }
 
 async function fetchVideos(query) {
@@ -513,10 +625,22 @@ async function fetchVideos(query) {
     }
   } catch (err) {
     if (err && err.name === "AbortError") return;
+    if (q === homeQuery) {
+      // Home should never be a dead end. Popular videos come from a different
+      // quota bucket, so this usually succeeds while search is limited.
+      try {
+        const popular = await fetchPopularItems(CONFIG.maxResults);
+        if (popular.length) {
+          currentResults = popular;
+          renderVideos(popular);
+          if (playerEl && !playerEl.hidden) renderSuggestions(popular, currentPlayerVideoId());
+          setStatus("Search is at its daily limit — showing popular videos instead.");
+          return;
+        }
+      } catch (_) { /* fall through to the error state */ }
+    }
     if (grid) renderEmpty("Couldn't load videos", "Check your connection or API key, then try again.");
-    const message =
-      err && err.message ? err.message : "Unable to load videos. Check your connection and try again.";
-    setStatus(message, true, true);
+    setStatus(friendlyFetchError(err), true, true);
     console.error("Failed to load videos:", err);
   }
 }
@@ -583,103 +707,54 @@ function suggestionFromItem(item, currentVideoId) {
   const videoId = toVideoId(item);
   if (!videoId || videoId === currentVideoId) return null;
   const sn = item.snippet || {};
-  const thumb =
-    sn.thumbnails?.high?.url ||
-    sn.thumbnails?.medium?.url ||
-    sn.thumbnails?.default?.url ||
-    `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   return {
     videoId,
     title: decodeEntities(sn.title) || "YouTube video",
     channel: decodeEntities(sn.channelTitle) || "Unknown channel",
-    thumb,
+    thumb: thumbFor(sn, videoId),
     duration: item._duration || "",
     publishedAt: sn.publishedAt,
   };
 }
 
 function buildSuggestionElement(s) {
-  const btn = document.createElement("button");
-  btn.type = "button";
+  const btn = document.createElement("div");
   btn.className = "ps-item";
+  btn.setAttribute("role", "button");
+  btn.setAttribute("tabindex", "0");
   btn.setAttribute("aria-label", `Play ${s.title}`);
   btn.innerHTML = `
     <div class="thumb-wrap">
       <img class="thumb" src="${s.thumb}" alt="" loading="lazy" decoding="async" />
       <span class="duration-badge">${s.duration ? s.duration : '<i class="fas fa-play" aria-hidden="true"></i>'}</span>
+      <button class="queue-add" type="button" aria-label="Add to queue">
+        <i class="fas fa-plus" aria-hidden="true"></i>
+      </button>
     </div>
     <div class="meta">
       <div class="meta-text">
         <h3 class="title"></h3>
         <p class="channel"></p>
-        <span class="queue-indicator" style="font-size:0.7em;color:var(--accent);margin-left:auto;opacity:0;"></span>
       </div>
     </div>`;
   btn.querySelector(".title").textContent = s.title;
   const channelEl = btn.querySelector(".channel");
   if (channelEl) channelEl.textContent = s.channel;
-  const indicator = btn.querySelector(".queue-indicator");
-  if (videoQueue.length > 0) {
-    indicator.textContent = "▶";
-    indicator.style.opacity = "0.7";
-  }
-  btn.addEventListener("click", () => {
-    // Add to queue and play if not already playing
-    if (!mediaPlaying || playerEl.hidden) {
-      addQueue(s.videoId, s.title, s.channel, s.thumb);
+  btn.addEventListener("click", () => openPlayer(s.videoId, s.title, s.channel, s.thumb));
+  btn.addEventListener("keydown", (event) => {
+    if (event.target !== btn) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openPlayer(s.videoId, s.title, s.channel, s.thumb);
     }
-    openPlayer(s.videoId, s.title, s.channel, s.thumb);
+  });
+  const add = btn.querySelector(".queue-add");
+  add.setAttribute("aria-label", `Add ${s.title} to queue`);
+  add.addEventListener("click", (event) => {
+    event.stopPropagation();
+    addToQueue(s);
   });
   return btn;
-}
-
-/* ------------------------- queue management ------------------------- */
-
-function addQueue(videoId, title, channel, thumb) {
-  const existingIdx = videoQueue.findIndex(v => v.videoId === videoId);
-  if (existingIdx >= 0 && existingIdx === 0) return; // Already at front
-  if (existingIdx >= 0) videoQueue.splice(existingIdx, 1);
-  videoQueue.push({ videoId, title, channel, thumb });
-  updateQueueUI();
-}
-
-function playNextInQueue() {
-  if (videoQueue.length === 0) {
-    queueMode = false;
-    return;
-  }
-  const next = videoQueue.shift();
-  openPlayer(next.videoId, next.title, next.channel, next.thumb);
-}
-
-function toggleQueueMode() {
-  queueMode = !queueMode;
-  if (queueMode && videoQueue.length > 0 && mediaPlaying && !playerEl.hidden) {
-    // Already playing, will auto-play next
-  } else if (queueMode && videoQueue.length > 0 && !mediaPlaying) {
-    // Not playing, play the first in queue
-    const next = videoQueue.shift();
-    openPlayer(next.videoId, next.title, next.channel, next.thumb);
-  }
-  updateQueueUI();
-}
-
-function updateQueueUI() {
-  // Update suggestion items to show queue indicator
-  if (!playerSuggest) return;
-  const items = playerSuggest.querySelectorAll(".ps-item");
-  items.forEach((item, idx) => {
-    const indicator = item.querySelector(".queue-indicator");
-    if (indicator && videoQueue.length > 0) {
-      if (idx === 0 && queueMode) {
-        indicator.textContent = "▶";
-        indicator.style.opacity = "0.7";
-      } else {
-        indicator.textContent = "";
-        indicator.style.opacity = "0";
-      }
-    }
-  });
 }
 
 async function loadFallbackSuggestions(videoId) {
@@ -716,6 +791,7 @@ function currentPlayerVideoId() {
 async function renderSuggestions(items, currentVideoId) {
   const container = playerSuggest;
   if (!container) return;
+  if (railQueue) railQueue.hidden = true;
   const list = [];
   for (const item of items || []) {
     const s = suggestionFromItem(item, currentVideoId);
@@ -727,10 +803,335 @@ async function renderSuggestions(items, currentVideoId) {
     if (!fallback.length) return;
     return renderSuggestions(fallback, currentVideoId);
   }
+  currentSuggestions = list;
   container.innerHTML = "";
   const fragment = document.createDocumentFragment();
   for (const s of list) fragment.appendChild(buildSuggestionElement(s));
   container.appendChild(fragment);
+  if (railQueue) railQueue.hidden = false;
+}
+
+/* ------------------------- queue ------------------------- */
+
+// The queue is the list of videos that will play after the current one. It is
+// local to the device and survives a reload; nothing about it depends on the
+// YouTube account.
+function normalizeQueueItem(raw) {
+  if (!raw || !raw.videoId) return null;
+  return {
+    videoId: String(raw.videoId),
+    title: decodeEntities(raw.title) || "YouTube video",
+    channel: decodeEntities(raw.channel) || "YouTube",
+    thumb: raw.thumb || `https://i.ytimg.com/vi/${raw.videoId}/hqdefault.jpg`,
+    duration: raw.duration || "",
+  };
+}
+
+let videoQueue = (() => {
+  const raw = storeGet("ytclone.queue", []);
+  return Array.isArray(raw) ? raw.map(normalizeQueueItem).filter(Boolean) : [];
+})();
+
+let playlists = (() => {
+  const raw = storeGet("ytclone.playlists", []);
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .map((p) => ({
+      id: p && p.id ? String(p.id) : uid(),
+      name: String((p && p.name) || "Playlist"),
+      createdAt: (p && p.createdAt) || Date.now(),
+      items: Array.isArray(p && p.items) ? p.items.map(normalizeQueueItem).filter(Boolean) : [],
+    }))
+    .filter((p) => p.name);
+})();
+
+function persistQueue() {
+  storeSet("ytclone.queue", videoQueue);
+}
+
+function persistPlaylists() {
+  storeSet("ytclone.playlists", playlists);
+}
+
+function updateQueueBadges() {
+  const n = videoQueue.length;
+  for (const el of [queueHeaderBadge, queueBadge]) {
+    if (!el) continue;
+    el.textContent = String(n);
+    el.hidden = n === 0;
+  }
+  if (queueCount) queueCount.textContent = String(n);
+  if (playlistCount) playlistCount.textContent = String(playlists.length);
+}
+
+function addToQueue(item) {
+  const normalized = normalizeQueueItem(item);
+  if (!normalized) return;
+  const existing = videoQueue.findIndex((v) => v.videoId === normalized.videoId);
+  if (existing >= 0) {
+    showToast("Already in the queue.", "fa-check", "queue");
+    return;
+  }
+  videoQueue.push(normalized);
+  persistQueue();
+  renderQueue();
+  showToast(`Added to queue. ${videoQueue.length} waiting.`, "fa-plus", "queue");
+}
+
+function toolButton(icon, label, handler, extraClass) {
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = `icon-btn${extraClass ? ` ${extraClass}` : ""}`;
+  b.setAttribute("aria-label", label);
+  b.innerHTML = `<i class="fas ${icon}" aria-hidden="true"></i>`;
+  b.addEventListener("click", (event) => {
+    event.stopPropagation();
+    handler();
+  });
+  return b;
+}
+
+function buildQueueRow(item, index) {
+  const li = document.createElement("li");
+  li.className = "queue-item";
+
+  const open = document.createElement("button");
+  open.type = "button";
+  open.className = "queue-open";
+  open.setAttribute("aria-label", `Play ${item.title}`);
+  open.innerHTML = `
+    <span class="queue-index">${index + 1}</span>
+    <img class="queue-thumb" src="${item.thumb}" alt="" loading="lazy" decoding="async" />
+    <span class="queue-copy">
+      <span class="queue-title"></span>
+      <span class="queue-channel"></span>
+    </span>`;
+  open.querySelector(".queue-title").textContent = item.title;
+  open.querySelector(".queue-channel").textContent = item.channel || "Queued";
+  open.addEventListener("click", () => playQueueIndex(index));
+
+  const tools = document.createElement("div");
+  tools.className = "queue-tools";
+  const up = toolButton("fa-arrow-up", "Move up", () => moveQueueItem(index, -1));
+  up.disabled = index === 0;
+  const down = toolButton("fa-arrow-down", "Move down", () => moveQueueItem(index, 1));
+  down.disabled = index === videoQueue.length - 1;
+  const remove = toolButton("fa-trash-alt", "Remove from queue", () => removeQueueItem(index), "danger");
+  tools.append(up, down, remove);
+
+  li.append(open, tools);
+  return li;
+}
+
+function renderQueue() {
+  updateQueueBadges();
+  if (queueList) {
+    queueList.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+    videoQueue.forEach((item, index) => fragment.appendChild(buildQueueRow(item, index)));
+    queueList.appendChild(fragment);
+  }
+  const empty = videoQueue.length === 0;
+  if (queueEmpty) queueEmpty.hidden = !empty;
+  for (const btn of [queuePlay, queueSave, queueClear]) {
+    if (btn) btn.disabled = empty;
+  }
+}
+
+function moveQueueItem(index, delta) {
+  const target = index + delta;
+  if (target < 0 || target >= videoQueue.length) return;
+  const [item] = videoQueue.splice(index, 1);
+  videoQueue.splice(target, 0, item);
+  persistQueue();
+  renderQueue();
+}
+
+function removeQueueItem(index) {
+  if (index < 0 || index >= videoQueue.length) return;
+  videoQueue.splice(index, 1);
+  persistQueue();
+  renderQueue();
+  showToast("Removed from queue.", "fa-check", "queue");
+}
+
+function clearQueue() {
+  if (!videoQueue.length) return;
+  videoQueue = [];
+  persistQueue();
+  renderQueue();
+  showToast("Queue cleared.", "fa-check", "queue");
+}
+
+function playQueueIndex(index) {
+  const item = videoQueue[index];
+  if (!item) return;
+  videoQueue = videoQueue.slice(index + 1);
+  persistQueue();
+  renderQueue();
+  closeQueueSheet();
+  openPlayer(item.videoId, item.title, item.channel, item.thumb);
+}
+
+function playNextInQueue() {
+  if (!videoQueue.length) return false;
+  const next = videoQueue.shift();
+  persistQueue();
+  renderQueue();
+  openPlayer(next.videoId, next.title, next.channel, next.thumb);
+  return true;
+}
+
+function saveQueueAsPlaylist(name) {
+  const trimmed = String(name || "").trim();
+  if (!trimmed) {
+    showToast("Give the playlist a name first.", "fa-pen");
+    if (playlistName) playlistName.focus();
+    return;
+  }
+  playlists.unshift({
+    id: uid(),
+    name: trimmed,
+    createdAt: Date.now(),
+    items: videoQueue.slice(),
+  });
+  persistPlaylists();
+  renderPlaylists();
+  if (playlistName) playlistName.value = "";
+  const n = videoQueue.length;
+  showToast(`Saved ${trimmed} with ${n} video${n === 1 ? "" : "s"}.`, "fa-bookmark", "playlist");
+}
+
+function buildPlaylistRow(playlist) {
+  const li = document.createElement("li");
+  li.className = "playlist-item";
+  const count = playlist.items.length;
+  li.innerHTML = `
+    <span class="playlist-stack" aria-hidden="true"><i class="fas fa-list"></i></span>
+    <span class="playlist-copy">
+      <span class="playlist-name"></span>
+      <span class="playlist-meta"></span>
+    </span>
+    <span class="playlist-actions"></span>`;
+  li.querySelector(".playlist-name").textContent = playlist.name;
+  li.querySelector(".playlist-meta").textContent = `${count} video${count === 1 ? "" : "s"}`;
+
+  const actions = li.querySelector(".playlist-actions");
+  const play = document.createElement("button");
+  play.type = "button";
+  play.className = "pill-btn primary";
+  play.textContent = "Play";
+  play.addEventListener("click", () => playPlaylist(playlist.id));
+  const queue = document.createElement("button");
+  queue.type = "button";
+  queue.className = "pill-btn";
+  queue.textContent = "Queue";
+  queue.addEventListener("click", () => queuePlaylist(playlist.id));
+  const del = toolButton("fa-trash-alt", `Delete ${playlist.name}`, () => deletePlaylist(playlist.id));
+  del.className = "icon-btn danger";
+  actions.append(play, queue, del);
+  return li;
+}
+
+function renderPlaylists() {
+  updateQueueBadges();
+  if (!playlistList) return;
+  playlistList.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  for (const playlist of playlists) fragment.appendChild(buildPlaylistRow(playlist));
+  playlistList.appendChild(fragment);
+  if (playlistsEmpty) playlistsEmpty.hidden = playlists.length > 0;
+}
+
+function playPlaylist(id) {
+  const playlist = playlists.find((p) => p.id === id);
+  if (!playlist) return;
+  if (!playlist.items.length) {
+    showToast("That playlist is empty.", "fa-list");
+    return;
+  }
+  const first = playlist.items[0];
+  videoQueue = playlist.items.slice(1);
+  persistQueue();
+  renderQueue();
+  closeQueueSheet();
+  openPlayer(first.videoId, first.title, first.channel, first.thumb);
+}
+
+function queuePlaylist(id) {
+  const playlist = playlists.find((p) => p.id === id);
+  if (!playlist) return;
+  let added = 0;
+  for (const item of playlist.items) {
+    if (videoQueue.some((v) => v.videoId === item.videoId)) continue;
+    videoQueue.push(item);
+    added += 1;
+  }
+  persistQueue();
+  renderQueue();
+  showToast(added ? `${added} added to queue.` : "Those videos are already queued.", added ? "fa-plus" : "fa-check", "queue");
+}
+
+function deletePlaylist(id) {
+  const playlist = playlists.find((p) => p.id === id);
+  if (!playlist) return;
+  const ok = typeof window.confirm === "function"
+    ? window.confirm(`Delete "${playlist.name}"? This cannot be undone.`)
+    : true;
+  if (!ok) return;
+  playlists = playlists.filter((p) => p.id !== id);
+  persistPlaylists();
+  renderPlaylists();
+  showToast("Playlist deleted.", "fa-check", "playlist");
+}
+
+function switchQueueTab(tab) {
+  const showPlaylists = tab === "playlists";
+  if (queueTabQueue) {
+    queueTabQueue.classList.toggle("is-active", !showPlaylists);
+    queueTabQueue.setAttribute("aria-selected", String(!showPlaylists));
+  }
+  if (queueTabPlaylists) {
+    queueTabPlaylists.classList.toggle("is-active", showPlaylists);
+    queueTabPlaylists.setAttribute("aria-selected", String(showPlaylists));
+  }
+  if (queuePanel) queuePanel.hidden = showPlaylists;
+  if (playlistsPanel) playlistsPanel.hidden = !showPlaylists;
+}
+
+function openQueueSheet(tab) {
+  if (!queueSheet) return;
+  sheetReturnFocus = document.activeElement;
+  // Lock the feed behind the sheet only when the theatre player is not already
+  // holding the page still. Closing restores exactly what was there.
+  if ((!playerEl || playerEl.hidden) && sheetLockedScroll === null) {
+    sheetLockedScroll = document.body.style.overflow || "";
+    document.body.style.overflow = "hidden";
+  }
+  renderQueue();
+  renderPlaylists();
+  switchQueueTab(tab || "queue");
+  queueSheet.hidden = false;
+  requestAnimationFrame(() => requestAnimationFrame(() => queueSheet.classList.add("is-open")));
+  setTimeout(() => { if (queueClose) queueClose.focus(); }, 80);
+}
+
+function closeQueueSheet() {
+  if (!queueSheet || queueSheet.hidden) return;
+  queueSheet.classList.remove("is-open");
+  const sheet = queueSheet;
+  setTimeout(() => {
+    if (!sheet.classList.contains("is-open")) sheet.hidden = true;
+  }, 320);
+  if (sheetLockedScroll !== null) {
+    document.body.style.overflow = sheetLockedScroll;
+    sheetLockedScroll = null;
+  }
+  const back = sheetReturnFocus;
+  sheetReturnFocus = null;
+  if (back && typeof back.focus === "function") {
+    setTimeout(() => { try { back.focus(); } catch (_) { /* gone */ } }, 60);
+  }
 }
 
 /* ------------------------- player plumbing ------------------------- */
@@ -791,6 +1192,19 @@ function ytCommand(func) {
   } catch (_) { /* ignore */ }
 }
 
+// Ask the embed to post player state back. Without this handshake YouTube only
+// answers direct commands, so we could not tell when a video ended.
+function ytListen() {
+  try {
+    if (playerFrame && playerFrame.contentWindow) {
+      playerFrame.contentWindow.postMessage(
+        JSON.stringify({ event: "listening", id: "player-frame", channel: "ytclone" }),
+        "*"
+      );
+    }
+  } catch (_) { /* ignore */ }
+}
+
 // Reveal the live YouTube frame over the poster once it has painted. A timeout
 // fallback means a blocked/slow embed can never leave an invisible player.
 function revealFrame() {
@@ -833,21 +1247,40 @@ function measureTile() {
   }
 }
 
-function layoutVideoBox() {
+function layoutFill() {
   const wrap = playerVideoWrap;
   const holder = playerFrameHolder;
-  if (!wrap || !holder || miniActive || audioMode) return;
-  // Mini / audio modes are styled by CSS classes only. The iframe is never
-  // detached or re-created, so switching modes cannot restart playback.
+  if (!wrap || !holder) return;
   const rect = wrap.getBoundingClientRect();
   const w = rect.width;
   const h = rect.height;
   if (!w || !h) return;
-  if (zoomEnabled) {
-    holder.style.width = `${Math.round(w)}px`;
-    holder.style.height = `${Math.round(h)}px`;
+  // Scale the 16:9 embed until it covers the whole window, then let the holder
+  // crop the overhang. The iframe itself is never re-created.
+  const scale = Math.max(w / 16, h / 9);
+  const frameW = Math.round(16 * scale);
+  const frameH = Math.round(9 * scale);
+  holder.style.width = `${frameW}px`;
+  holder.style.height = `${frameH}px`;
+  holder.style.left = `${Math.round((w - frameW) / 2)}px`;
+  holder.style.top = `${Math.round((h - frameH) / 2)}px`;
+}
+
+function layoutVideoBox() {
+  const wrap = playerVideoWrap;
+  const holder = playerFrameHolder;
+  if (!wrap || !holder || miniActive || audioMode) return;
+  if (fillMode) {
+    layoutFill();
     return;
   }
+  // Leaving fill clears the centring offsets it wrote.
+  holder.style.left = "";
+  holder.style.top = "";
+  const rect = wrap.getBoundingClientRect();
+  const w = rect.width;
+  const h = rect.height;
+  if (!w || !h) return;
   // The video always fills its 16:9 frame. Narrowing it to the grid tile width
   // left a dead black band beside it on tablets and phones.
   let W = Math.min((h * 16) / 9, w);
@@ -866,11 +1299,41 @@ function setupPlayerLayout() {
     resizeObserver = null;
   }
   if (playerVideoWrap && typeof ResizeObserver !== "undefined") {
-    resizeObserver = new ResizeObserver(() => layoutVideoBox());
+    resizeObserver = new ResizeObserver(() => {
+      if (fillMode) layoutFill();
+      else layoutVideoBox();
+    });
     resizeObserver.observe(playerVideoWrap);
   }
-  window.addEventListener("resize", () => { measureTile(); layoutVideoBox(); });
-  window.addEventListener("orientationchange", () => setTimeout(() => { measureTile(); layoutVideoBox(); }, 0));
+}
+
+function setFill(on) {
+  if (!playerEl || playerEl.hidden) return;
+  const next = Boolean(on);
+  if (next && miniActive) exitMini(false);
+  if (next && audioMode) setAudioMode(false);
+  fillMode = next;
+  playerEl.classList.toggle("is-fill", next);
+  if (playerFrameHolder) {
+    playerFrameHolder.classList.toggle("zoomed", next);
+    // The centring offsets are written only by layoutFill; clear them the
+    // moment fill ends so mini/audio/theatre can centre with flex again.
+    if (!next) {
+      playerFrameHolder.style.left = "";
+      playerFrameHolder.style.top = "";
+    }
+  }
+  if (zoomToggle) {
+    zoomToggle.setAttribute("aria-checked", String(next));
+    zoomToggle.setAttribute("aria-pressed", String(next));
+    zoomToggle.setAttribute("aria-label", next ? "Exit fill" : "Fill the screen");
+    const icon = zoomToggle.querySelector("i");
+    if (icon) icon.className = next ? "fas fa-compress" : "fas fa-expand";
+  }
+  requestAnimationFrame(() => {
+    if (next) layoutFill();
+    else layoutVideoBox();
+  });
 }
 
 function setAudioMode(on) {
@@ -880,6 +1343,7 @@ function setAudioMode(on) {
     exitMini(false);
     if (playerEl && !playerEl.hidden) document.body.style.overflow = "hidden";
   }
+  if (on && fillMode) setFill(false);
   audioMode = Boolean(on);
   // CSS sizes the frame in audio mode; no inline style and no src change.
   if (playerEl) playerEl.classList.toggle("audio-mode", audioMode);
@@ -892,6 +1356,7 @@ function setAudioMode(on) {
 
 function enterMini() {
   if (!playerEl || playerEl.hidden) return;
+  if (fillMode) setFill(false);
   setAudioMode(false);
   measureTile();
   miniActive = true;
@@ -933,6 +1398,8 @@ function openPlayer(videoId, title, channel, thumb) {
   const resolvedId = toVideoId({ id: { videoId } }) || videoId;
   if (miniActive) exitMini(false);
   setAudioMode(false);
+  endedFor = "";
+  playerOpenedAt = Date.now();
   // Poster + soft fade: opening the player should never flash an empty black
   // stage while the embed loads.
   if (playerFrame) playerFrame.classList.remove("is-ready");
@@ -958,7 +1425,7 @@ function openPlayer(videoId, title, channel, thumb) {
       const img = document.createElement("img");
       img.src = thumb;
       img.alt = "";
-      img.style.cssText = "width:100%;height:100%;object-fit:cover;border-radius:14px";
+      img.style.cssText = "width:100%;height:100%;object-fit:cover;border-radius:inherit";
       audioArt.appendChild(img);
     } else {
       audioArt.innerHTML = '<i class="fas fa-headphones" aria-hidden="true"></i>';
@@ -973,7 +1440,12 @@ function openPlayer(videoId, title, channel, thumb) {
   window.scrollTo(0, 0);
   setupPlayerLayout();
   measureTile();
-  requestAnimationFrame(() => layoutVideoBox());
+  requestAnimationFrame(() => {
+    if (fillMode) layoutFill();
+    else layoutVideoBox();
+  });
+  clearTimeout(listeningTimer);
+  listeningTimer = setTimeout(() => { ytListen(); setTimeout(ytListen, 900); }, 500);
 }
 
 function closePlayer() {
@@ -981,6 +1453,7 @@ function closePlayer() {
   try { ytCommand("stopVideo"); } catch (_) { /* ignore */ }
   playerFrame.src = "";
   setMediaPlaying(false);
+  if (fillMode) setFill(false);
   miniActive = false;
   playerEl.classList.remove("mini");
   if (miniToggle) miniToggle.setAttribute("aria-pressed", "false");
@@ -994,15 +1467,20 @@ function closePlayer() {
   window.scrollTo(0, y);
 }
 
-// Android back: full player -> floating mini player, then a second back closes.
-// Both steps are CSS-only, so the iframe is never re-created and audio continues.
+// Android back: fill -> theatre, full player -> floating mini, then close.
+// Both steps are CSS-only, so the iframe is never re-created.
 window.__onAndroidBack = function () {
+  if (queueSheet && !queueSheet.hidden) {
+    closeQueueSheet();
+    return true;
+  }
   if (profilePanel && !profilePanel.hidden) {
     closeProfile();
     return true;
   }
   if (playerEl && !playerEl.hidden) {
-    if (miniActive) closePlayer();
+    if (fillMode) setFill(false);
+    else if (miniActive) closePlayer();
     else enterMini();
     return true;
   }
@@ -1039,6 +1517,77 @@ function AllowCam() {
 
 function toggleMenu() {}
 
+/* ------------------------- gestures ------------------------- */
+
+// Touches over the YouTube iframe belong to YouTube, so the page owns a real
+// gesture target: the video edges and the now-playing strip. A short swipe up
+// fills the screen; a swipe down on the floating bar leaves it.
+function attachSwipe(el) {
+  if (!el) return;
+  let startX = 0;
+  let startY = 0;
+  let tracking = false;
+  el.addEventListener("touchstart", (e) => {
+    if (e.touches.length !== 1) { tracking = false; return; }
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    tracking = true;
+  }, { passive: true });
+  el.addEventListener("touchend", (e) => {
+    if (!tracking) return;
+    tracking = false;
+    const t = e.changedTouches[0];
+    if (!t) return;
+    const dy = t.clientY - startY;
+    const dx = t.clientX - startX;
+    if (Math.abs(dy) < 56 || Math.abs(dy) < Math.abs(dx) * 1.3) return;
+    if (dy < 0 && !fillMode) setFill(true);
+    else if (dy > 0 && fillMode) setFill(false);
+  }, { passive: true });
+}
+attachSwipe(playerVideoWrap);
+attachSwipe(playerInfo);
+
+/* ------------------------- YouTube player state ------------------------- */
+
+// The embed posts state back after the listening handshake. state 0 is ended,
+// which is our cue to start the next queued video instead of showing YouTube's
+// end screen.
+function handlePlayerState(state) {
+  const id = currentPlayerVideoId();
+  if (state === 1) {
+    endedFor = "";
+    setMediaPlaying(true);
+  } else if (state === 2) {
+    setMediaPlaying(false);
+  } else if (state === 0) {
+    setMediaPlaying(false);
+    if (!id || endedFor === id) return;
+    // A stale "ended" from the previous video can land just after a new src.
+    if (Date.now() - playerOpenedAt < 1600) return;
+    endedFor = id;
+    if (!videoQueue.length) return;
+    if (!playerEl || playerEl.hidden) return;
+    setTimeout(() => { playNextInQueue(); }, 400);
+  }
+}
+
+window.addEventListener("message", (event) => {
+  let origin = "";
+  try { origin = new URL(event.origin).hostname; } catch (_) { return; }
+  if (!/(^|\.)youtube\.com$/.test(origin) && !/(^|\.)youtube-nocookie\.com$/.test(origin)) return;
+  let data = event.data;
+  if (typeof data === "string") {
+    try { data = JSON.parse(data); } catch (_) { return; }
+  }
+  if (!data || typeof data !== "object") return;
+  if (data.event === "onStateChange" && typeof data.info === "number") {
+    handlePlayerState(data.info);
+  } else if (data.event === "infoDelivery" && data.info && typeof data.info.playerState === "number") {
+    handlePlayerState(data.info.playerState);
+  }
+});
+
 /* ------------------------- event wiring ------------------------- */
 
 if (chipsEl) {
@@ -1061,22 +1610,24 @@ if (clearBtn && searchInput) {
 
 if (playerCollapse) playerCollapse.addEventListener("click", closePlayer);
 if (audioToggle) audioToggle.addEventListener("click", () => setAudioMode(!audioMode));
-const queueToggleEl = document.getElementById("queue-toggle");
-if (queueToggleEl) queueToggleEl.addEventListener("click", () => toggleQueueMode());
 if (audioPlay) audioPlay.addEventListener("click", togglePlayback);
 if (miniToggle) miniToggle.addEventListener("click", () => (miniActive ? exitMini(true) : enterMini()));
 if (miniPlay) miniPlay.addEventListener("click", togglePlayback);
 if (miniExpand) miniExpand.addEventListener("click", () => exitMini(true));
 if (miniClose) miniClose.addEventListener("click", closePlayer);
+if (fillGrab) fillGrab.addEventListener("click", () => setFill(!fillMode));
+if (zoomToggle) zoomToggle.addEventListener("click", () => setFill(!fillMode));
+
 if (playerEl) {
   playerEl.addEventListener("click", (e) => {
-    if (e.target === playerEl) closePlayer();
+    if (e.target === playerEl && !fillMode) closePlayer();
   });
 }
 if (playerFrame) {
   playerFrame.addEventListener("load", () => {
     // Ignore the empty-src load fired by closePlayer().
     if (!playerFrame.getAttribute("src")) return;
+    ytListen();
     // Two frames gives the embed a chance to paint before the poster leaves.
     requestAnimationFrame(() => requestAnimationFrame(revealFrame));
   });
@@ -1092,39 +1643,91 @@ document.addEventListener("visibilitychange", () => {
   if (!mediaPlaying || !playerFrame || !playerFrame.src) return;
   setTimeout(() => ytCommand("playVideo"), 300);
 });
-if (zoomToggle) {
-  zoomToggle.addEventListener("click", () => {
-    zoomEnabled = !zoomEnabled;
-    const on = zoomEnabled;
-    zoomToggle.setAttribute("aria-checked", on ? "true" : "false");
-    zoomToggle.setAttribute("aria-pressed", on ? "true" : "false");
-    layoutVideoBox();
-    // Apply zoom to fill when enabled
-    if (on && playerFrameHolder) {
-      playerFrameHolder.classList.add("zoomed");
-    } else if (playerFrameHolder) {
-      playerFrameHolder.classList.remove("zoomed");
+
+window.addEventListener("resize", () => { measureTile(); if (fillMode) layoutFill(); else layoutVideoBox(); });
+window.addEventListener("orientationchange", () => setTimeout(() => {
+  measureTile();
+  if (fillMode) layoutFill();
+  else layoutVideoBox();
+}, 0));
+
+/* queue sheet wiring */
+if (queueHeaderBtn) queueHeaderBtn.addEventListener("click", () => openQueueSheet("queue"));
+const queueToggleEl = document.getElementById("queue-toggle");
+if (queueToggleEl) queueToggleEl.addEventListener("click", () => openQueueSheet("queue"));
+if (queueClose) queueClose.addEventListener("click", closeQueueSheet);
+if (queueSheet) {
+  queueSheet.addEventListener("click", (e) => {
+    if (e.target === queueSheet) closeQueueSheet();
+  });
+  queueSheet.addEventListener("keydown", (e) => {
+    if (e.key !== "Tab" || !queueDialog) return;
+    const focusables = queueDialog.querySelectorAll(
+      'button:not([disabled]), input, [href], [tabindex]:not([tabindex="-1"])'
+    );
+    if (!focusables.length) return;
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   });
 }
+if (queueTabQueue) queueTabQueue.addEventListener("click", () => switchQueueTab("queue"));
+if (queueTabPlaylists) queueTabPlaylists.addEventListener("click", () => switchQueueTab("playlists"));
+if (queuePlay) queuePlay.addEventListener("click", () => playQueueIndex(0));
+if (queueClear) queueClear.addEventListener("click", clearQueue);
+if (queueSave) {
+  queueSave.addEventListener("click", () => {
+    switchQueueTab("playlists");
+    if (playlistName) {
+      playlistName.value = `Queue ${playlists.length + 1}`;
+      playlistName.focus();
+      playlistName.select();
+      playlistName.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+}
+if (playlistForm) {
+  playlistForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    saveQueueAsPlaylist(playlistName ? playlistName.value : "");
+  });
+}
+if (railQueue) {
+  railQueue.addEventListener("click", () => {
+    const current = currentPlayerVideoId();
+    let added = 0;
+    for (const s of currentSuggestions) {
+      if (s.videoId === current) continue;
+      if (videoQueue.some((v) => v.videoId === s.videoId)) continue;
+      videoQueue.push(normalizeQueueItem(s));
+      added += 1;
+    }
+    persistQueue();
+    renderQueue();
+    showToast(added ? `${added} added to queue.` : "Those videos are already queued.", added ? "fa-plus" : "fa-check", "queue");
+  });
+}
+
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    if (profilePanel && !profilePanel.hidden) closeProfile();
-    else if (playerEl && !playerEl.hidden && !miniActive && zoomEnabled) {
-      // Exit zoom-to-fill mode instead of closing player
-      zoomEnabled = false;
-      if (zoomToggle) {
-        zoomToggle.setAttribute("aria-checked", "false");
-        zoomToggle.setAttribute("aria-pressed", "false");
-      }
-      if (playerFrameHolder) playerFrameHolder.classList.remove("zoomed");
-      layoutVideoBox();
-    } else if (playerEl && !playerEl.hidden && miniActive) {
-      // Leave the floating player and return to full theatre view.
-      exitMini(true);
-    } else {
-      closePlayer();
-    }
+    if (queueSheet && !queueSheet.hidden) closeQueueSheet();
+    else if (profilePanel && !profilePanel.hidden) closeProfile();
+    else if (playerEl && !playerEl.hidden && fillMode) setFill(false);
+    else if (playerEl && !playerEl.hidden && miniActive) exitMini(true);
+    else if (playerEl && !playerEl.hidden) closePlayer();
+    return;
+  }
+  const tag = document.activeElement && document.activeElement.tagName;
+  if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+  if ((e.key === "f" || e.key === "F") && playerEl && !playerEl.hidden) {
+    e.preventDefault();
+    setFill(!fillMode);
   }
 });
 
@@ -1172,4 +1775,6 @@ if (googleLoginBtn) googleLoginBtn.addEventListener("click", async () => {
   }
 });
 
+renderQueue();
+renderPlaylists();
 loadConfig();
