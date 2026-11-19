@@ -50,6 +50,9 @@ const miniClose = document.getElementById("mini-close");
 const profilePanel = document.getElementById("profile-panel");
 const googleLoginBtn = document.getElementById("google-login-btn");
 const profileNameInput = document.getElementById("profile-name");
+const apiKeyInput = document.getElementById("api-key-input");
+const apiKeySave = document.getElementById("api-key-save");
+const apiKeyStatus = document.getElementById("api-key-status");
 const brandText = document.getElementById("brand-text");
 const profileBtn = document.getElementById("profile-btn");
 const homeLink = document.getElementById("home-link");
@@ -152,8 +155,15 @@ function uid() {
   return `p${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
 }
 
+// A key saved in this browser wins over the shipped one. Search quota is per
+// Google Cloud project, so a personal key cannot be used up by anyone else.
+function customApiKey() {
+  const raw = storeGet("ytclone.apiKey", "");
+  return typeof raw === "string" ? raw.trim() : "";
+}
+
 function apiKeys() {
-  const list = [CONFIG.apiKey, ...(Array.isArray(CONFIG.apiKeys) ? CONFIG.apiKeys : [])]
+  const list = [customApiKey(), CONFIG.apiKey, ...(Array.isArray(CONFIG.apiKeys) ? CONFIG.apiKeys : [])]
     .filter((k) => typeof k === "string" && k.trim());
   return [...new Set(list)];
 }
@@ -265,7 +275,7 @@ function writeSearchCache(q, items) {
   storeSet("ytclone.searchCache", Object.fromEntries(kept));
 }
 
-function setStatus(message, isError = false, showRetry = false) {
+function setStatus(message, isError = false, showRetry = false, action = null) {
   if (!statusEl) return;
   statusEl.classList.toggle("error", Boolean(isError));
   statusEl.innerHTML = "";
@@ -278,6 +288,14 @@ function setStatus(message, isError = false, showRetry = false) {
     btn.className = "retry-btn";
     btn.textContent = "Retry";
     btn.addEventListener("click", () => fetchVideos(lastQuery));
+    statusEl.appendChild(btn);
+  }
+  if (action && typeof action.onClick === "function") {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "retry-btn";
+    btn.textContent = action.label;
+    btn.addEventListener("click", action.onClick);
     statusEl.appendChild(btn);
   }
 }
@@ -447,12 +465,64 @@ function openProfile() {
   if (!profilePanel) return;
   const p = getProfile();
   if (profileNameInput) profileNameInput.value = p.name || "";
+  if (apiKeyInput) apiKeyInput.value = customApiKey();
+  updateApiKeyHint();
   renderHistory();
   profilePanel.hidden = false;
 }
 
 function closeProfile() {
   if (profilePanel) profilePanel.hidden = true;
+}
+
+function updateApiKeyHint() {
+  if (!apiKeyStatus) return;
+  apiKeyStatus.textContent = customApiKey()
+    ? "Using your own key on this device. It is tried before the shared key."
+    : "Using the app's shared key. Its daily search limit is shared by everyone.";
+}
+
+// A wrong key is worse than no key: it would replace a working shared key with
+// a broken one, so the key is checked against YouTube before it is stored.
+async function saveApiKey() {
+  const raw = (apiKeyInput && apiKeyInput.value.trim()) || "";
+  if (raw && !/^[A-Za-z0-9_-]{20,}$/.test(raw)) {
+    if (apiKeyStatus) apiKeyStatus.textContent = "That doesn't look like an API key. Keys are long and start with AIza.";
+    showToast("That doesn't look like an API key.", "fa-keyboard", "settings");
+    if (apiKeyInput) apiKeyInput.focus();
+    return;
+  }
+  if (raw) {
+    if (apiKeyStatus) apiKeyStatus.textContent = "Checking the key with YouTube…";
+    if (apiKeySave) apiKeySave.disabled = true;
+    try {
+      const res = await fetch(apiUrl("videos", { part: "snippet", chart: "mostPopular", maxResults: 1 }, raw));
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const reason = String(data?.error?.errors?.[0]?.reason || data?.error?.status || "");
+        const message = apiErrorText(reason, res.status);
+        if (apiKeyStatus) apiKeyStatus.textContent = message;
+        showToast(message, "fa-exclamation-triangle", "settings");
+        return;
+      }
+    } catch (_) {
+      if (apiKeyStatus) apiKeyStatus.textContent = "Couldn't reach YouTube to check the key. Try again in a moment.";
+      return;
+    } finally {
+      if (apiKeySave) apiKeySave.disabled = false;
+    }
+    storeSet("ytclone.apiKey", raw);
+  } else {
+    try { localStorage.removeItem("ytclone.apiKey"); } catch (_) { /* storage may be unavailable */ }
+  }
+  // Cached answers were fetched with the old key; drop them so the new key is
+  // actually used on the next search.
+  try { localStorage.removeItem("ytclone.searchCache"); } catch (_) { /* storage may be unavailable */ }
+  apiKeyIndex = 0;
+  updateApiKeyHint();
+  showToast(raw ? "Your key is saved and is tried first." : "Back to the shared key.", "fa-check", "settings");
+  closeProfile();
+  fetchHome();
 }
 
 function saveProfile() {
@@ -697,13 +767,36 @@ function friendlyFetchError(err) {
   return raw || "Couldn't load videos. Check your connection and try again.";
 }
 
-function showFeed(items, message, { error = false, retry = false } = {}) {
+function showFeed(items, message, { error = false, retry = false, action = null } = {}) {
   currentResults = items;
   renderVideos(items);
   if (items.length && playerEl && !playerEl.hidden) {
     renderSuggestions(items, currentPlayerVideoId());
   }
-  if (message) setStatus(message, error, retry);
+  if (message) setStatus(message, error, retry, action);
+}
+
+// When a search is refused for quota, offer the one fix that removes the shared
+// limit: the user's own key. Hidden once a key is already saved.
+function addKeyAction() {
+  if (customApiKey()) return null;
+  return { label: "Add your key", onClick: focusApiKeyField };
+}
+
+function searchLimitedMessage(detail) {
+  if (customApiKey()) {
+    return "Search is limited today — your key used up its YouTube quota. Keys reset at midnight Pacific Time.";
+  }
+  return `Search is limited today — ${detail}`;
+}
+
+function focusApiKeyField() {
+  openProfile();
+  setTimeout(() => {
+    if (!apiKeyInput) return;
+    apiKeyInput.scrollIntoView({ behavior: "smooth", block: "center" });
+    apiKeyInput.focus();
+  }, 140);
 }
 
 // Home is a browse view, not a search: it reads the popular feed, which costs
@@ -766,7 +859,9 @@ async function fetchVideos(query) {
     // label. The user never sees Google's raw quota text.
     const saved = readSearchCache(q, { allowStale: true });
     if (saved) {
-      showFeed(saved.items, `Search is limited today — showing saved results for "${q}".`);
+      showFeed(saved.items, searchLimitedMessage(`showing saved results for "${q}".`), {
+        action: addKeyAction(),
+      });
       return;
     }
     try {
@@ -782,9 +877,12 @@ async function fetchVideos(query) {
       if (items.length) {
         showFeed(
           items,
-          matches.length
-            ? `Search is limited today — popular matches for "${q}".`
-            : "Search is limited today — showing popular videos."
+          searchLimitedMessage(
+            matches.length
+              ? `popular matches for "${q}".`
+              : "showing popular videos."
+          ),
+          { action: addKeyAction() }
         );
         return;
       }
@@ -1934,6 +2032,15 @@ if (profilePanel) {
 }
 const profileSave = document.getElementById("profile-save");
 if (profileSave) profileSave.addEventListener("click", saveProfile);
+if (apiKeySave) apiKeySave.addEventListener("click", saveApiKey);
+if (apiKeyInput) {
+  apiKeyInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      saveApiKey();
+    }
+  });
+}
 const historyClear = document.getElementById("history-clear");
 if (historyClear) historyClear.addEventListener("click", resetProfile);
 const feedReset = document.getElementById("feed-reset");

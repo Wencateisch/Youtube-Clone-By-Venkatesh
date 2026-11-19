@@ -1,7 +1,7 @@
 // Bump this on every release. Cache-first for immutable art, network-first for
 // the app shell: a stale shell is worse than an offline miss, and the previous
 // cache-first version meant users kept the old CSS/JS for months.
-const CACHE_NAME = "yt-clone-v9";
+const CACHE_NAME = "yt-clone-v10";
 const APP_SHELL = [
   "./",
   "./index.html",
