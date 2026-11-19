@@ -42,7 +42,6 @@ const miniToggle = document.getElementById("mini-toggle");
 const miniExpand = document.getElementById("mini-expand");
 const miniClose = document.getElementById("mini-close");
 const profilePanel = document.getElementById("profile-panel");
-const pipToggle = document.getElementById("pip-toggle");
 const googleLoginBtn = document.getElementById("google-login-btn");
 const profileNameInput = document.getElementById("profile-name");
 const brandText = document.getElementById("brand-text");
@@ -61,6 +60,7 @@ let mediaPlaying = false;
 let currentTileWidth = 0;
 let playerScrollY = 0;
 let resizeObserver = null;
+let frameReadyTimer = 0;
 let videoQueue = [];
 let queueMode = false;
 let queueAutoPlay = true; // Auto-play next video
@@ -78,6 +78,24 @@ function notifyPlaybackActive(active) {
 }
 
 /* ------------------------- small utilities ------------------------- */
+
+// The YouTube API returns titles with HTML entities ("HTML &amp; CSS"). We
+// render text nodes, so the entity would otherwise show up verbatim.
+function decodeEntities(text) {
+  const value = text == null ? "" : String(text);
+  if (value.indexOf("&") === -1) return value;
+  const named = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+  return value.replace(/&(#x?[0-9a-fA-F]+|[a-zA-Z]+);/g, (match, code) => {
+    if (code.charAt(0) === "#") {
+      const n = code.charAt(1).toLowerCase() === "x"
+        ? parseInt(code.slice(2), 16)
+        : parseInt(code.slice(1), 10);
+      return Number.isFinite(n) ? String.fromCodePoint(n) : match;
+    }
+    const key = code.toLowerCase();
+    return Object.prototype.hasOwnProperty.call(named, key) ? named[key] : match;
+  });
+}
 
 function storeGet(key, fallback) {
   try {
@@ -395,8 +413,8 @@ function renderVideos(items = []) {
   for (const item of videos) {
     const videoId = item.id.videoId;
     const sn = item.snippet || {};
-    const title = sn.title || "YouTube video";
-    const channel = sn.channelTitle || "Unknown channel";
+    const title = decodeEntities(sn.title) || "YouTube video";
+    const channel = decodeEntities(sn.channelTitle) || "Unknown channel";
     const when = timeAgo(sn.publishedAt);
     const duration = item._duration || "";
     const sub = [when].filter(Boolean).join(" • ") || "Tap to play";
@@ -572,8 +590,8 @@ function suggestionFromItem(item, currentVideoId) {
     `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   return {
     videoId,
-    title: sn.title || "YouTube video",
-    channel: sn.channelTitle || "Unknown channel",
+    title: decodeEntities(sn.title) || "YouTube video",
+    channel: decodeEntities(sn.channelTitle) || "Unknown channel",
     thumb,
     duration: item._duration || "",
     publishedAt: sn.publishedAt,
@@ -773,8 +791,20 @@ function ytCommand(func) {
   } catch (_) { /* ignore */ }
 }
 
+// Reveal the live YouTube frame over the poster once it has painted. A timeout
+// fallback means a blocked/slow embed can never leave an invisible player.
+function revealFrame() {
+  clearTimeout(frameReadyTimer);
+  frameReadyTimer = 0;
+  if (playerFrame) playerFrame.classList.add("is-ready");
+  if (playerFrameHolder) playerFrameHolder.style.backgroundImage = "";
+}
+
 function setMediaPlaying(playing) {
   mediaPlaying = Boolean(playing);
+  // Read by the service-worker upgrade handler in index.html: never reload the
+  // page out from under a playing video.
+  document.documentElement.dataset.playing = mediaPlaying ? "1" : "0";
   notifyPlaybackActive(mediaPlaying);
   const icon = mediaPlaying ? "fa-pause" : "fa-play";
   const label = mediaPlaying ? "Pause" : "Play";
@@ -818,9 +848,9 @@ function layoutVideoBox() {
     holder.style.height = `${Math.round(h)}px`;
     return;
   }
-  // Desktop theatre: the video fills the stage, not the grid tile width.
-  const wide = window.matchMedia && window.matchMedia("(min-width: 901px), (orientation: landscape)").matches;
-  let W = Math.min((h * 16) / 9, w, wide ? w : currentTileWidth || w);
+  // The video always fills its 16:9 frame. Narrowing it to the grid tile width
+  // left a dead black band beside it on tablets and phones.
+  let W = Math.min((h * 16) / 9, w);
   let H = (W * 9) / 16;
   if (H < 200) {
     H = Math.min(200, h);
@@ -866,7 +896,7 @@ function enterMini() {
   measureTile();
   miniActive = true;
   playerEl.classList.add("mini");
-  if (pipToggle) pipToggle.setAttribute("aria-pressed", "true");
+  if (miniToggle) miniToggle.setAttribute("aria-pressed", "true");
   if (miniTitle) miniTitle.textContent = (playerTitle && playerTitle.textContent) || "YouTube video";
   if (miniEl) miniEl.hidden = false;
   document.body.style.overflow = "";
@@ -887,7 +917,7 @@ function exitMini(showFullPlayer = true) {
   if (!miniActive) return;
   miniActive = false;
   playerEl.classList.remove("mini");
-  if (pipToggle) pipToggle.setAttribute("aria-pressed", "false");
+  if (miniToggle) miniToggle.setAttribute("aria-pressed", "false");
   if (miniEl) miniEl.hidden = true;
   if (showFullPlayer && playerEl) {
     playerEl.hidden = false;
@@ -903,10 +933,21 @@ function openPlayer(videoId, title, channel, thumb) {
   const resolvedId = toVideoId({ id: { videoId } }) || videoId;
   if (miniActive) exitMini(false);
   setAudioMode(false);
+  // Poster + soft fade: opening the player should never flash an empty black
+  // stage while the embed loads.
+  if (playerFrame) playerFrame.classList.remove("is-ready");
+  if (playerFrameHolder) {
+    playerFrameHolder.style.backgroundImage = thumb ? `url("${thumb}")` : "";
+    playerFrameHolder.classList.remove("opening");
+    void playerFrameHolder.offsetWidth;
+    playerFrameHolder.classList.add("opening");
+  }
+  clearTimeout(frameReadyTimer);
+  frameReadyTimer = setTimeout(revealFrame, 3000);
   playerFrame.src = `https://www.youtube.com/embed/${resolvedId}?autoplay=1&playsinline=1&rel=0&enablejsapi=1`;
   setMediaPlaying(true);
-  const safeTitle = title || "YouTube video";
-  const safeChannel = channel || "";
+  const safeTitle = decodeEntities(title) || "YouTube video";
+  const safeChannel = decodeEntities(channel);
   if (playerTitle) playerTitle.textContent = safeTitle;
   if (playerChannel) playerChannel.textContent = safeChannel;
   if (audioTitle) audioTitle.textContent = safeTitle;
@@ -942,7 +983,7 @@ function closePlayer() {
   setMediaPlaying(false);
   miniActive = false;
   playerEl.classList.remove("mini");
-  if (pipToggle) pipToggle.setAttribute("aria-pressed", "false");
+  if (miniToggle) miniToggle.setAttribute("aria-pressed", "false");
   if (miniEl) miniEl.hidden = true;
   setAudioMode(false);
   playerEl.hidden = true;
@@ -1023,13 +1064,21 @@ if (audioToggle) audioToggle.addEventListener("click", () => setAudioMode(!audio
 const queueToggleEl = document.getElementById("queue-toggle");
 if (queueToggleEl) queueToggleEl.addEventListener("click", () => toggleQueueMode());
 if (audioPlay) audioPlay.addEventListener("click", togglePlayback);
-if (miniToggle) miniToggle.addEventListener("click", enterMini);
+if (miniToggle) miniToggle.addEventListener("click", () => (miniActive ? exitMini(true) : enterMini()));
 if (miniPlay) miniPlay.addEventListener("click", togglePlayback);
 if (miniExpand) miniExpand.addEventListener("click", () => exitMini(true));
 if (miniClose) miniClose.addEventListener("click", closePlayer);
 if (playerEl) {
   playerEl.addEventListener("click", (e) => {
     if (e.target === playerEl) closePlayer();
+  });
+}
+if (playerFrame) {
+  playerFrame.addEventListener("load", () => {
+    // Ignore the empty-src load fired by closePlayer().
+    if (!playerFrame.getAttribute("src")) return;
+    // Two frames gives the embed a chance to paint before the poster leaves.
+    requestAnimationFrame(() => requestAnimationFrame(revealFrame));
   });
 }
 document.addEventListener("fullscreenchange", handleFullscreenChange);
@@ -1108,17 +1157,6 @@ const updatesBtn = document.getElementById("updates-btn");
 if (updatesBtn) updatesBtn.addEventListener("click", () => { openProfile(); checkForUpdates(); });
 const libraryBtn = document.getElementById("library-btn");
 if (libraryBtn) libraryBtn.addEventListener("click", openProfile);
-
-// Picture in picture reuses the mini player. The old implementation created a
-// second iframe with the same URL, which restarted the video from 0:00 — the
-// exact behaviour we must avoid. Now only a CSS class changes.
-if (pipToggle) {
-  pipToggle.addEventListener("click", () => {
-    if (!playerEl || playerEl.hidden) return;
-    if (miniActive) exitMini(true);
-    else enterMini();
-  });
-}
 
 // Google login support
 if (googleLoginBtn) googleLoginBtn.addEventListener("click", async () => {

@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="./index.css?v=1.6.0" />
+    <link rel="stylesheet" href="./index.css?v=1.6.1" />
   </head>
   <body>
     <header id="navBar" class="nav-bar">
@@ -110,28 +110,30 @@
             <i class="fas fa-times" aria-hidden="true"></i>
           </button>
         </div>
-      </div>
-      <aside class="player-rail" aria-label="Up next">
-        <div class="player-rail-head">
-          <div class="player-rail-meta">
+        <div class="player-info">
+          <div class="player-info-text">
             <div id="player-title" class="player-title"></div>
             <div id="player-channel" class="player-channel"></div>
           </div>
-          <button id="audio-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Audio mode">
-            <i class="fas fa-headphones" aria-hidden="true"></i>
-          </button>
-          <button id="queue-toggle" class="icon-btn" type="button" aria-label="Queue mode">
-            <i class="fas fa-list" aria-hidden="true"></i>
-          </button>
-          <button id="pip-toggle" class="icon-btn" type="button" aria-label="Picture in picture">
-            <i class="fas fa-picture-in-picture" aria-hidden="true"></i>
-          </button>
-          <button id="mini-toggle" class="icon-btn" type="button" aria-label="Mini player">
-            <i class="fas fa-window-minimize" aria-hidden="true"></i>
-          </button>
-          <button id="zoom-toggle" class="icon-btn" type="button" role="switch" aria-checked="false" aria-label="Zoom to fill">
-            <i class="fas fa-expand" aria-hidden="true"></i>
-          </button>
+          <div class="player-actions" role="group" aria-label="Player options">
+            <button id="audio-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Audio mode">
+              <i class="fas fa-headphones" aria-hidden="true"></i>
+            </button>
+            <button id="queue-toggle" class="icon-btn" type="button" aria-label="Queue mode">
+              <i class="fas fa-list" aria-hidden="true"></i>
+            </button>
+            <button id="mini-toggle" class="icon-btn" type="button" aria-pressed="false" aria-label="Picture in picture (mini player)">
+              <i class="fas fa-window-minimize" aria-hidden="true"></i>
+            </button>
+            <button id="zoom-toggle" class="icon-btn" type="button" role="switch" aria-checked="false" aria-label="Zoom to fill">
+              <i class="fas fa-expand" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <aside class="player-rail" aria-label="Up next">
+        <div class="player-rail-head">
+          <span class="player-rail-label">Up next</span>
         </div>
         <div id="player-suggest" class="player-suggest"></div>
       </aside>
@@ -192,7 +194,7 @@
       <button class="bn-item" type="button" id="library-btn"><i class="fas fa-photo-video"></i><span>Library</span></button>
     </nav>
 
-    <script src="./index.js?v=1.6.0"></script>
+    <script src="./index.js?v=1.6.1"></script>
     <script>
       // The APK ships its assets inside the app, so a cache-first service
       // worker only ever serves the *previous* APK's CSS/JS. Inside the native
@@ -215,8 +217,27 @@
           return;
         }
 
+        var hadController = !!navigator.serviceWorker.controller;
+        navigator.serviceWorker.addEventListener("controllerchange", function () {
+          // A newer worker took over. Pages opened under an old cache-first
+          // worker reload once so the user sees the current build. Never do it
+          // while media is playing: a refresh would stop the video.
+          if (!hadController) return;
+          if (document.documentElement.dataset.playing === "1") return;
+          if (sessionStorage.getItem("ytclone.sw-reloaded")) return;
+          sessionStorage.setItem("ytclone.sw-reloaded", "1");
+          location.reload();
+        });
+
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("./sw.js").catch(function () {});
+          navigator.serviceWorker
+            .register("./sw.js", { updateViaCache: "none" })
+            .then(function (reg) {
+              // Ask for a fresh copy of sw.js on every visit instead of waiting
+              // for the browser's 24h update cycle.
+              if (reg && reg.update) reg.update().catch(function () {});
+            })
+            .catch(function () {});
         });
       })();
     </script>

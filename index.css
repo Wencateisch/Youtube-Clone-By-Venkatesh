@@ -41,6 +41,10 @@
   --chip-ink: #0b0b0d;
   --modal-bg: rgba(0,0,0,.72);
   --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px;
+  /* Theatre rail: comfortable for reading at 1080p without eating the video. */
+  --rail-w: clamp(300px, 21vw, 400px);
+  /* Height reserved under the video for the now-playing title + controls. */
+  --player-info-h: 88px;
 
   /* Safe-area insets.
      The Android shell (Capacitor) injects --safe-area-inset-* as an inline style on
@@ -258,9 +262,21 @@ img { max-width: 100%; display: block; }
 .player-frame-holder {
   position: relative; width: 100%; aspect-ratio: 16 / 9;
   background: var(--player-void); overflow: hidden;
+  background-size: cover; background-position: center; background-repeat: no-repeat;
 }
 .player-frame-holder.zoomed { aspect-ratio: auto; width: 100%; height: 100%; }
-.player-frame { position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%; border: 0; display: block; }
+/* Poster fades into the live frame instead of a black flash on open. */
+.player-frame {
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  width: 100%; height: 100%; border: 0; display: block;
+  opacity: 0; transition: opacity .28s ease;
+}
+.player-frame.is-ready { opacity: 1; }
+@keyframes player-in {
+  from { opacity: 0; transform: scale(.996); }
+  to { opacity: 1; transform: none; }
+}
+.player-frame-holder.opening { animation: player-in .22s ease-out both; }
 .player-collapse {
   position: absolute; top: 10px; right: 10px; z-index: 6;
   width: 38px; height: 38px; border-radius: 50%;
@@ -271,21 +287,47 @@ img { max-width: 100%; display: block; }
 .player-collapse:active { transform: scale(.92); }
 .player-collapse:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
+/* Now-playing block: sits directly under the video, like YouTube's own
+   theatre page. On a phone the title gets the full width with the controls on
+   their own row; on a desktop they share one row. */
+.player-info {
+  flex: 0 0 auto;
+  display: flex; flex-direction: column; align-items: stretch;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) var(--space-2);
+  background: var(--bg);
+}
+.player-info-text { min-width: 0; }
+.player-title {
+  font-size: 1.02rem; font-weight: 600; line-height: 1.35; color: var(--text);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.player-channel { font-size: .85rem; color: var(--muted); margin-top: 2px; }
+/* Stacked on phones, the toolbar spans the row instead of clustering left. */
+.player-actions {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-1); flex: 0 0 auto;
+}
+.player-actions .icon-btn { flex: 0 0 auto; }
+
 .player-rail {
   flex: 1 1 auto; min-height: 0;
   display: flex; flex-direction: column;
-  margin-top: var(--space-2); /* keep suggestions clear of the video */
+  margin-top: 0;
   background: var(--surface);
   border-top: 1px solid var(--border);
   overflow: hidden; overscroll-behavior: contain;
 }
-.player-rail-head { flex: 0 0 auto; display: flex; align-items: flex-start; gap: var(--space-2); padding: var(--space-3); }
-.player-rail-meta { flex: 1 1 auto; min-width: 0; }
-.player-rail .player-title {
-  font-size: 1rem; font-weight: 600; line-height: 1.35; color: var(--text);
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+.player-rail-head {
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-3) var(--space-2);
 }
-.player-rail .player-channel { font-size: .85rem; color: var(--muted); margin-top: var(--space-1); }
+.player-rail-label {
+  font-size: .74rem; font-weight: 600; letter-spacing: .07em;
+  text-transform: uppercase; color: var(--muted);
+}
 /* Suggestions scroll vertically and take every pixel the player leaves over. */
 .player-suggest {
   flex: 1 1 auto; min-height: 0;
@@ -361,19 +403,26 @@ img { max-width: 100%; display: block; }
   .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); padding: 0; }
   .status { padding: var(--space-1) var(--space-3) var(--space-2); }
 
-  /* Theatre mode in landscape: video fills the stage on the left, and the
-     suggestions rail takes ALL the remaining width on the right. */
+  /* Theatre in landscape: the video keeps its true 16:9 shape on the left,
+     the compact title/actions strip sits under it, and the suggestions rail
+     fills the rest of the width. */
   #player { flex-direction: row; }
   .player-stage {
     flex: 0 0 auto; min-width: 0;
-    width: min(calc((100vh - var(--inset-top)) * 16 / 9), calc(100% - 244px));
-    width: min(calc((100dvh - var(--inset-top)) * 16 / 9), calc(100% - 244px));
+    --video-w: min(calc((100vh - var(--inset-top) - 58px) * 16 / 9), calc(100% - 244px));
+    --video-w: min(calc((100dvh - var(--inset-top) - 58px) * 16 / 9), calc(100% - 244px));
+    width: var(--video-w);
+    justify-content: center;
   }
-  .player-video-wrap {
-    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-    width: 100%; aspect-ratio: auto;
-    align-items: center; justify-content: center;
+  .player-video-wrap { position: relative; top: auto; right: auto; bottom: auto; left: auto; width: 100%; aspect-ratio: 16 / 9; }
+  .player-info {
+    flex-direction: row; align-items: center; justify-content: space-between;
+    gap: var(--space-2); padding: var(--space-1) var(--space-3);
   }
+  .player-info-text { flex: 1 1 auto; }
+  .player-title { font-size: .88rem; -webkit-line-clamp: 1; }
+  .player-channel { display: none; }
+  .player-actions .icon-btn { width: 38px; height: 38px; }
   .player-rail {
     flex: 1 1 auto; width: auto; min-width: 220px;
     margin-top: 0; margin-left: var(--space-3);
@@ -382,21 +431,33 @@ img { max-width: 100%; display: block; }
 }
 
 /* Desktops / wide windows: theatre mode on the first click, whatever the
-   orientation. Only phones keep the tile-sized, stacked player. */
+   orientation. The video is a true 16:9 box — previously the stage was
+   stretched to the full window height, so YouTube letterboxed a 16:9 video
+   inside it and the page looked like a giant black void. Now the now-playing
+   block sits directly under the video and the rail fills the full height. */
 @media (min-width: 901px) {
   #player { flex-direction: row; }
   .player-stage {
-    flex: 0 0 auto; min-width: 0;
-    width: min(calc((100vh - var(--inset-top)) * 16 / 9), calc(100% - 324px));
-    width: min(calc((100dvh - var(--inset-top)) * 16 / 9), calc(100% - 324px));
+    flex: 1 1 auto; min-width: 0;
+    justify-content: center;
+    --video-w: min(100%, calc((100vh - var(--inset-top) - var(--player-info-h)) * 16 / 9));
+    --video-w: min(100%, calc((100dvh - var(--inset-top) - var(--player-info-h)) * 16 / 9));
   }
   .player-video-wrap {
-    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
-    width: 100%; aspect-ratio: auto;
-    align-items: center; justify-content: center;
+    position: relative; top: auto; right: auto; bottom: auto; left: auto;
+    width: var(--video-w); aspect-ratio: 16 / 9;
+    margin-left: auto; margin-right: auto;
   }
+  .player-info {
+    flex-direction: row; align-items: flex-start; justify-content: space-between;
+    gap: var(--space-4); padding: var(--space-3) var(--space-4) var(--space-4);
+    width: var(--video-w); margin-left: auto; margin-right: auto;
+  }
+  .player-info-text { flex: 1 1 auto; }
+  .player-title { font-size: 1.12rem; }
+  .player-channel { font-size: .9rem; }
   .player-rail {
-    flex: 1 1 auto; width: auto; min-width: 300px;
+    flex: 0 0 auto; width: var(--rail-w); min-width: 0;
     margin-top: 0; margin-left: var(--space-3);
     border-top: 0; border-left: 1px solid var(--border);
   }
@@ -425,10 +486,8 @@ img { max-width: 100%; display: block; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
-/* ---------- Tile-sized player: phones only; desktops always use theatre ---------- */
-@media (orientation: portrait) and (max-width: 900px) {
-  .player-video-wrap { width: min(var(--player-tile-w, 100%), 100%); }
-}
+/* Phones and portrait tablets use the full width: a tile-width video left the
+   rest of the row as a black band, which read as broken. */
 .player.compact .player-suggest { flex-direction: column; }
 .player.compact .ps-item { width: 100%; }
 
@@ -441,12 +500,25 @@ img { max-width: 100%; display: block; }
   position: relative; top: auto; right: auto; bottom: auto; left: auto;
   width: 100%; flex: 0 0 auto;
 }
-.player.audio-mode .player-video-wrap {
+.player.audio-mode .player-video-wrap,
+#player.audio-mode .player-info {
   position: relative; top: auto; right: auto; bottom: auto; left: auto;
-  width: 100%; aspect-ratio: auto; min-height: 300px;
+  width: 100%; margin-left: 0; margin-right: 0;
 }
+.player.audio-mode .player-video-wrap { aspect-ratio: auto; min-height: 300px; }
+/* The audio panel already shows the title and channel; the strip under it only
+   carries the mode buttons, on the same surface so there is no colour band. */
+#player.audio-mode .player-info {
+  background: var(--surface);
+  padding: var(--space-2) var(--space-3);
+  justify-content: flex-end;
+}
+#player.audio-mode .player-info-text { display: none; }
 #player.audio-mode .player-rail {
-  margin: var(--space-2) 0 0; min-width: 0;
+  margin: var(--space-2) 0 0; min-width: 0; max-width: none;
+  /* Desktop fixes the rail width; in the stacked audio layout it must flex
+     again or its content height pushes past the viewport. */
+  flex: 1 1 auto; width: auto;
   border-top: 1px solid var(--border); border-left: 0;
 }
 .audio-panel {
@@ -509,7 +581,7 @@ img { max-width: 100%; display: block; }
   position: absolute; top: 0; right: 0; bottom: 0; left: 0;
   width: 100%; height: 100%; aspect-ratio: auto;
 }
-#player.mini .player-rail { display: none; }
+#player.mini .player-rail, #player.mini .player-info { display: none; }
 #player.mini .player-collapse { top: 6px; right: 6px; }
 
 .mini-player {
@@ -579,7 +651,7 @@ button:disabled, .icon-btn:disabled, .chip:disabled, .ps-item:disabled, .search-
 .search { border-color: var(--field-border); }
 .search:focus-within { border-color: var(--focus); }
 .status, .duration-badge, .subline { font-variant-numeric: tabular-nums; }
-.empty-state h2, .audio-title, .player-rail .player-title { text-wrap: balance; }
+.empty-state h2, .audio-title, .player-title { text-wrap: balance; }
 
 /* Hallmark finish: one accent, one motion language, readable dark surfaces */
 .icon-btn, .chip, .pill-btn, .video-item, .ps-item, .bn-item, .history-item {

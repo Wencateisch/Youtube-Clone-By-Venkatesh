@@ -1,7 +1,7 @@
 // Bump this on every release. Cache-first for immutable art, network-first for
 // the app shell: a stale shell is worse than an offline miss, and the previous
 // cache-first version meant users kept the old CSS/JS for months.
-const CACHE_NAME = "yt-clone-v6";
+const CACHE_NAME = "yt-clone-v7";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -20,9 +20,12 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-    ).then(() => self.clients.claim())
+    caches
+      .keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+      // Take over open pages. The page itself decides whether to reload once
+      // (index.html), so a video that is playing is never interrupted.
+      .then(() => self.clients.claim())
   );
 });
 
