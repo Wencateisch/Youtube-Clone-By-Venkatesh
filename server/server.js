@@ -74,7 +74,11 @@ db.exec(`
 /* -------------------------- helpers -------------------------- */
 
 function json(res, data, status = 200) {
-  res.writeHead(status, { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" });
+  res.writeHead(status, {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "Cache-Control": "no-store",
+  });
   res.end(JSON.stringify(data));
 }
 
@@ -303,8 +307,12 @@ const popularItems = (data) =>
 
 const revalidating = new Set();
 
-async function searchUpstream(cacheKeyValue, q, maxResults, region) {
-  const params = { part: "snippet", type: "video", maxResults, q };
+// Always fetch the widest page the endpoint allows (costs the same 100 units),
+// so one cached entry can answer every maxResults the app asks for.
+const SEARCH_FETCH_MAX = 50;
+
+async function searchUpstream(cacheKeyValue, q, region) {
+  const params = { part: "snippet", type: "video", maxResults: SEARCH_FETCH_MAX, q };
   if (region) params.regionCode = region;
   const out = await youtube("search", params);
   if (!out.ok) return { items: null, reason: out.reason };
@@ -371,30 +379,33 @@ async function handleSearch(url, res) {
   const region = String(url.searchParams.get("regionCode") || cfg?.regionCode || "")
     .toUpperCase()
     .slice(0, 2);
-  const key = cacheKey(["search", region, maxResults, q]);
+  const key = cacheKey(["search", region, q]);
   const hit = cacheGet(key);
+  const slice = (items) => (items || []).slice(0, maxResults);
 
   if (hit && hit.fresh) {
     console.log(`[search] "${q}" cache hit`);
-    return json(res, { items: hit.payload.items || [], cached: true, degraded: false, fetchedAt: hit.at });
+    return json(res, { items: slice(hit.payload.items), cached: true, degraded: false, fetchedAt: hit.at });
   }
   if (hit) {
     // Serve the stale copy at once and refresh behind the request, so a slow or
     // refused upstream never makes the user wait or see an error.
     if (!revalidating.has(key)) {
       revalidating.add(key);
-      searchUpstream(key, q, maxResults, region)
+      searchUpstream(key, q, region)
         .catch(() => {})
         .finally(() => revalidating.delete(key));
     }
     console.log(`[search] "${q}" stale hit`);
-    return json(res, { items: hit.payload.items || [], cached: true, stale: true, degraded: false, fetchedAt: hit.at });
+    return json(res, { items: slice(hit.payload.items), cached: true, stale: true, degraded: false, fetchedAt: hit.at });
   }
 
-  const out = await searchUpstream(key, q, maxResults, region);
-  if (out.items && out.items.length) {
+  const out = await searchUpstream(key, q, region);
+  if (!out.reason) {
+    // A real answer, even an empty one: no results is not a quota problem, so
+    // the app must not be told to show the popular fallback.
     console.log(`[search] "${q}" upstream ${out.items.length} items`);
-    return json(res, { items: out.items, cached: false, degraded: false });
+    return json(res, { items: slice(out.items), cached: false, degraded: false });
   }
   const fallback = await popularFeed(maxResults, region);
   console.log(`[search] "${q}" degraded (${out.reason}) with ${fallback.length} popular items`);
