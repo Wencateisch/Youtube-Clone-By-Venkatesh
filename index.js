@@ -303,6 +303,75 @@ function writeSearchCache(q, items) {
   storeSet("ytclone.searchCache", Object.fromEntries(kept));
 }
 
+/* ---------------------- last-resort content ---------------------- */
+
+// Whatever happens upstream, the grid must show something: the last feed this
+// device rendered, then the catalog snapshot that ships with the app.
+const LAST_FEED_KEY = "ytclone.lastFeed";
+let catalogPromise = null;
+
+function rememberFeed(items, label) {
+  if (!Array.isArray(items) || !items.length) return;
+  storeSet(LAST_FEED_KEY, {
+    at: Date.now(),
+    label: String(label || ""),
+    items: items.slice(0, CONFIG.maxResults || 24),
+  });
+}
+
+function readLastFeed() {
+  const saved = storeGet(LAST_FEED_KEY, null);
+  if (!saved || !Array.isArray(saved.items) || !saved.items.length) return null;
+  return saved;
+}
+
+function loadCatalog() {
+  if (!catalogPromise) {
+    catalogPromise = fetch("./catalog.json", { cache: "no-store" })
+      .then((res) => (res.ok ? res.json() : null))
+      .catch(() => null);
+  }
+  return catalogPromise;
+}
+
+function queryWords(text) {
+  return String(text || "")
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((word) => word.length > 2);
+}
+
+// Words from the query that appear in a title or a channel name.
+function matching(items, query) {
+  const words = queryWords(query);
+  if (!words.length) return [];
+  return items.filter((item) => {
+    const snippet = (item && item.snippet) || {};
+    const text = `${snippet.title || ""} ${snippet.channelTitle || ""}`.toLowerCase();
+    return words.some((word) => text.includes(word));
+  });
+}
+
+// A handful of matching videos must still fill the grid, otherwise a query with
+// one lucky match would render a single huge card and look broken.
+function padMatches(matches, items, limit) {
+  if (!matches.length) return items.slice(0, limit);
+  const seen = new Set(matches.map((item) => item && item.id && item.id.videoId));
+  const rest = items.filter((item) => !seen.has(item && item.id && item.id.videoId));
+  return [...matches, ...rest].slice(0, limit);
+}
+
+async function catalogItems(query) {
+  const catalog = await loadCatalog();
+  if (!catalog) return [];
+  const limit = CONFIG.maxResults || 24;
+  const popular = Array.isArray(catalog.popular) ? catalog.popular : [];
+  const saved = catalog.queries && typeof catalog.queries === "object" ? catalog.queries : {};
+  const exact = saved[String(query || "").trim().toLowerCase()];
+  if (Array.isArray(exact) && exact.length) return exact.slice(0, limit);
+  return padMatches(matching(popular, query), popular, limit);
+}
+
 function setStatus(message, isError = false, showRetry = false, action = null) {
   if (!statusEl) return;
   statusEl.classList.toggle("error", Boolean(isError));
@@ -840,11 +909,22 @@ async function fetchHome() {
     const items = await fetchPopularItems(CONFIG.maxResults);
     if (!items.length) throw new Error("The popular feed came back empty.");
     showFeed(items, "Popular right now");
+    rememberFeed(items, "Popular right now");
   } catch (err) {
     if (err && err.name === "AbortError") return;
     const saved = readSearchCache(homeQuery, { allowStale: true });
     if (saved) {
       showFeed(saved.items, "Showing saved videos. Check your connection to refresh.");
+      return;
+    }
+    const last = readLastFeed();
+    if (last) {
+      showFeed(last.items, "Showing the videos saved on this device.");
+      return;
+    }
+    const catalog = await catalogItems(homeQuery);
+    if (catalog.length) {
+      showFeed(catalog, "Showing the built-in catalog. Check your connection to refresh.");
       return;
     }
     if (grid) renderEmpty("Couldn't load videos", "Check your connection and try again.");
@@ -884,6 +964,7 @@ async function fetchVideos(query) {
       await enrichDurations(proxiedItems);
       writeSearchCache(q, proxiedItems);
       showFeed(proxiedItems, `Results for "${q}"`);
+      rememberFeed(proxiedItems, q);
       return;
     }
     const data = await fetchApi(
@@ -896,6 +977,7 @@ async function fetchVideos(query) {
     await enrichDurations(items);
     writeSearchCache(q, items);
     showFeed(items, items.length ? `Results for "${q}"` : "");
+    rememberFeed(items, q);
   } catch (err) {
     if (err && err.name === "AbortError") return;
     // Rescue order: this query's saved results, then popular videos whose
@@ -910,19 +992,13 @@ async function fetchVideos(query) {
     }
     try {
       const popular = await fetchPopularItems(50);
-      const tokens = q.toLowerCase().split(/\s+/).filter((t) => t.length > 2);
-      const matches = tokens.length
-        ? popular.filter((v) => {
-            const text = `${(v.snippet && v.snippet.title) || ""} ${(v.snippet && v.snippet.channelTitle) || ""}`.toLowerCase();
-            return tokens.some((t) => text.includes(t));
-          })
-        : [];
-      const items = (matches.length ? matches : popular).slice(0, CONFIG.maxResults || 24);
+      const matches = matching(popular, q);
+      const items = padMatches(matches, popular, CONFIG.maxResults || 24);
       if (items.length) {
         showFeed(
           items,
           searchLimitedMessage(
-            matches.length
+            matches.length >= 3
               ? `popular matches for "${q}".`
               : "showing popular videos."
           ),
@@ -930,7 +1006,27 @@ async function fetchVideos(query) {
         );
         return;
       }
-    } catch (_) { /* fall through to the error state */ }
+    } catch (_) { /* fall through to the offline content */ }
+
+    // Offline, or YouTube refused everything: the catalog snapshot and the last
+    // feed still give the user something to watch.
+    const quota = Boolean(err && isQuotaReason(err.code));
+    const catalog = await catalogItems(q);
+    if (catalog.length) {
+      showFeed(
+        catalog,
+        quota
+          ? searchLimitedMessage("showing the built-in catalog.")
+          : "Showing the built-in catalog. Check your connection to refresh.",
+        { action: quota ? addKeyAction() : null }
+      );
+      return;
+    }
+    const last = readLastFeed();
+    if (last) {
+      showFeed(last.items, "Showing the videos saved on this device.");
+      return;
+    }
     if (grid) renderEmpty("Couldn't load videos", "Check your connection and try again.");
     setStatus(friendlyFetchError(err), true, true);
     console.error("Failed to load videos:", err);

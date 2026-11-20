@@ -1,0 +1,37 @@
+name: Web Resilience
+
+on:
+  push:
+    paths:
+      - 'index.js'
+      - 'index.html'
+      - 'index.css'
+      - 'sw.js'
+      - 'www/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - '.github/workflows/web-tests.yml'
+  pull_request:
+    paths:
+      - 'index.js'
+      - 'index.html'
+      - 'index.css'
+      - 'sw.js'
+      - 'www/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - '.github/workflows/web-tests.yml'
+  workflow_dispatch:
+
+jobs:
+  resilience:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run the resilience scenarios
+        run: node tests/resilience.mjs

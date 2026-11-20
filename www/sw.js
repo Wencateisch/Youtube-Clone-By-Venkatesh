@@ -1,7 +1,7 @@
 // Bump this on every release. Cache-first for immutable art, network-first for
 // the app shell: a stale shell is worse than an offline miss, and the previous
 // cache-first version meant users kept the old CSS/JS for months.
-const CACHE_NAME = "yt-clone-v10";
+const CACHE_NAME = "yt-clone-v11";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -14,7 +14,14 @@ const APP_SHELL = [
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting())
+    caches
+      .open(CACHE_NAME)
+      .then((cache) => cache.addAll(APP_SHELL))
+      // The catalog snapshot is optional: it lets the app draw a grid with no
+      // network at all, but a missing file must not break the install.
+      .then(() => caches.open(CACHE_NAME))
+      .then((cache) => cache.add("./catalog.json").catch(() => undefined))
+      .then(() => self.skipWaiting())
   );
 });
 

@@ -1,13 +1,14 @@
 {
     "name": "youtube-clone-by-venkatesh",
-    "version": "1.7.2",
+    "version": "1.7.3",
     "description": "",
     "main": "index.js",
     "scripts": {
         "sync": "npx cap sync",
         "copy:web": "powershell -NoProfile -Command Copy-Item index.html,index.css,index.js,config.json,manifest.webmanifest,icon.svg,sw.js -Destination www -Force",
         "android": "npx cap open android",
-        "start": "npx serve www"
+        "start": "npx serve www",
+        "test:web": "node tests/resilience.mjs"
     },
     "repository": {
         "type": "git",

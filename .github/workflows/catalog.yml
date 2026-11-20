@@ -1,0 +1,42 @@
+name: Refresh Catalog
+
+on:
+  schedule:
+    # Twice a day, well away from the Pacific quota reset.
+    - cron: '0 3,15 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/build-catalog.mjs'
+      - '.github/workflows/catalog.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Fetch the catalog
+        run: node scripts/build-catalog.mjs
+        env:
+          # Falls back to config.json when the secret is absent.
+          YOUTUBE_KEY: ${{ secrets.YOUTUBE_KEY }}
+
+      - name: Commit the snapshot when it changed
+        run: |
+          if git diff --quiet -- www/catalog.json; then
+            echo "Catalog unchanged." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "catalog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add www/catalog.json
+          git commit -m "Refresh the offline catalog"
+          git push
