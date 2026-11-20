@@ -2,13 +2,14 @@ name: Refresh Catalog
 
 on:
   schedule:
-    # Twice a day, well away from the Pacific quota reset.
-    - cron: '0 3,15 * * *'
+    # Once a day, well away from the Pacific quota reset. Every run costs about
+    # 400 units (1 for the chart, 100 per query), so keep it infrequent.
+    - cron: '0 4 * * *'
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - 'scripts/build-catalog.mjs'
-      - '.github/workflows/catalog.yml'
 
 permissions:
   contents: write
