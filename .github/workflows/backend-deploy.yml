@@ -21,7 +21,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          # node:sqlite (used by the server) needs Node 22.5 or newer.
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
@@ -37,9 +38,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
+    env:
+      RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+      RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
     steps:
       - name: Deploy to Railway
+        if: env.RAILWAY_TOKEN != '' && env.RAILWAY_SERVICE_ID != ''
         uses: nickyout/railway-deploy@v3
         with:
-          railway_service_id: ${{ secrets.RAILWAY_SERVICE_ID }}
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+          railway_service_id: ${{ env.RAILWAY_SERVICE_ID }}
+          railway_token: ${{ env.RAILWAY_TOKEN }}
