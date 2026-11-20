@@ -42,9 +42,27 @@ jobs:
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       RAILWAY_SERVICE_ID: ${{ secrets.RAILWAY_SERVICE_ID }}
     steps:
-      - name: Deploy to Railway
-        if: env.RAILWAY_TOKEN != '' && env.RAILWAY_SERVICE_ID != ''
-        uses: nickyout/railway-deploy@v3
+      - uses: actions/checkout@v4
+
+      - name: Check for Railway credentials
+        id: check
+        run: |
+          if [ -n "$RAILWAY_TOKEN" ] && [ -n "$RAILWAY_SERVICE_ID" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "RAILWAY_TOKEN / RAILWAY_SERVICE_ID are not set; skipping the deploy." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Setup Node.js
+        if: steps.check.outputs.configured == 'true'
+        uses: actions/setup-node@v4
         with:
-          railway_service_id: ${{ env.RAILWAY_SERVICE_ID }}
-          railway_token: ${{ env.RAILWAY_TOKEN }}
+          node-version: '24'
+
+      - name: Deploy to Railway
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          npm install -g @railway/cli
+          railway up --service "$RAILWAY_SERVICE_ID" --detach
+        working-directory: server
