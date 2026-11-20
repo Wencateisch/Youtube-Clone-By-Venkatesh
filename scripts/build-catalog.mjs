@@ -9,7 +9,9 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG_PATH = path.join(ROOT, "config.json");
-const OUT_PATH = path.join(ROOT, "www", "catalog.json");
+// GitHub Pages serves the repository root, while the APK bundles www: both
+// copies have to exist and stay identical.
+const OUT_PATHS = [path.join(ROOT, "catalog.json"), path.join(ROOT, "www", "catalog.json")];
 
 const DEFAULT_QUERIES = "trending music,movie trailers,breaking news,cricket highlights";
 const QUERIES = String(process.env.CATALOG_QUERIES ?? DEFAULT_QUERIES)
@@ -83,7 +85,7 @@ async function api(endpoint, params) {
   throw new Error(`${endpoint} failed: ${last}`);
 }
 
-const previous = JSON.parse(await readFile(OUT_PATH, "utf8").catch(() => "{}"));
+const previous = JSON.parse(await readFile(OUT_PATHS[1], "utf8").catch(() => "{}"));
 const catalog = {
   updatedAt: new Date().toISOString(),
   source: "youtube-data-api",
@@ -123,7 +125,8 @@ if (!catalog.popular.length && !Object.keys(catalog.queries).length) {
   process.exit(1);
 }
 
-await writeFile(OUT_PATH, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+const body = `${JSON.stringify(catalog, null, 2)}\n`;
+for (const target of OUT_PATHS) await writeFile(target, body, "utf8");
 console.log(
-  `Wrote ${path.relative(ROOT, OUT_PATH)}: ${catalog.popular.length} popular, ${Object.keys(catalog.queries).length} queries, ${failures} kept from before.`
+  `Wrote ${OUT_PATHS.map((target) => path.relative(ROOT, target)).join(", ")}: ${catalog.popular.length} popular, ${Object.keys(catalog.queries).length} queries, ${failures} kept from before.`
 );

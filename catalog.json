@@ -1,0 +1,5866 @@
+{
+  "updatedAt": "2026-11-20T12:02:50.556Z",
+  "source": "youtube-data-api",
+  "popular": [
+    {
+      "id": {
+        "videoId": "LJC7mgjp5FQ"
+      },
+      "snippet": {
+        "title": "Taylor Swift - I Knew It, I Knew You x Our Song (Live From The 60th CMA Awards)",
+        "channelId": "UCqECaJ8Gagnn7YCbPEzWH6g",
+        "channelTitle": "Taylor Swift",
+        "publishedAt": "2026-11-19T11:00:19Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/LJC7mgjp5FQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "Fg0jyss_YnU"
+      },
+      "snippet": {
+        "title": "Avengers: Doomsday | The Return | In Theaters December 18",
+        "channelId": "UCvC4D8onUfXzvjTOM-dBfEA",
+        "channelTitle": "Marvel Entertainment",
+        "publishedAt": "2026-11-18T17:00:01Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/Fg0jyss_YnU/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "ymCHX_Dcc-U"
+      },
+      "snippet": {
+        "title": "I Survived 100 Hours In GTA 6",
+        "channelId": "UCIPPMRA040LQr5QPyJEbmXA",
+        "channelTitle": "MrBeast Gaming",
+        "publishedAt": "2026-11-19T18:00:01Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/ymCHX_Dcc-U/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "p8i5SiUrpjg"
+      },
+      "snippet": {
+        "title": "Quando Rondo -  HEAD GONE [Official Video]",
+        "channelId": "UCLr1r2bBAwBPG3KJubtYyyg",
+        "channelTitle": "Quando Rondo",
+        "publishedAt": "2026-11-20T04:52:19Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/p8i5SiUrpjg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/p8i5SiUrpjg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/p8i5SiUrpjg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/p8i5SiUrpjg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/p8i5SiUrpjg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "o4aslcUEnoU"
+      },
+      "snippet": {
+        "title": "Avengers: Doomsday: Every NEW REVEAL From the Empire Teaser",
+        "channelId": "UCgMJGv4cQl8-q71AyFeFmtg",
+        "channelTitle": "ScreenCrush",
+        "publishedAt": "2026-11-19T22:53:50Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/o4aslcUEnoU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/o4aslcUEnoU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/o4aslcUEnoU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/o4aslcUEnoU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/o4aslcUEnoU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "vUPR8jtzzzQ"
+      },
+      "snippet": {
+        "title": "So GTA 6 is Finally Here",
+        "channelId": "UCq6VFHwMzcMXbuKyG7SQYIg",
+        "channelTitle": "penguinz0",
+        "publishedAt": "2026-11-20T01:15:29Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/vUPR8jtzzzQ/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "0JQ9k6kcKVs"
+      },
+      "snippet": {
+        "title": "NAYEON “BABY ANGEL” M/V",
+        "channelId": "UCaO6TYtlC8U5ttz62hTrZgg",
+        "channelTitle": "JYP Entertainment",
+        "publishedAt": "2026-11-20T05:00:03Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/0JQ9k6kcKVs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/0JQ9k6kcKVs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/0JQ9k6kcKVs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/0JQ9k6kcKVs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/0JQ9k6kcKVs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "3FbHbWWNH-c"
+      },
+      "snippet": {
+        "title": "GTA 6 (Grand Theft Auto 6) - Official Global Launch Trailer",
+        "channelId": "UCKy1dAqELo0zrOtPkf0eTMw",
+        "channelTitle": "IGN",
+        "publishedAt": "2026-11-19T14:41:37Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/3FbHbWWNH-c/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "5tdj53ioJ-c"
+      },
+      "snippet": {
+        "title": "PLAYING GTA 6 FOR THE FIRST TIME (PART 3)",
+        "channelId": "UCvCfpQXRXdJdL07pzTIA6Cw",
+        "channelTitle": "Kai Cenat Live",
+        "publishedAt": "2026-11-20T01:30:35Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/5tdj53ioJ-c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/5tdj53ioJ-c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/5tdj53ioJ-c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/5tdj53ioJ-c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/5tdj53ioJ-c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "9TCe40xwHwc"
+      },
+      "snippet": {
+        "title": "Kalashnikov - Cartel de Santa ft Richard Ahumada, Pablito Calavera, Chato | @elcarteldesantatv",
+        "channelId": "UCunw-c0EKIX5LpPo8GpA2Aw",
+        "channelTitle": "elcarteldesantatv",
+        "publishedAt": "2026-11-20T02:05:10Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9TCe40xwHwc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9TCe40xwHwc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9TCe40xwHwc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9TCe40xwHwc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9TCe40xwHwc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "gNHr2-JjKRM"
+      },
+      "snippet": {
+        "title": "THE NIGHTINGALE – Official Teaser Trailer (4K)",
+        "channelId": "UCz97F7dMxBNOfGYu3rx8aCw",
+        "channelTitle": "Sony Pictures Entertainment",
+        "publishedAt": "2026-11-19T14:17:16Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "gcktQGI5PzI"
+      },
+      "snippet": {
+        "title": "Lainey Wilson - Just A Woman (Live from \"The 60th Annual CMA Awards\")",
+        "channelId": "UCZkeQWzPCGeH707eRS6K6Hg",
+        "channelTitle": "Lainey Wilson",
+        "publishedAt": "2026-11-19T04:12:23Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/gcktQGI5PzI/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "shWuftoim7k"
+      },
+      "snippet": {
+        "title": "Man of Tomorrow Footage, The Batman 2 Update, No Doomsday Final Trailer & MORE!!",
+        "channelId": "UCkFbAywlXz4W0BCle2eFyUw",
+        "channelTitle": "3C Films",
+        "publishedAt": "2026-11-19T22:26:18Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/shWuftoim7k/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/shWuftoim7k/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/shWuftoim7k/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/shWuftoim7k/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/shWuftoim7k/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "eJKZKf0gL-s"
+      },
+      "snippet": {
+        "title": "SMii7Y Plays GTA 6 For The First Time",
+        "channelId": "UCzXwjTI6c6mVn6oui_p6oiw",
+        "channelTitle": "SMii7Y",
+        "publishedAt": "2026-11-20T01:13:15Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/eJKZKf0gL-s/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "IQI2qaqHFlg"
+      },
+      "snippet": {
+        "title": "GiiiRIP",
+        "channelId": "UCI5OIwx9z32Zurb8t4Umzwg",
+        "channelTitle": "BIGBANG - Topic",
+        "publishedAt": "2026-11-20T05:02:15Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IQI2qaqHFlg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IQI2qaqHFlg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IQI2qaqHFlg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IQI2qaqHFlg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IQI2qaqHFlg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "s4f9D1VqpoU"
+      },
+      "snippet": {
+        "title": "Invincible Season 5 Teaser Trailer | Prime Video",
+        "channelId": "UCy8ozxCSVaZJTagk3zSPNZA",
+        "channelTitle": "Prime Video AU & NZ",
+        "publishedAt": "2026-11-19T17:00:05Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/s4f9D1VqpoU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/s4f9D1VqpoU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/s4f9D1VqpoU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/s4f9D1VqpoU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/s4f9D1VqpoU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "YDNs_sPEcJc"
+      },
+      "snippet": {
+        "title": "GTA 6 Gameplay Walkthrough Part 1 FULL GAME [4K PS5 PRO] - No Commentary",
+        "channelId": "UC1bwliGvJogr7cWK0nT2Eag",
+        "channelTitle": "MKIceAndFire",
+        "publishedAt": "2026-11-18T18:23:40Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YDNs_sPEcJc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YDNs_sPEcJc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YDNs_sPEcJc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YDNs_sPEcJc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YDNs_sPEcJc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "OAeBV9nFdTo"
+      },
+      "snippet": {
+        "title": "Christmas Song Playlist 🎅🏻 Top Christmas Songs of All Time🎄Best Christmas Music Playlist",
+        "channelId": "UCn0JHLJWiO3_Y5xfNPcF_Ug",
+        "channelTitle": "Christmas Songs and Carols - Love to Sing",
+        "publishedAt": "2026-11-18T13:00:01Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/OAeBV9nFdTo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "cJRsJQMAVYY"
+      },
+      "snippet": {
+        "title": "LITTLEFOOT | Official Trailer | Land Before Time Reimagining",
+        "channelId": "UCIA_T4Y0OQoBEtS8YHYxAVA",
+        "channelTitle": "Joey Lever",
+        "publishedAt": "2026-11-18T14:57:34Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/cJRsJQMAVYY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "qSyo5d-dVzA"
+      },
+      "snippet": {
+        "title": "🔴PLAYING GTA 6 EARLY ACCESS GAMEPLAY GET IN HERE!",
+        "channelId": "UCWsDFcIhY2DBi3GB5uykGXA",
+        "channelTitle": "IShowSpeed",
+        "publishedAt": "2026-11-19T17:07:45Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/qSyo5d-dVzA/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "PH8e3LBuLsQ"
+      },
+      "snippet": {
+        "title": "Kevin Gates - I Got Power",
+        "channelId": "UCj2GTFekdV3EUsTVN8oaEqA",
+        "channelTitle": "kevingatesTV",
+        "publishedAt": "2026-11-19T23:24:09Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PH8e3LBuLsQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PH8e3LBuLsQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PH8e3LBuLsQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PH8e3LBuLsQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PH8e3LBuLsQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "ufeJbTNq-BI"
+      },
+      "snippet": {
+        "title": "Artificial - Official Trailer - In Select Theaters Christmas Day, Everywhere January 8",
+        "channelId": "UCpy5dRhZd-JbZP4NsrnLt1w",
+        "channelTitle": "NEON",
+        "publishedAt": "2026-11-18T17:00:10Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ufeJbTNq-BI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ufeJbTNq-BI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ufeJbTNq-BI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ufeJbTNq-BI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "J18nXpZHyyI"
+      },
+      "snippet": {
+        "title": "WAS THAT BIGFOOT?? | Grand Theft Auto 6 - Part 2",
+        "channelId": "UCYzPXprvl5Y-Sf0g4vX-m6g",
+        "channelTitle": "jacksepticeye",
+        "publishedAt": "2026-11-19T17:00:33Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/J18nXpZHyyI/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "-1Doa1tmSAY"
+      },
+      "snippet": {
+        "title": "Flunky x Jammin - Otendewa ( Official Audio )",
+        "channelId": "UCY2su50d1ul28CxT3dBBrHA",
+        "channelTitle": "Flunky",
+        "publishedAt": "2026-11-06T12:59:25Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/-1Doa1tmSAY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/-1Doa1tmSAY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/-1Doa1tmSAY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/-1Doa1tmSAY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/-1Doa1tmSAY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "IcSLYhp3jmE"
+      },
+      "snippet": {
+        "title": "Avengers Doomsday Final Trailer?! New Posters Breakdown! GTA 6 Sales & Drama! Elon Musk Skydance",
+        "channelId": "UCAXR2zenCwvRIyQd9ydtfaA",
+        "channelTitle": "Beyond The Trailer",
+        "publishedAt": "2026-11-20T05:10:38Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IcSLYhp3jmE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IcSLYhp3jmE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IcSLYhp3jmE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IcSLYhp3jmE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IcSLYhp3jmE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "6RgkIVpvvsY"
+      },
+      "snippet": {
+        "title": "🔴 LIVE! - GTA 6 on PS5 PRO with TYPICAL GAMER!",
+        "channelId": "UC2wKfjlioOCLP4xQMOWNcgg",
+        "channelTitle": "Typical Gamer",
+        "publishedAt": "2026-11-20T11:17:31Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/6RgkIVpvvsY/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "Rqg2skyf3lw"
+      },
+      "snippet": {
+        "title": "Mangi Sulu",
+        "channelId": "UCJ0y30Z83w6YV3Nh9ejW8BA",
+        "channelTitle": "Kronos_StyleKumul - Topic",
+        "publishedAt": "2026-11-12T10:04:37Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Rqg2skyf3lw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Rqg2skyf3lw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Rqg2skyf3lw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Rqg2skyf3lw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Rqg2skyf3lw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "pU5PHR9POs4"
+      },
+      "snippet": {
+        "title": "AVENGERS DOOMSDAY FINAL TRAILER OFFICIAL ANNOUNCEMENT",
+        "channelId": "UCBS7ypf4ccm6e_bu35EiAAA",
+        "channelTitle": "Everything Always",
+        "publishedAt": "2026-11-19T22:21:18Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pU5PHR9POs4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pU5PHR9POs4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pU5PHR9POs4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pU5PHR9POs4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pU5PHR9POs4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "1yBSK22csvI"
+      },
+      "snippet": {
+        "title": "GTA 6: 10 Things The Game DOESN'T TELL YOU",
+        "channelId": "UCNvzD7Z-g64bPXxGzaQaa4g",
+        "channelTitle": "gameranx",
+        "publishedAt": "2026-11-19T17:13:18Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1yBSK22csvI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1yBSK22csvI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1yBSK22csvI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1yBSK22csvI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1yBSK22csvI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "hYvK824FQK8"
+      },
+      "snippet": {
+        "title": "Justice - Starting From Zero (feat. Michael McDonald) [From GTAVI: Original Score]",
+        "channelId": "UCQ5Ssrs48yJBfOesfDqXUeA",
+        "channelTitle": "Justice",
+        "publishedAt": "2026-11-19T23:00:19Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/hYvK824FQK8/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "jPvERVds1Hc"
+      },
+      "snippet": {
+        "title": "INVINCIBLE SEASON 5 TRAILER 2027 Breakdown & WTF Easter Eggs",
+        "channelId": "UCDiFRMQWpcp8_KD4vwIVicw",
+        "channelTitle": "Emergency Awesome",
+        "publishedAt": "2026-11-19T21:52:54Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/jPvERVds1Hc/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "61zPppIwcQo"
+      },
+      "snippet": {
+        "title": "Dandy's World 1.0 Devlog 💉 Play Nov. 20th, 2026!",
+        "channelId": "UC4r7qwkv3CsODTw3gAuJfdg",
+        "channelTitle": "BlushCrunch Studio",
+        "publishedAt": "2026-11-19T15:00:01Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/61zPppIwcQo/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "KePvp0-hcn0"
+      },
+      "snippet": {
+        "title": "The Beatles - In My Life (Official Music Video starring Owen Cooper)",
+        "channelId": "UC4dqLAF7yT-_DqeYisQ001w",
+        "channelTitle": "TheBeatlesVEVO",
+        "publishedAt": "2026-11-19T16:00:06Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KePvp0-hcn0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KePvp0-hcn0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KePvp0-hcn0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KePvp0-hcn0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KePvp0-hcn0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "dlpxXcC8nPk"
+      },
+      "snippet": {
+        "title": "The Comeback King | Official Trailer",
+        "channelId": "UCq0OueAsdxH6b8nyAspwViw",
+        "channelTitle": "Universal Pictures",
+        "publishedAt": "2026-11-18T16:00:05Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "GFynyp0hHfE"
+      },
+      "snippet": {
+        "title": "GTA 6 has everyone fighting..",
+        "channelId": "UCQeRaTukNYft1_6AZPACnog",
+        "channelTitle": "Asmongold TV  ",
+        "publishedAt": "2026-11-20T06:32:52Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/GFynyp0hHfE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/GFynyp0hHfE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/GFynyp0hHfE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/GFynyp0hHfE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/GFynyp0hHfE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "vpFFHcxyALw"
+      },
+      "snippet": {
+        "title": "Héctor \"El Father\" ❌ Naldo ❌ Hanzel La H - Tu Eres Loco (Official Video)",
+        "channelId": "UC-r4xTOSzBHlBtdct0LPuUw",
+        "channelTitle": "Hanzel La H",
+        "publishedAt": "2026-11-20T01:00:10Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vpFFHcxyALw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vpFFHcxyALw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vpFFHcxyALw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vpFFHcxyALw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vpFFHcxyALw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "Nrjt_tywpSo"
+      },
+      "snippet": {
+        "title": "Druski Collect & Praise | Official Trailer",
+        "channelId": "UC4PQqjGczpgmqbpicKjkwvw",
+        "channelTitle": "Druski",
+        "publishedAt": "2026-11-18T18:50:39Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Nrjt_tywpSo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Nrjt_tywpSo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Nrjt_tywpSo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Nrjt_tywpSo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Nrjt_tywpSo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "CukTYtF72KY"
+      },
+      "snippet": {
+        "title": "GTA 6 Walkthrough Gameplay Part 2 - JASON DUVAL (GRAND THEFT AUTO 6)",
+        "channelId": "UCpqXJOEqGS-TCnazcHCo0rA",
+        "channelTitle": "theRadBrad",
+        "publishedAt": "2026-11-19T15:00:35Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/CukTYtF72KY/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "k2Y7lqZ8SLU"
+      },
+      "snippet": {
+        "title": "Cómo Le Digo a Mi Amá",
+        "channelId": "UCL6--XVoLsAh-uxT_Q6Zuug",
+        "channelTitle": "Eley Romero - Topic",
+        "publishedAt": "2026-11-18T10:03:49Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/k2Y7lqZ8SLU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/k2Y7lqZ8SLU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/k2Y7lqZ8SLU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/k2Y7lqZ8SLU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/k2Y7lqZ8SLU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "f3s_NU4CHr0"
+      },
+      "snippet": {
+        "title": "ICE AGE: BOILING POINT Trailer 2 (NEW 2027) 4K",
+        "channelId": "UC2sxxXRBL5SgY0fI58BrOCA",
+        "channelTitle": "JoBlo Animation 4K",
+        "publishedAt": "2026-11-19T17:05:21Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/f3s_NU4CHr0/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "tJkml60sSr8"
+      },
+      "snippet": {
+        "title": "Suzy Says…",
+        "channelId": "UC63anZxfVGHUEmfBAf5w7pw",
+        "channelTitle": "CaseOh",
+        "publishedAt": "2026-11-19T23:00:36Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tJkml60sSr8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tJkml60sSr8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tJkml60sSr8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/tJkml60sSr8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/tJkml60sSr8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "BD9xlMnIGd4"
+      },
+      "snippet": {
+        "title": "BIG30, Pooh Shiesty - 375 AM",
+        "channelId": "UC4GHcOf7Sp4UlhxPatsI-Eg",
+        "channelTitle": "BIG30VEVO",
+        "publishedAt": "2026-11-20T05:00:09Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BD9xlMnIGd4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BD9xlMnIGd4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BD9xlMnIGd4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BD9xlMnIGd4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BD9xlMnIGd4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "vdhNar4uxm4"
+      },
+      "snippet": {
+        "title": "Yeh Prem Mol Liya – Official Trailer | Ayushmann, Sharvari, Sooraj Barjatya | Himesh Reshammiya",
+        "channelId": "UCEKWXRsfUHkan-D_ljU8Asw",
+        "channelTitle": "Rajshri",
+        "publishedAt": "2026-11-18T12:39:55Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/vdhNar4uxm4/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "NwQKirh2dxE"
+      },
+      "snippet": {
+        "title": "Testing Everything In GTA 6",
+        "channelId": "UCw1SQ6QRRtfAhrN_cjkrOgA",
+        "channelTitle": "LazarBeam",
+        "publishedAt": "2026-11-20T04:08:43Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/NwQKirh2dxE/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "3x5kL9xcbPM"
+      },
+      "snippet": {
+        "title": "Trigga500k - Sum 2 Talk About (Official Video) ft. Fatt Smaxk",
+        "channelId": "UCxYeuvcAeW0UI2RWoKWkSAg",
+        "channelTitle": "Trigga500kVEVO",
+        "publishedAt": "2026-11-19T22:30:03Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/3x5kL9xcbPM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/3x5kL9xcbPM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/3x5kL9xcbPM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/3x5kL9xcbPM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/3x5kL9xcbPM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "zj5INxeFMig"
+      },
+      "snippet": {
+        "title": "FlightReacts Plays GTA 6 For 1st Time &...",
+        "channelId": "UCoGIPQ7M4NWai7LRgRhaSOg",
+        "channelTitle": "NotYourAverageFlight",
+        "publishedAt": "2026-11-19T15:00:11Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "fhd": {
+            "url": "https://i.ytimg.com/vi/zj5INxeFMig/fhddefault.jpg",
+            "width": 1920,
+            "height": 1080
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "zMIX8CeLYdk"
+      },
+      "snippet": {
+        "title": "YFN Lucci - part III. [Official Music Video]",
+        "channelId": "UCGhqRGnTE34MXy9LMI9Q4bQ",
+        "channelTitle": "YFN Lucci",
+        "publishedAt": "2026-11-20T05:00:19Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/zMIX8CeLYdk/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "RMfrMfGrFvo"
+      },
+      "snippet": {
+        "title": "Grand Theft Auto 6 - Part 5 - Building a Life Together",
+        "channelId": "UC36MGPfPwOWafAXauiV4LdA",
+        "channelTitle": "TmarTn2",
+        "publishedAt": "2026-11-19T19:21:38Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "uhd": {
+            "url": "https://i.ytimg.com/vi/RMfrMfGrFvo/uhddefault.jpg",
+            "width": 3840,
+            "height": 2160
+          }
+        }
+      }
+    },
+    {
+      "id": {
+        "videoId": "dUThbdoat00"
+      },
+      "snippet": {
+        "title": "Mili - City Blue [Project Moon 10th Anniversary]",
+        "channelId": "UCVh47EKH9VLresRqiYi9txw",
+        "channelTitle": "Mili",
+        "publishedAt": "2026-11-19T11:00:11Z",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          },
+          "qhd": {
+            "url": "https://i.ytimg.com/vi/dUThbdoat00/qhddefault.jpg",
+            "width": 2560,
+            "height": 1440
+          }
+        }
+      }
+    }
+  ],
+  "queries": {
+    "trending music": [
+      {
+        "id": {
+          "videoId": "fTKqtvXjkvo"
+        },
+        "snippet": {
+          "title": "Top Hits 2026 ~ Trending Songs 2026 ~ Top Songs 2026 Top Music 🎶🎧",
+          "channelId": "UCYXIviXPAaaaU_AOotpXTAw",
+          "channelTitle": "Revive Music",
+          "publishedAt": "2025-06-27T18:54:01Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/fTKqtvXjkvo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/fTKqtvXjkvo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/fTKqtvXjkvo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/fTKqtvXjkvo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/fTKqtvXjkvo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "Jq4k_0aOmz0"
+        },
+        "snippet": {
+          "title": "Tiktok Songs 2026 - Tiktok Trending 2026 - These Songs Will Make You Dance",
+          "channelId": "UCvt5p3A11M8zd8iJPCC5XvQ",
+          "channelTitle": "Love Life Lyrics",
+          "publishedAt": "2026-08-17T11:00:33Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/Jq4k_0aOmz0/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "5BE91jAQqgU"
+        },
+        "snippet": {
+          "title": "Top 4 Most Viral Songs (2023-2026) 🌍🎧😍 | Cupid - Alabi - Pretty Little Baby | trending on tiktok",
+          "channelId": "UCYfxTjBpjJGGM8tg4zBClyg",
+          "channelTitle": "Top Tune USA",
+          "publishedAt": "2026-09-13T16:01:05Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/5BE91jAQqgU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/5BE91jAQqgU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/5BE91jAQqgU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/5BE91jAQqgU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/5BE91jAQqgU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "iTx7TCdDtWk"
+        },
+        "snippet": {
+          "title": "New mashup 2026 TRENDS 🌷",
+          "channelId": "UCRx-gBn8FlKZgD7oW2eGU9w",
+          "channelTitle": "Luminous lyric ",
+          "publishedAt": "2026-09-29T12:30:27Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/iTx7TCdDtWk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/iTx7TCdDtWk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/iTx7TCdDtWk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/iTx7TCdDtWk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/iTx7TCdDtWk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "WpvnoSJ3lto"
+        },
+        "snippet": {
+          "title": "Baby 123, Ako Ang Bagyo, Alabang | New Trending OPM 2026 🔥 What Gen Z Is Listening to This November",
+          "channelId": "UCyxIBkrnuSiGQChKpL6IWoA",
+          "channelTitle": "Sunset OPM Hits",
+          "publishedAt": "2026-10-29T23:55:43Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/WpvnoSJ3lto/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "HxwdAykdbVY"
+        },
+        "snippet": {
+          "title": "🦋Top 30 Hits Music Spotify 2026 || The Best Trending on Tiktok Songs -- Hot hits Pop Songs Playlist🎧",
+          "channelId": "UCL6LeUgTnxt1XsJVS71RTAQ",
+          "channelTitle": "JsVibes Music",
+          "publishedAt": "2026-11-18T14:09:02Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "OSpmd7HQ1ws"
+        },
+        "snippet": {
+          "title": "🔥 Skusta Clee &amp; Flow G, Al James - Bagong OPM Rap Songs 2026 (Trending Tagalog Rap Mix) 🚀",
+          "channelId": "UC0s9a06uUCUbqdPsyLjGmtw",
+          "channelTitle": "OPM Top Vibes",
+          "publishedAt": "2026-04-26T22:00:32Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "9vHkUSsljXE"
+        },
+        "snippet": {
+          "title": "2026 Top Hits Clean ♫ Trending Clean Music 2026 🔥 Best Pop Clean Hits for Workout &amp; Classroom 2026",
+          "channelId": "UCq4zhQqEaUg7-OpXUSQn45A",
+          "channelTitle": "Amazing Vibes",
+          "publishedAt": "2026-03-27T10:00:10Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "pC0RpYMlK3M"
+        },
+        "snippet": {
+          "title": "Top 4 Most Trending Songs of August 2026 🔥🎶 | Golden, KATSEYE &amp; Oliver Tree #shorts",
+          "channelId": "UCy4TCux3fHJX_afLcjOx_6A",
+          "channelTitle": "OtifyBox",
+          "publishedAt": "2026-08-06T14:42:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/pC0RpYMlK3M/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/pC0RpYMlK3M/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/pC0RpYMlK3M/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/pC0RpYMlK3M/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/pC0RpYMlK3M/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "J_KA_mk5zt0"
+        },
+        "snippet": {
+          "title": "Trending beets #good vibes mpya 2026 enjoy your day ",
+          "channelId": "UCFrOSSQ1lvy8rm45oxIZcbw",
+          "channelTitle": "All INONE",
+          "publishedAt": "2026-06-28T10:14:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "MCxuPwjDDcs"
+        },
+        "snippet": {
+          "title": "Lutty Neika ft. Bravion Emcee - Anaconda (Official 4K Music Video)",
+          "channelId": "UCq2n_OSrkKvbGurqWWFtARg",
+          "channelTitle": "LUTTY NEIKA 🇺🇬",
+          "publishedAt": "2026-06-26T07:00:06Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/MCxuPwjDDcs/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/MCxuPwjDDcs/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/MCxuPwjDDcs/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/MCxuPwjDDcs/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/MCxuPwjDDcs/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "rMvh9C9E8c8"
+        },
+        "snippet": {
+          "title": "New trend…❤️‍🔥#trending #music #viral #youtubeshorts",
+          "channelId": "UCL4lnK7vKlaO1m2JciVoG8Q",
+          "channelTitle": "YouTuber_mahi",
+          "publishedAt": "2026-11-20T05:30:32Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "kIo6PHLLl7U"
+        },
+        "snippet": {
+          "title": "🎧 New Filipino Music 2026 ❤️ Best OPM Love Songs | Beautiful Tagalog Playlist",
+          "channelId": "UCY_LIe5dYC1rtM89XaslsxA",
+          "channelTitle": "Serenata",
+          "publishedAt": "2026-07-31T21:01:27Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "LuzXr3He9NI"
+        },
+        "snippet": {
+          "title": "Top Hits 2026 Playlist ~ Trending Music 2026 🎵 Spotify Mix ~ Best TikTok Songs (Hits Collection)",
+          "channelId": "UCci3lozteCexkJ4g0xj-9NQ",
+          "channelTitle": "Dynamic Deep House",
+          "publishedAt": "2025-10-29T11:58:50Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "KNJEcLxozRo"
+        },
+        "snippet": {
+          "title": "Top 5 most Tik Tok trending dance phonk songs 2025-26! from Around the World 🎧🌍🇿🇦🇰🇷 | #explore",
+          "channelId": "UCYfxTjBpjJGGM8tg4zBClyg",
+          "channelTitle": "Top Tune USA",
+          "publishedAt": "2026-09-09T15:00:09Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/KNJEcLxozRo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/KNJEcLxozRo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/KNJEcLxozRo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/KNJEcLxozRo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/KNJEcLxozRo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "swx07W7bbXM"
+        },
+        "snippet": {
+          "title": "John Blaq - Angela [Official Music Video] 4K",
+          "channelId": "UCG6wFeHQL7H1JjRA40OR8eQ",
+          "channelTitle": "John Blaq Music",
+          "publishedAt": "2026-02-09T17:00:06Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/swx07W7bbXM/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/swx07W7bbXM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/swx07W7bbXM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/swx07W7bbXM/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/swx07W7bbXM/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "0gvy7v6GTMo"
+        },
+        "snippet": {
+          "title": "🎶Spotify Hits Music 2026 || Top Music Playlist -- Best 100 English Songs | Viral Tiktok Music",
+          "channelId": "UCh_4VN7jDxDi1WNJ7xgcQZA",
+          "channelTitle": "Soft Feelings",
+          "publishedAt": "2026-08-13T10:40:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/0gvy7v6GTMo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/0gvy7v6GTMo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/0gvy7v6GTMo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/0gvy7v6GTMo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/0gvy7v6GTMo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zJmi7xiWtW8"
+        },
+        "snippet": {
+          "title": "2026 DISCO RAP MIX CLUB | Trending Reggae Music | Muzhika XL",
+          "channelId": "UCXTXj9OaMlL5QArDrHs7TtA",
+          "channelTitle": "Muzhika XL",
+          "publishedAt": "2026-04-18T22:01:06Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "M9QXV4r3c4Y"
+        },
+        "snippet": {
+          "title": "[HOT] Mahal Magmahal – Esremborak | Trending OPM Indie Pop 2026 | Gen Z Filipino Hit",
+          "channelId": "UCyxIBkrnuSiGQChKpL6IWoA",
+          "channelTitle": "Sunset OPM Hits",
+          "publishedAt": "2026-10-22T23:47:29Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "td6iCrK4MHc"
+        },
+        "snippet": {
+          "title": "Peaceful Chill Playlist 🌙 Trending English Songs 2026 🎧 Best Acoustic Love Hits",
+          "channelId": "UCHQtsJSoWU1Cb-8odG5Pmuw",
+          "channelTitle": "Morning Serenity",
+          "publishedAt": "2026-09-22T23:00:37Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "Lws6Zv_d_6k"
+        },
+        "snippet": {
+          "title": "Top OPM Trending Songs 2026 💖 Wish 107.5 Live Sessions | Best Tagalog Playlist",
+          "channelId": "UCMnvBxVcQ9GqVUJJsTj2Bxg",
+          "channelTitle": "OPM GLOW",
+          "publishedAt": "2026-05-14T21:01:05Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "FPlJt2A0yYo"
+        },
+        "snippet": {
+          "title": "Top Spotify Hits 2026 🎵 Trending English Love Songs | Acoustic Chill Vibes | Viral TikTok Playlist",
+          "channelId": "UCFK97s5taFt5JwLG-IxVcHw",
+          "channelTitle": "Chill Chord",
+          "publishedAt": "2026-07-18T23:00:38Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "rRjtTx49hkc"
+        },
+        "snippet": {
+          "title": "Davido, Mayorkun, FOLA - B4 B4 (Official Video)",
+          "channelId": "UCQJOYS9v30qM74f6gZDk0TA",
+          "channelTitle": "DavidoVEVO",
+          "publishedAt": "2026-08-09T16:00:06Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "JpDCsCCh5Ro"
+        },
+        "snippet": {
+          "title": "Gunday…❤️‍🔥#trending #music #viral #youtubeshorts",
+          "channelId": "UCYXTYCg7zRByTtoxSAJH-KA",
+          "channelTitle": "Mahi Giri",
+          "publishedAt": "2026-11-20T07:30:35Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      }
+    ],
+    "movie trailers": [
+      {
+        "id": {
+          "videoId": "dlpxXcC8nPk"
+        },
+        "snippet": {
+          "title": "The Comeback King | Official Trailer",
+          "channelId": "UCq0OueAsdxH6b8nyAspwViw",
+          "channelTitle": "Universal Pictures",
+          "publishedAt": "2026-11-18T16:00:05Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/dlpxXcC8nPk/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "gNHr2-JjKRM"
+        },
+        "snippet": {
+          "title": "THE NIGHTINGALE – Official Teaser Trailer (4K)",
+          "channelId": "UCz97F7dMxBNOfGYu3rx8aCw",
+          "channelTitle": "Sony Pictures Entertainment",
+          "publishedAt": "2026-11-19T14:17:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/gNHr2-JjKRM/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "SO4t-jxcMlQ"
+        },
+        "snippet": {
+          "title": "Artificial - Official Trailer",
+          "channelId": "UCWJ5MfdQZ6jXbF5gYuSAf5Q",
+          "channelTitle": "IGN Movie Trailers",
+          "publishedAt": "2026-11-18T18:17:35Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/SO4t-jxcMlQ/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "xgvZAd7FSnw"
+        },
+        "snippet": {
+          "title": "AVENGERS: DOOMSDAY &quot;Master Manipulator&quot; Trailer (NEW 2026)",
+          "channelId": "UCRX7UEyE8kp35mPrgC2sosA",
+          "channelTitle": "JoBlo Movie Network",
+          "publishedAt": "2026-11-18T17:23:00Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/xgvZAd7FSnw/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "2ixA6BgwkUk"
+        },
+        "snippet": {
+          "title": "NEW MOVIE TRAILERS 2026 &amp; 2027",
+          "channelId": "UCLRlryMfL8ffxzrtqv0_k_w",
+          "channelTitle": "KinoCheck.com",
+          "publishedAt": "2026-11-06T19:03:03Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/2ixA6BgwkUk/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "wAFHBHXUzWE"
+        },
+        "snippet": {
+          "title": "Frisco King | Official Trailer | Paramount+",
+          "channelId": "UCrRttZIypNTA1Mrfwo745Sg",
+          "channelTitle": "Paramount Plus",
+          "publishedAt": "2026-11-18T16:00:04Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/wAFHBHXUzWE/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "Fso81Ypg9T4"
+        },
+        "snippet": {
+          "title": "Remain | Official Trailer",
+          "channelId": "UCjmJDM5pRKbUlVIzDYYWb6g",
+          "channelTitle": "Warner Bros.",
+          "publishedAt": "2026-11-16T20:00:07Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Fso81Ypg9T4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Fso81Ypg9T4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Fso81Ypg9T4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Fso81Ypg9T4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Fso81Ypg9T4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "nppid9XVtwY"
+        },
+        "snippet": {
+          "title": "ICE AGE 6: Boiling Point Official Trailer (2027) Disney",
+          "channelId": "UCLRlryMfL8ffxzrtqv0_k_w",
+          "channelTitle": "KinoCheck.com",
+          "publishedAt": "2026-11-19T17:13:37Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/nppid9XVtwY/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "e67Qtn_3hkc"
+        },
+        "snippet": {
+          "title": "Ice Age: Boiling Point | Official Trailer | In Theaters February 5, 2027",
+          "channelId": "UC_5niPa-d35gg88HaS7RrIw",
+          "channelTitle": "Disney",
+          "publishedAt": "2026-11-19T17:00:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/e67Qtn_3hkc/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "uJqaGLmZpGo"
+        },
+        "snippet": {
+          "title": "Dune: Part Three | Final Trailer",
+          "channelId": "UCjmJDM5pRKbUlVIzDYYWb6g",
+          "channelTitle": "Warner Bros.",
+          "publishedAt": "2026-10-27T16:00:34Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/uJqaGLmZpGo/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "A7lyvgnDuDE"
+        },
+        "snippet": {
+          "title": "Ebenezer | Official Trailer (2026 Movie) - Johnny Depp, Ian McKellen, Rupert Grint, Sam Claflin",
+          "channelId": "UCF9imwPMSGz4Vq1NiTWCC7g",
+          "channelTitle": "Paramount Pictures",
+          "publishedAt": "2026-07-23T23:44:46Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/A7lyvgnDuDE/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "gDJ-ini7fF0"
+        },
+        "snippet": {
+          "title": "NARNIA: THE MAGICIAN’S NEPHEW | Official Trailer | Netflix",
+          "channelId": "UCWOA1ZGywLbqmigxE4Qlvuw",
+          "channelTitle": "Netflix",
+          "publishedAt": "2026-10-13T18:00:00Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/gDJ-ini7fF0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/gDJ-ini7fF0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/gDJ-ini7fF0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/gDJ-ini7fF0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/gDJ-ini7fF0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "knvS_lRxaGc"
+        },
+        "snippet": {
+          "title": "AVENGERS: DOOMSDAY &quot;3000 Incursions&quot; Trailer (NEW 2026)",
+          "channelId": "UCRX7UEyE8kp35mPrgC2sosA",
+          "channelTitle": "JoBlo Movie Network",
+          "publishedAt": "2026-11-14T17:00:04Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/knvS_lRxaGc/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zHSYXDLH4io"
+        },
+        "snippet": {
+          "title": "Bad Day | Cameron Diaz | Official Trailer | Netflix",
+          "channelId": "UCWOA1ZGywLbqmigxE4Qlvuw",
+          "channelTitle": "Netflix",
+          "publishedAt": "2026-11-05T15:00:00Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zHSYXDLH4io/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zHSYXDLH4io/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zHSYXDLH4io/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zHSYXDLH4io/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zHSYXDLH4io/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "POaHAWdvlcQ"
+        },
+        "snippet": {
+          "title": "Ice Age: Boiling Point - Official Trailer (2027) Ray Romano, John Leguizamo, Simon Pegg",
+          "channelId": "UCWJ5MfdQZ6jXbF5gYuSAf5Q",
+          "channelTitle": "IGN Movie Trailers",
+          "publishedAt": "2026-11-19T18:07:34Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/POaHAWdvlcQ/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "I6tMFYT9s7E"
+        },
+        "snippet": {
+          "title": "BEHEMOTH! | Official Trailer | Searchlight Pictures",
+          "channelId": "UCor9rW6PgxSQ9vUPWQdnaYQ",
+          "channelTitle": "SearchlightPictures",
+          "publishedAt": "2026-10-28T13:00:22Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/I6tMFYT9s7E/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "fdkwGvMB5zQ"
+        },
+        "snippet": {
+          "title": "BUNKER | Starring Javier Bardem &amp; Penélope Cruz | Official US Trailer (2027)",
+          "channelId": "UCruD_lL-5fmllpKMSL-yCyQ",
+          "channelTitle": "Sony Pictures Classics",
+          "publishedAt": "2026-10-21T20:08:41Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/fdkwGvMB5zQ/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "nIw1O3zvOfE"
+        },
+        "snippet": {
+          "title": "JUMANJI: OPEN WORLD - New Trailer (4K)",
+          "channelId": "UCz97F7dMxBNOfGYu3rx8aCw",
+          "channelTitle": "Sony Pictures Entertainment",
+          "publishedAt": "2026-10-28T13:00:39Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/nIw1O3zvOfE/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "U6sbm1OaJb8"
+        },
+        "snippet": {
+          "title": "Street Fighter | New Trailer (2026 Movie)",
+          "channelId": "UCF9imwPMSGz4Vq1NiTWCC7g",
+          "channelTitle": "Paramount Pictures",
+          "publishedAt": "2026-09-01T16:00:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/U6sbm1OaJb8/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "uMFBQSvUiyo"
+        },
+        "snippet": {
+          "title": "FROSTBITE Official Trailer (2026)",
+          "channelId": "UCpJN7kiUkDrH11p0GQhLyFw",
+          "channelTitle": "Movie Trailers Source",
+          "publishedAt": "2026-11-18T18:22:25Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/uMFBQSvUiyo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/uMFBQSvUiyo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/uMFBQSvUiyo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/uMFBQSvUiyo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/uMFBQSvUiyo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "a20LtkPALYM"
+        },
+        "snippet": {
+          "title": "Children of Blood and Bone | New Trailer (2027) - Thuso Mbedu, Damson Idris, Amandla Stenberg",
+          "channelId": "UCF9imwPMSGz4Vq1NiTWCC7g",
+          "channelTitle": "Paramount Pictures",
+          "publishedAt": "2026-11-12T14:00:01Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/a20LtkPALYM/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zhApeaHMvfs"
+        },
+        "snippet": {
+          "title": "JUMANJI: OPEN WORLD - Official Trailer (4K)",
+          "channelId": "UCz97F7dMxBNOfGYu3rx8aCw",
+          "channelTitle": "Sony Pictures Entertainment",
+          "publishedAt": "2026-07-29T00:59:43Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/zhApeaHMvfs/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "4a6momE_lTg"
+        },
+        "snippet": {
+          "title": "NEW MOVIE TRAILERS (2026-2027)",
+          "channelId": "UCXPMXcMnFvP2YjhbDhjmtGQ",
+          "channelTitle": "The Movie House",
+          "publishedAt": "2026-11-19T23:57:58Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "XOWxQs1PIa4"
+        },
+        "snippet": {
+          "title": "NEW MOVIE TRAILERS 2026 &amp; 2027",
+          "channelId": "UCLRlryMfL8ffxzrtqv0_k_w",
+          "channelTitle": "KinoCheck.com",
+          "publishedAt": "2026-10-21T16:08:48Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      }
+    ],
+    "breaking news": [
+      {
+        "id": {
+          "videoId": "Y9ZOBFq_61o"
+        },
+        "snippet": {
+          "title": "BREAKING NEWS: John Kennedy Shows No Mercy To Trump Nom Over Chinese Ship That Hit River Cruise",
+          "channelId": "UCg40OxZ1GYh3u3jBntB6DLg",
+          "channelTitle": "Forbes Breaking News",
+          "publishedAt": "2026-11-19T16:34:59Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "TQwb-a14uBc"
+        },
+        "snippet": {
+          "title": "BREAKING NEWS: David Smith, Susan Smith&#39;s Ex-Husband, Begs Parole Board Not To Let Her Out Of Prison",
+          "channelId": "UCg40OxZ1GYh3u3jBntB6DLg",
+          "channelTitle": "Forbes Breaking News",
+          "publishedAt": "2026-11-19T16:16:08Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/TQwb-a14uBc/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "9ogTHuSdNm8"
+        },
+        "snippet": {
+          "title": "This Morning’s Top Headlines – Nov. 19 | Morning News NOW",
+          "channelId": "UCeY0bbntWzzVIaj2z3QigXg",
+          "channelTitle": "NBC News",
+          "publishedAt": "2026-11-19T13:21:58Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "hzmW4YbxY0k"
+        },
+        "snippet": {
+          "title": "🚨BREAKING: Saints RELEASED Justin Reid! #nfl #shorts #saints Saints News",
+          "channelId": "UCp1q6ivk5e11ezHD6ObroqA",
+          "channelTitle": "Saints Now by Chat Sports",
+          "publishedAt": "2026-11-19T20:50:03Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "FxPNoqrUzfw"
+        },
+        "snippet": {
+          "title": "BREAKING NEWS: James Comer Announces Release Of Report Into Government &#39;Mishandling&#39; Of Epstein Case",
+          "channelId": "UCg40OxZ1GYh3u3jBntB6DLg",
+          "channelTitle": "Forbes Breaking News",
+          "publishedAt": "2026-11-10T16:58:49Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "uzyZ_DvoywU"
+        },
+        "snippet": {
+          "title": "&#39;NO REASON TO LIE&#39;: Bongino assesses cyberattack fears",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-18T18:45:12Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "QpowvuSWicI"
+        },
+        "snippet": {
+          "title": "LATEST: Reporter BANNED by China as Trump wraps up HISTORIC summit",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-19T15:00:31Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "RsJjjafh8go"
+        },
+        "snippet": {
+          "title": "breaking news : -CM  योगी की माता जी केआकस्मिक निधन... #ujjwalbhoomi #viralreels #cmyogi #trend",
+          "channelId": "UCLQfaPw8VI0xAVxaSXWGMpQ",
+          "channelTitle": "Ujjwal Bhoomi",
+          "publishedAt": "2026-11-20T09:48:24Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/RsJjjafh8go/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/RsJjjafh8go/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/RsJjjafh8go/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/RsJjjafh8go/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/RsJjjafh8go/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "cbcmGyg6anc"
+        },
+        "snippet": {
+          "title": "Breaking News:  &#39;बागेश्वर सरकार को सड़क मार्ग से लाए, देखना चाहता था..&#39;",
+          "channelId": "UC9CYT9gSNLevX5ey2_6CK0Q",
+          "channelTitle": "NDTV India",
+          "publishedAt": "2026-11-20T10:14:57Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "nGBNDBm5fw0"
+        },
+        "snippet": {
+          "title": "Breaking news! What is going on?!!😱#news",
+          "channelId": "UCxOFklfBbHIdjxHaLw0KkKg",
+          "channelTitle": "Amanda Maley",
+          "publishedAt": "2026-11-18T19:05:29Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "ePtNJ7jdVng"
+        },
+        "snippet": {
+          "title": "BREAKING: Russell Brand sentenced to 10.5 years in prison",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-09T14:49:26Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "VFM5GacR964"
+        },
+        "snippet": {
+          "title": "അമ്മയെ മകൻ ചപ്പാത്തിക്കോലുകൊണ്ട് തലക്കടിച്ചു| Breaking News Malayalam| VISMAYA NEWS",
+          "channelId": "UCoOQDJS5K6v3g__qPcullxg",
+          "channelTitle": "Vismaya News",
+          "publishedAt": "2026-11-20T11:26:19Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "jGYj8P6qVKA"
+        },
+        "snippet": {
+          "title": "Breaking news: 83-year-old Michèle Lamy and 28-year-old Jaden Smith have announced their engagement.",
+          "channelId": "UCbG0d7Ouu8A0qu-uDR7QNrA",
+          "channelTitle": "hames roller",
+          "publishedAt": "2026-11-13T08:30:42Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "shortsAspectRatio": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sardefault.jpg",
+              "width": 1080,
+              "height": 1920
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "i9Ys0YSLY3I"
+        },
+        "snippet": {
+          "title": "Former Navy SEAL&#39;s BLUNT warning: Could be &#39;DRESS REHEARSAL&#39; for what&#39;s to come",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-18T21:45:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "XZ346Kmhvp4"
+        },
+        "snippet": {
+          "title": "🔴 Breaking News - කඩුවෙල ගින්නෙන් එකම පවුලේ සිව්දෙනෙකු මරුට - Hiru News",
+          "channelId": "UCckltLEhFLv8Xz_lQhYfwmg",
+          "channelTitle": "Hiru News",
+          "publishedAt": "2026-11-19T02:43:35Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "d5Gn99ZLrww"
+        },
+        "snippet": {
+          "title": "Breaking News LastNight Lixty Five YearOld Gwen Stefani WasReported To Be In ANew Relationship",
+          "channelId": "UCQM-dK5zrA-mX0Ai-lo9wlw",
+          "channelTitle": "yus2604-p9q",
+          "publishedAt": "2026-11-20T07:33:53Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "kLLjpq-UKV4"
+        },
+        "snippet": {
+          "title": "बंगाल में हुआ बड़ा खेला #shorts #news #breaking",
+          "channelId": "UCBbpLKJLhIbDd_wX4ubU_Cw",
+          "channelTitle": "DB Live",
+          "publishedAt": "2026-11-20T04:00:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "N5gP1CV4drA"
+        },
+        "snippet": {
+          "title": "Today Breaking News  | ഈ മണിക്കൂറിലെ പ്രധാന വാർത്ത | Top Headlines Of The Hour | 19.11.2026",
+          "channelId": "UC-mMi78WJST4N5o8_i1FoXw",
+          "channelTitle": "News18 Kerala",
+          "publishedAt": "2026-11-19T03:39:21Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "JLJ2j_o-Lf8"
+        },
+        "snippet": {
+          "title": "Morning Joe 11/19/26 | 🅼🆂🅽🅱️🅲 Breaking News Today  November 19, 2026",
+          "channelId": "UCsprC8uh2-jT-YvdXXGQjAw",
+          "channelTitle": "Feb Guitar Music",
+          "publishedAt": "2026-11-19T11:59:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "flfT_pxio4M"
+        },
+        "snippet": {
+          "title": "Sources: Highly classified NSA comms network down; What we know",
+          "channelId": "UCupvZG-5ko_eiXAupbDfxWw",
+          "channelTitle": "CNN",
+          "publishedAt": "2026-11-17T16:58:43Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/flfT_pxio4M/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "e0jJOZ6BZrk"
+        },
+        "snippet": {
+          "title": "Today Breaking News, 19 November 2026, दिनभर की बड़ी खबरें, Yogi, Rahul Gandhi, PM Modi, Donald Trump",
+          "channelId": "UCEW9foRmk4UdbzacT8KCYkA",
+          "channelTitle": "News Ganga",
+          "publishedAt": "2026-11-19T14:12:59Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "Zhn9ACEFGes"
+        },
+        "snippet": {
+          "title": "🔴BREAKING NEWS -  සසුනෙන් නෙරපූ රාජාංගනයේ සද්ධාරතන අත්අඩංගුවට - Hiru News",
+          "channelId": "UCckltLEhFLv8Xz_lQhYfwmg",
+          "channelTitle": "Hiru News",
+          "publishedAt": "2026-11-18T07:56:18Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "aXHgTLkKBaI"
+        },
+        "snippet": {
+          "title": "UNTV: Hataw Balita Ngayon | November 16, 2026",
+          "channelId": "UC3XaG-7UVi2vD8ZZEMNnnpw",
+          "channelTitle": "UNTV News and Rescue",
+          "publishedAt": "2026-11-15T23:00:23Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "xb1YXv9PUKA"
+        },
+        "snippet": {
+          "title": "Shooting-Range Instructors Disarm Man Moments Before Potential Tragedy | #News #Breakingnews",
+          "channelId": "UCf24hpj7gnQIerexiXcdwBA",
+          "channelTitle": "Signal News",
+          "publishedAt": "2026-11-11T10:46:51Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      }
+    ],
+    "cricket highlights": [
+      {
+        "id": {
+          "videoId": "8MXhRmQ4kR0"
+        },
+        "snippet": {
+          "title": "Australia v England 2026-27 | Third ODI",
+          "channelId": "UCkBY0aHJP9BwjZLDYxAQrKg",
+          "channelTitle": "cricket.com.au",
+          "publishedAt": "2026-11-18T11:51:01Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/8MXhRmQ4kR0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/8MXhRmQ4kR0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/8MXhRmQ4kR0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/8MXhRmQ4kR0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/8MXhRmQ4kR0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zTzfLGx1eUY"
+        },
+        "snippet": {
+          "title": "Highlights | South Africa vs Bangladesh | 1st Test | Day 5 | Bangladesh tour of South Africa 2026",
+          "channelId": "UCNU0Vv6U1xZS82cIQrgDeqw",
+          "channelTitle": "Rabbitholebd Sports",
+          "publishedAt": "2026-11-19T11:04:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/zTzfLGx1eUY/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "5WI5LuIcOiA"
+        },
+        "snippet": {
+          "title": "Full Highlights | Pakistan vs Sri Lanka | 2nd Test Day 3 | Test Series 2026 | M9V1J",
+          "channelId": "UC-fzWbU1zavz77kP1gPPdSg",
+          "channelTitle": "Sports Central by DRM",
+          "publishedAt": "2026-11-19T12:17:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "uzrrPFhBCFc"
+        },
+        "snippet": {
+          "title": "Full Match Highlights | Emirates Eagles vs United Tigers | Match 30 | Abu Dhabi T10 League | ZU1K",
+          "channelId": "UCgNs5GVvw5Td-05qp22sPLg",
+          "channelTitle": "T10 League Official",
+          "publishedAt": "2026-11-19T18:48:30Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "DOIULP6hN74"
+        },
+        "snippet": {
+          "title": "Match Highlights | Bangladesh &#39;A&#39; v Hong Kong, China | DP World Men&#39;s Asia Cup Rising Stars 2026",
+          "channelId": "UC7ITT3ooYWDYY_ehIUbt6eg",
+          "channelTitle": "Asian Cricket Council",
+          "publishedAt": "2026-11-19T16:47:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "qhd": {
+              "url": "https://i.ytimg.com/vi/DOIULP6hN74/qhddefault.jpg",
+              "width": 2560,
+              "height": 1440
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "0JLYcLzuPnE"
+        },
+        "snippet": {
+          "title": "Full Highlights | Pakistan vs Sri Lanka | 2nd Test Day 2 | Test Series 2026 | M9V1J",
+          "channelId": "UC-fzWbU1zavz77kP1gPPdSg",
+          "channelTitle": "Sports Central by DRM",
+          "publishedAt": "2026-11-18T12:45:29Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/0JLYcLzuPnE/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "yXPFLKoN30g"
+        },
+        "snippet": {
+          "title": "New Zealand vs India 1st Test Highlights 2026 | IND vs NZ Highlights | India Tour of New Zealand",
+          "channelId": "UCdBGcSSKuPeHdHv-bAas01Q",
+          "channelTitle": "Geo Kabaddi Dangal",
+          "publishedAt": "2026-11-19T01:41:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/yXPFLKoN30g/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/yXPFLKoN30g/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/yXPFLKoN30g/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/yXPFLKoN30g/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/yXPFLKoN30g/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "81zKhSnC2Ls"
+        },
+        "snippet": {
+          "title": "Highlights | South Africa vs Bangladesh | 1st Test | Day 4 | Bangladesh tour of South Africa 2026",
+          "channelId": "UCNU0Vv6U1xZS82cIQrgDeqw",
+          "channelTitle": "Rabbitholebd Sports",
+          "publishedAt": "2026-11-18T15:51:52Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/81zKhSnC2Ls/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "IsGMjn0Vi9g"
+        },
+        "snippet": {
+          "title": "GREATEST GAME EVER?! 🤯 Brisbane Heat v Sydney Thunder | Match 27 Highlights | #WBBL12",
+          "channelId": "UCv5-1Ypl3Adf4uGaR_H0mlg",
+          "channelTitle": "The Big Bash",
+          "publishedAt": "2026-11-19T12:00:54Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/IsGMjn0Vi9g/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/IsGMjn0Vi9g/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/IsGMjn0Vi9g/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/IsGMjn0Vi9g/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/IsGMjn0Vi9g/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "MTaVCuYOeBo"
+        },
+        "snippet": {
+          "title": "Full Match Highlights | UAE Bulls vs Arabian Aces | Match 28 | Abu Dhabi T10 League 2026 | ZU1K",
+          "channelId": "UCgNs5GVvw5Td-05qp22sPLg",
+          "channelTitle": "T10 League Official",
+          "publishedAt": "2026-11-19T14:12:32Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/MTaVCuYOeBo/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "j9hIxI_CtZY"
+        },
+        "snippet": {
+          "title": "Full Match Highlights | Emirates Eagles vs RD Champions | M 23 | Abu Dhabi T10 League 2026 | ZU1K",
+          "channelId": "UCgNs5GVvw5Td-05qp22sPLg",
+          "channelTitle": "T10 League Official",
+          "publishedAt": "2026-11-16T18:50:42Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/j9hIxI_CtZY/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "cGjyzWYtiBg"
+        },
+        "snippet": {
+          "title": "Match Highlights | Grand Finale | Pakistan U19 v India U19 | DP World Men&#39;s U19 Asia Cup 2026",
+          "channelId": "UC7ITT3ooYWDYY_ehIUbt6eg",
+          "channelTitle": "Asian Cricket Council",
+          "publishedAt": "2026-11-14T15:27:03Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "qhd": {
+              "url": "https://i.ytimg.com/vi/cGjyzWYtiBg/qhddefault.jpg",
+              "width": 2560,
+              "height": 1440
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "pQgTg4zqIGc"
+        },
+        "snippet": {
+          "title": "Full Match Highlights | UAE Bulls vs United Tigers | Match 26 | Abu Dhabi T10 League 2026 | ZU1K",
+          "channelId": "UCgNs5GVvw5Td-05qp22sPLg",
+          "channelTitle": "T10 League Official",
+          "publishedAt": "2026-11-18T17:02:12Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/pQgTg4zqIGc/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "ugdZTDj18gU"
+        },
+        "snippet": {
+          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
+          "channelId": "UCOQNJjhXwvAScuELTT_i7cQ",
+          "channelTitle": "Sony LIV",
+          "publishedAt": "2026-11-14T15:49:51Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "c3G8jorMwJU"
+        },
+        "snippet": {
+          "title": "Sri 98\\10🥶#SriLankaCricket #CricketShort Cricket #Cricket #Shorts#CricketHighlights #LegendsVsStars",
+          "channelId": "UCJxdj_ysvMe9RVOeICN_dcg",
+          "channelTitle": "Legends vs Stars",
+          "publishedAt": "2026-11-19T14:49:38Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/c3G8jorMwJU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/c3G8jorMwJU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/c3G8jorMwJU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/c3G8jorMwJU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/c3G8jorMwJU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zJpzg60sJqU"
+        },
+        "snippet": {
+          "title": "Cricket demand skills not gender 🔥 #womenscricket #indiancricket #shorts #cricket #highlights #edit",
+          "channelId": "UCsZGmvKbJ-MDjxYOpfZneyg",
+          "channelTitle": "𝕍𝕀ℕℤℂℝ𝕀ℂ",
+          "publishedAt": "2026-11-20T10:31:04Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "v2b8AJ112-Q"
+        },
+        "snippet": {
+          "title": "1st Session Highlights | Pakistan vs Sri Lanka | 2nd Test Day 3 | Test Series 2026 | M9V1J",
+          "channelId": "UCmHCyBKDCQk5GwJB3NvTbdw",
+          "channelTitle": "Sports TV",
+          "publishedAt": "2026-11-19T07:33:21Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/v2b8AJ112-Q/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "cLHOPmGS7dE"
+        },
+        "snippet": {
+          "title": "Yashasvi Jaiswal 85 Runs vs New Zealand Highlights | 16 Fours Storm #yashasvijaiswal #indvsnz",
+          "channelId": "UCz0A6yM6I4WwJWW2fGm8BWg",
+          "channelTitle": "CricInfo ",
+          "publishedAt": "2026-11-20T06:34:55Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/cLHOPmGS7dE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/cLHOPmGS7dE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/cLHOPmGS7dE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/cLHOPmGS7dE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/cLHOPmGS7dE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "x03J82Sqa5c"
+        },
+        "snippet": {
+          "title": "IND vs NZ 1st Test Day 2 Highlights &amp; Analysis | भारत की दमदार वापसी, स्कोर 159/1 | #indvsnztest",
+          "channelId": "UCz0A6yM6I4WwJWW2fGm8BWg",
+          "channelTitle": "CricInfo ",
+          "publishedAt": "2026-11-20T05:57:51Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/x03J82Sqa5c/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/x03J82Sqa5c/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/x03J82Sqa5c/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/x03J82Sqa5c/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/x03J82Sqa5c/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "TiLcDSjuDP8"
+        },
+        "snippet": {
+          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
+          "channelId": "UC_WKb6N9iTGc77hxwXLDrbA",
+          "channelTitle": "Sony Sports Network",
+          "publishedAt": "2026-11-14T15:49:31Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "WukQbI3enfg"
+        },
+        "snippet": {
+          "title": "Amarnath Magical inswing delivery 1978 vs Australia #short #cricket #crickethighlights #ytshorts",
+          "channelId": "UCQ19XvjViBwqwFBUlIx93BQ",
+          "channelTitle": "CricSaga",
+          "publishedAt": "2026-11-18T11:26:18Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/WukQbI3enfg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/WukQbI3enfg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/WukQbI3enfg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/WukQbI3enfg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "shortsAspectRatio": {
+              "url": "https://i.ytimg.com/vi/WukQbI3enfg/sardefault.jpg",
+              "width": 362,
+              "height": 644
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "bdyFlDFrNWI"
+        },
+        "snippet": {
+          "title": "1st Session Highlights | Pakistan vs Sri Lanka | 2nd Test Day 1 | Test Series 2026 | M9V1J",
+          "channelId": "UCmHCyBKDCQk5GwJB3NvTbdw",
+          "channelTitle": "Sports TV",
+          "publishedAt": "2026-11-17T07:34:17Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/bdyFlDFrNWI/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "h8m2JLD4fbQ"
+        },
+        "snippet": {
+          "title": "Highlights | South Africa vs Bangladesh | 1st Test | Day 1 | Bangladesh tour of South Africa 2026",
+          "channelId": "UCNU0Vv6U1xZS82cIQrgDeqw",
+          "channelTitle": "Rabbitholebd Sports",
+          "publishedAt": "2026-11-15T16:31:35Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "tubFTFJwiiA"
+        },
+        "snippet": {
+          "title": "Ind vs Nz 5th ODI Match Highlights &amp; BTS #indvsnz #highlights",
+          "channelId": "UCoix7viEJdY37U0V2soWBVA",
+          "channelTitle": "Raghavonstrike",
+          "publishedAt": "2026-11-16T15:36:07Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      }
+    ]
+  }
+}

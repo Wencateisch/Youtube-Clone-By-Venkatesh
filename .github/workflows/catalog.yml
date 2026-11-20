@@ -32,12 +32,12 @@ jobs:
 
       - name: Commit the snapshot when it changed
         run: |
-          if git diff --quiet -- www/catalog.json; then
+          if git diff --quiet -- catalog.json www/catalog.json; then
             echo "Catalog unchanged." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           git config user.name "catalog-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add www/catalog.json
+          git add catalog.json www/catalog.json
           git commit -m "Refresh the offline catalog"
           git push
