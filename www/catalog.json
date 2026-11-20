@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T12:02:50.556Z",
+  "updatedAt": "2026-11-20T12:06:37.088Z",
   "source": "youtube-data-api",
   "popular": [
     {
@@ -2146,6 +2146,44 @@
       },
       {
         "id": {
+          "videoId": "vt0i6nuqNEo"
+        },
+        "snippet": {
+          "title": "The Weeknd, Madonna, Playboi Carti - Popular (Official Music Video)",
+          "channelId": "UCF_fDSgPpBQuh1MsUTgIARQ",
+          "channelTitle": "TheWeekndVEVO",
+          "publishedAt": "2024-02-22T17:00:43Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/vt0i6nuqNEo/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/vt0i6nuqNEo/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/vt0i6nuqNEo/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/vt0i6nuqNEo/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/vt0i6nuqNEo/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
           "videoId": "WpvnoSJ3lto"
         },
         "snippet": {
@@ -2189,79 +2227,36 @@
       },
       {
         "id": {
-          "videoId": "HxwdAykdbVY"
+          "videoId": "S84fG_hbSoE"
         },
         "snippet": {
-          "title": "🦋Top 30 Hits Music Spotify 2026 || The Best Trending on Tiktok Songs -- Hot hits Pop Songs Playlist🎧",
-          "channelId": "UCL6LeUgTnxt1XsJVS71RTAQ",
-          "channelTitle": "JsVibes Music",
-          "publishedAt": "2026-11-18T14:09:02Z",
+          "title": "BUKUTU BY KAROLE KASITA &amp; SHEEBAH official Music Video 4K",
+          "channelId": "UCdS2Fui_gD8aeLptuUZ514g",
+          "channelTitle": "Karole Kasita",
+          "publishedAt": "2026-10-15T19:38:45Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/default.jpg",
+              "url": "https://i.ytimg.com/vi/S84fG_hbSoE/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/S84fG_hbSoE/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/S84fG_hbSoE/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/S84fG_hbSoE/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "fhd": {
-              "url": "https://i.ytimg.com/vi/HxwdAykdbVY/fhddefault.jpg",
-              "width": 1920,
-              "height": 1080
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "OSpmd7HQ1ws"
-        },
-        "snippet": {
-          "title": "🔥 Skusta Clee &amp; Flow G, Al James - Bagong OPM Rap Songs 2026 (Trending Tagalog Rap Mix) 🚀",
-          "channelId": "UC0s9a06uUCUbqdPsyLjGmtw",
-          "channelTitle": "OPM Top Vibes",
-          "publishedAt": "2026-04-26T22:00:32Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/S84fG_hbSoE/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -2270,43 +2265,76 @@
       },
       {
         "id": {
-          "videoId": "9vHkUSsljXE"
+          "videoId": "nZAldcRY4xs"
         },
         "snippet": {
-          "title": "2026 Top Hits Clean ♫ Trending Clean Music 2026 🔥 Best Pop Clean Hits for Workout &amp; Classroom 2026",
-          "channelId": "UCq4zhQqEaUg7-OpXUSQn45A",
-          "channelTitle": "Amazing Vibes",
-          "publishedAt": "2026-03-27T10:00:10Z",
+          "title": "OPM Viral Hits 2026 🔥 Must-Hear Filipino Songs | Trending OPM Music Mix 🎧",
+          "channelId": "UCO6SdW-3hSoZDRlzI3huqxw",
+          "channelTitle": "OPM Viral Sounds",
+          "publishedAt": "2026-11-11T23:02:07Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/default.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             },
             "fhd": {
-              "url": "https://i.ytimg.com/vi/9vHkUSsljXE/fhddefault.jpg",
+              "url": "https://i.ytimg.com/vi/nZAldcRY4xs/fhddefault.jpg",
               "width": 1920,
               "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "J_KA_mk5zt0"
+        },
+        "snippet": {
+          "title": "Trending beets #good vibes mpya 2026 enjoy your day ",
+          "channelId": "UCFrOSSQ1lvy8rm45oxIZcbw",
+          "channelTitle": "All INONE",
+          "publishedAt": "2026-06-28T10:14:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/sddefault.jpg",
+              "width": 640,
+              "height": 480
             }
           }
         }
@@ -2351,33 +2379,114 @@
       },
       {
         "id": {
-          "videoId": "J_KA_mk5zt0"
+          "videoId": "OSpmd7HQ1ws"
         },
         "snippet": {
-          "title": "Trending beets #good vibes mpya 2026 enjoy your day ",
-          "channelId": "UCFrOSSQ1lvy8rm45oxIZcbw",
-          "channelTitle": "All INONE",
-          "publishedAt": "2026-06-28T10:14:16Z",
+          "title": "🔥 Skusta Clee &amp; Flow G, Al James - Bagong OPM Rap Songs 2026 (Trending Tagalog Rap Mix) 🚀",
+          "channelId": "UC0s9a06uUCUbqdPsyLjGmtw",
+          "channelTitle": "OPM Top Vibes",
+          "publishedAt": "2026-04-26T22:00:32Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/default.jpg",
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/J_KA_mk5zt0/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/sddefault.jpg",
               "width": 640,
               "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/OSpmd7HQ1ws/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "QDRCxEqSahk"
+        },
+        "snippet": {
+          "title": "New Trending OPM Love Hits 2026 🎶 Best OPM Playlist - Tagalog Songs 2026",
+          "channelId": "UCY_LIe5dYC1rtM89XaslsxA",
+          "channelTitle": "Serenata",
+          "publishedAt": "2026-05-24T21:03:07Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/QDRCxEqSahk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/QDRCxEqSahk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/QDRCxEqSahk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/QDRCxEqSahk/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/QDRCxEqSahk/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "PIiXPD4jzQw"
+        },
+        "snippet": {
+          "title": "Sane - 4MABABE (ft. MuGaratia, Tocky Vibes)[Official Music Video]",
+          "channelId": "UCppm4Aqa3gXtTKZu-vnsmkA",
+          "channelTitle": "Sane Wav",
+          "publishedAt": "2026-10-09T08:00:09Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/PIiXPD4jzQw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/PIiXPD4jzQw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/PIiXPD4jzQw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/PIiXPD4jzQw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/PIiXPD4jzQw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
             }
           }
         }
@@ -2422,112 +2531,79 @@
       },
       {
         "id": {
-          "videoId": "rMvh9C9E8c8"
+          "videoId": "CWzsCGpd2V0"
         },
         "snippet": {
-          "title": "New trend…❤️‍🔥#trending #music #viral #youtubeshorts",
-          "channelId": "UCL4lnK7vKlaO1m2JciVoG8Q",
-          "channelTitle": "YouTuber_mahi",
-          "publishedAt": "2026-11-20T05:30:32Z",
+          "title": "Skusta Clee - Since Day One (Lyrics) ft. Flow G",
+          "channelId": "UC0wH0eDLKkepvM8Gz3riGog",
+          "channelTitle": "Lem Vibe Music",
+          "publishedAt": "2026-07-30T03:35:19Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/default.jpg",
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/maxresdefault.jpg",
               "width": 1280,
               "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/CWzsCGpd2V0/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
             }
           }
         }
       },
       {
         "id": {
-          "videoId": "kIo6PHLLl7U"
+          "videoId": "zSmYXUx125o"
         },
         "snippet": {
-          "title": "🎧 New Filipino Music 2026 ❤️ Best OPM Love Songs | Beautiful Tagalog Playlist",
-          "channelId": "UCY_LIe5dYC1rtM89XaslsxA",
-          "channelTitle": "Serenata",
-          "publishedAt": "2026-07-31T21:01:27Z",
+          "title": "Best Of Naija Songs 2026🎉Hottest Afrobeat Party Mix - Rema, Burna Boy, Ayra starr, Asake, BNXN",
+          "channelId": "UC12G3TpsQVlbTwMyX7ms1-g",
+          "channelTitle": "Naija Afrobeats",
+          "publishedAt": "2026-10-12T08:41:39Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/default.jpg",
+              "url": "https://i.ytimg.com/vi/zSmYXUx125o/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/zSmYXUx125o/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/zSmYXUx125o/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/zSmYXUx125o/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/kIo6PHLLl7U/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "LuzXr3He9NI"
-        },
-        "snippet": {
-          "title": "Top Hits 2026 Playlist ~ Trending Music 2026 🎵 Spotify Mix ~ Best TikTok Songs (Hits Collection)",
-          "channelId": "UCci3lozteCexkJ4g0xj-9NQ",
-          "channelTitle": "Dynamic Deep House",
-          "publishedAt": "2025-10-29T11:58:50Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/LuzXr3He9NI/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/zSmYXUx125o/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -2574,44 +2650,6 @@
       },
       {
         "id": {
-          "videoId": "swx07W7bbXM"
-        },
-        "snippet": {
-          "title": "John Blaq - Angela [Official Music Video] 4K",
-          "channelId": "UCG6wFeHQL7H1JjRA40OR8eQ",
-          "channelTitle": "John Blaq Music",
-          "publishedAt": "2026-02-09T17:00:06Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/swx07W7bbXM/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/swx07W7bbXM/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/swx07W7bbXM/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/swx07W7bbXM/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/swx07W7bbXM/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
           "videoId": "0gvy7v6GTMo"
         },
         "snippet": {
@@ -2650,79 +2688,41 @@
       },
       {
         "id": {
-          "videoId": "zJmi7xiWtW8"
+          "videoId": "kIYtwm8JSs4"
         },
         "snippet": {
-          "title": "2026 DISCO RAP MIX CLUB | Trending Reggae Music | Muzhika XL",
-          "channelId": "UCXTXj9OaMlL5QArDrHs7TtA",
-          "channelTitle": "Muzhika XL",
-          "publishedAt": "2026-04-18T22:01:06Z",
+          "title": "Mac Miller - Cinderella (Lyrics) ft. Ty Dolla $ign",
+          "channelId": "UC4XJeGGdXj0vA4CxDDJ8J_A",
+          "channelTitle": "Cakes & Eclairs",
+          "publishedAt": "2026-08-22T16:37:28Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/default.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "M9QXV4r3c4Y"
-        },
-        "snippet": {
-          "title": "[HOT] Mahal Magmahal – Esremborak | Trending OPM Indie Pop 2026 | Gen Z Filipino Hit",
-          "channelId": "UCyxIBkrnuSiGQChKpL6IWoA",
-          "channelTitle": "Sunset OPM Hits",
-          "publishedAt": "2026-10-22T23:47:29Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             },
             "fhd": {
-              "url": "https://i.ytimg.com/vi/M9QXV4r3c4Y/fhddefault.jpg",
+              "url": "https://i.ytimg.com/vi/kIYtwm8JSs4/fhddefault.jpg",
               "width": 1920,
               "height": 1080
             }
@@ -2731,79 +2731,36 @@
       },
       {
         "id": {
-          "videoId": "td6iCrK4MHc"
+          "videoId": "2ZTcvsdMR1c"
         },
         "snippet": {
-          "title": "Peaceful Chill Playlist 🌙 Trending English Songs 2026 🎧 Best Acoustic Love Hits",
-          "channelId": "UCHQtsJSoWU1Cb-8odG5Pmuw",
-          "channelTitle": "Morning Serenity",
-          "publishedAt": "2026-09-22T23:00:37Z",
+          "title": "Ayra Starr - Heaven Baby ft. ZAYN",
+          "channelId": "UC2IzfN6qRP4ld2H6BKB1uKg",
+          "channelTitle": "AyraStarrVEVO",
+          "publishedAt": "2026-10-05T16:02:40Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/default.jpg",
+              "url": "https://i.ytimg.com/vi/2ZTcvsdMR1c/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/2ZTcvsdMR1c/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/2ZTcvsdMR1c/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/2ZTcvsdMR1c/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "fhd": {
-              "url": "https://i.ytimg.com/vi/td6iCrK4MHc/fhddefault.jpg",
-              "width": 1920,
-              "height": 1080
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "Lws6Zv_d_6k"
-        },
-        "snippet": {
-          "title": "Top OPM Trending Songs 2026 💖 Wish 107.5 Live Sessions | Best Tagalog Playlist",
-          "channelId": "UCMnvBxVcQ9GqVUJJsTj2Bxg",
-          "channelTitle": "OPM GLOW",
-          "publishedAt": "2026-05-14T21:01:05Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/Lws6Zv_d_6k/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/2ZTcvsdMR1c/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -2812,79 +2769,36 @@
       },
       {
         "id": {
-          "videoId": "FPlJt2A0yYo"
+          "videoId": "rMvh9C9E8c8"
         },
         "snippet": {
-          "title": "Top Spotify Hits 2026 🎵 Trending English Love Songs | Acoustic Chill Vibes | Viral TikTok Playlist",
-          "channelId": "UCFK97s5taFt5JwLG-IxVcHw",
-          "channelTitle": "Chill Chord",
-          "publishedAt": "2026-07-18T23:00:38Z",
+          "title": "New trend…❤️‍🔥#trending #music #viral #youtubeshorts",
+          "channelId": "UCL4lnK7vKlaO1m2JciVoG8Q",
+          "channelTitle": "YouTuber_mahi",
+          "publishedAt": "2026-11-20T05:30:32Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/default.jpg",
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "fhd": {
-              "url": "https://i.ytimg.com/vi/FPlJt2A0yYo/fhddefault.jpg",
-              "width": 1920,
-              "height": 1080
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "rRjtTx49hkc"
-        },
-        "snippet": {
-          "title": "Davido, Mayorkun, FOLA - B4 B4 (Official Video)",
-          "channelId": "UCQJOYS9v30qM74f6gZDk0TA",
-          "channelTitle": "DavidoVEVO",
-          "publishedAt": "2026-08-09T16:00:06Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/rRjtTx49hkc/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/rMvh9C9E8c8/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -2923,6 +2837,82 @@
             },
             "maxres": {
               "url": "https://i.ytimg.com/vi/JpDCsCCh5Ro/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "N8FrVBQG1EU"
+        },
+        "snippet": {
+          "title": "Mimi Kampala X Pallaso - Malidadi (Official Music Video)",
+          "channelId": "UCljHThGIF1cyxkm69mQPNOw",
+          "channelTitle": "Mimi Kampala Official",
+          "publishedAt": "2026-06-05T09:13:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/N8FrVBQG1EU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/N8FrVBQG1EU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/N8FrVBQG1EU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/N8FrVBQG1EU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/N8FrVBQG1EU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "zJmi7xiWtW8"
+        },
+        "snippet": {
+          "title": "2026 DISCO RAP MIX CLUB | Trending Reggae Music | Muzhika XL",
+          "channelId": "UCXTXj9OaMlL5QArDrHs7TtA",
+          "channelTitle": "Muzhika XL",
+          "publishedAt": "2026-04-18T22:01:06Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/zJmi7xiWtW8/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -3773,6 +3763,44 @@
       },
       {
         "id": {
+          "videoId": "4a6momE_lTg"
+        },
+        "snippet": {
+          "title": "NEW MOVIE TRAILERS (2026-2027)",
+          "channelId": "UCXPMXcMnFvP2YjhbDhjmtGQ",
+          "channelTitle": "The Movie House",
+          "publishedAt": "2026-11-19T23:57:58Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/4a6momE_lTg/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
           "videoId": "a20LtkPALYM"
         },
         "snippet": {
@@ -3859,81 +3887,43 @@
       },
       {
         "id": {
-          "videoId": "4a6momE_lTg"
+          "videoId": "SBlZFOiwrik"
         },
         "snippet": {
-          "title": "NEW MOVIE TRAILERS (2026-2027)",
-          "channelId": "UCXPMXcMnFvP2YjhbDhjmtGQ",
-          "channelTitle": "The Movie House",
-          "publishedAt": "2026-11-19T23:57:58Z",
+          "title": "Long Haired Businessmen (2026) | Official Trailer | Paramount Movies",
+          "channelId": "UC9YHyj7QSkkSg2pjQ7M8Khg",
+          "channelTitle": "Paramount Movies",
+          "publishedAt": "2026-11-05T16:00:15Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/4a6momE_lTg/default.jpg",
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/4a6momE_lTg/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/4a6momE_lTg/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/4a6momE_lTg/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/4a6momE_lTg/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "XOWxQs1PIa4"
-        },
-        "snippet": {
-          "title": "NEW MOVIE TRAILERS 2026 &amp; 2027",
-          "channelId": "UCLRlryMfL8ffxzrtqv0_k_w",
-          "channelTitle": "KinoCheck.com",
-          "publishedAt": "2026-10-21T16:08:48Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             },
-            "uhd": {
-              "url": "https://i.ytimg.com/vi/XOWxQs1PIa4/uhddefault.jpg",
-              "width": 3840,
-              "height": 2160
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/SBlZFOiwrik/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
             }
           }
         }
@@ -3972,6 +3962,201 @@
             },
             "maxres": {
               "url": "https://i.ytimg.com/vi/Y9ZOBFq_61o/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "uzyZ_DvoywU"
+        },
+        "snippet": {
+          "title": "&#39;NO REASON TO LIE&#39;: Bongino assesses cyberattack fears",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-18T18:45:12Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "9ogTHuSdNm8"
+        },
+        "snippet": {
+          "title": "This Morning’s Top Headlines – Nov. 19 | Morning News NOW",
+          "channelId": "UCeY0bbntWzzVIaj2z3QigXg",
+          "channelTitle": "NBC News",
+          "publishedAt": "2026-11-19T13:21:58Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "i9Ys0YSLY3I"
+        },
+        "snippet": {
+          "title": "Former Navy SEAL&#39;s BLUNT warning: Could be &#39;DRESS REHEARSAL&#39; for what&#39;s to come",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-18T21:45:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "QpowvuSWicI"
+        },
+        "snippet": {
+          "title": "LATEST: Reporter BANNED by China as Trump wraps up HISTORIC summit",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-19T15:00:31Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/QpowvuSWicI/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "hzmW4YbxY0k"
+        },
+        "snippet": {
+          "title": "🚨BREAKING: Saints RELEASED Justin Reid! #nfl #shorts #saints Saints News",
+          "channelId": "UCp1q6ivk5e11ezHD6ObroqA",
+          "channelTitle": "Saints Now by Chat Sports",
+          "publishedAt": "2026-11-19T20:50:03Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -4023,201 +4208,6 @@
       },
       {
         "id": {
-          "videoId": "9ogTHuSdNm8"
-        },
-        "snippet": {
-          "title": "This Morning’s Top Headlines – Nov. 19 | Morning News NOW",
-          "channelId": "UCeY0bbntWzzVIaj2z3QigXg",
-          "channelTitle": "NBC News",
-          "publishedAt": "2026-11-19T13:21:58Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "fhd": {
-              "url": "https://i.ytimg.com/vi/9ogTHuSdNm8/fhddefault.jpg",
-              "width": 1920,
-              "height": 1080
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "hzmW4YbxY0k"
-        },
-        "snippet": {
-          "title": "🚨BREAKING: Saints RELEASED Justin Reid! #nfl #shorts #saints Saints News",
-          "channelId": "UCp1q6ivk5e11ezHD6ObroqA",
-          "channelTitle": "Saints Now by Chat Sports",
-          "publishedAt": "2026-11-19T20:50:03Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/hzmW4YbxY0k/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "FxPNoqrUzfw"
-        },
-        "snippet": {
-          "title": "BREAKING NEWS: James Comer Announces Release Of Report Into Government &#39;Mishandling&#39; Of Epstein Case",
-          "channelId": "UCg40OxZ1GYh3u3jBntB6DLg",
-          "channelTitle": "Forbes Breaking News",
-          "publishedAt": "2026-11-10T16:58:49Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/FxPNoqrUzfw/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "uzyZ_DvoywU"
-        },
-        "snippet": {
-          "title": "&#39;NO REASON TO LIE&#39;: Bongino assesses cyberattack fears",
-          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
-          "channelTitle": "Fox News",
-          "publishedAt": "2026-11-18T18:45:12Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/uzyZ_DvoywU/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "QpowvuSWicI"
-        },
-        "snippet": {
-          "title": "LATEST: Reporter BANNED by China as Trump wraps up HISTORIC summit",
-          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
-          "channelTitle": "Fox News",
-          "publishedAt": "2026-11-19T15:00:31Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/QpowvuSWicI/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/QpowvuSWicI/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/QpowvuSWicI/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/QpowvuSWicI/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/QpowvuSWicI/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
           "videoId": "RsJjjafh8go"
         },
         "snippet": {
@@ -4248,434 +4238,6 @@
             },
             "maxres": {
               "url": "https://i.ytimg.com/vi/RsJjjafh8go/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "cbcmGyg6anc"
-        },
-        "snippet": {
-          "title": "Breaking News:  &#39;बागेश्वर सरकार को सड़क मार्ग से लाए, देखना चाहता था..&#39;",
-          "channelId": "UC9CYT9gSNLevX5ey2_6CK0Q",
-          "channelTitle": "NDTV India",
-          "publishedAt": "2026-11-20T10:14:57Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "nGBNDBm5fw0"
-        },
-        "snippet": {
-          "title": "Breaking news! What is going on?!!😱#news",
-          "channelId": "UCxOFklfBbHIdjxHaLw0KkKg",
-          "channelTitle": "Amanda Maley",
-          "publishedAt": "2026-11-18T19:05:29Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "ePtNJ7jdVng"
-        },
-        "snippet": {
-          "title": "BREAKING: Russell Brand sentenced to 10.5 years in prison",
-          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
-          "channelTitle": "Fox News",
-          "publishedAt": "2026-11-09T14:49:26Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/ePtNJ7jdVng/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "VFM5GacR964"
-        },
-        "snippet": {
-          "title": "അമ്മയെ മകൻ ചപ്പാത്തിക്കോലുകൊണ്ട് തലക്കടിച്ചു| Breaking News Malayalam| VISMAYA NEWS",
-          "channelId": "UCoOQDJS5K6v3g__qPcullxg",
-          "channelTitle": "Vismaya News",
-          "publishedAt": "2026-11-20T11:26:19Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/VFM5GacR964/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/VFM5GacR964/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/VFM5GacR964/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/VFM5GacR964/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/VFM5GacR964/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "jGYj8P6qVKA"
-        },
-        "snippet": {
-          "title": "Breaking news: 83-year-old Michèle Lamy and 28-year-old Jaden Smith have announced their engagement.",
-          "channelId": "UCbG0d7Ouu8A0qu-uDR7QNrA",
-          "channelTitle": "hames roller",
-          "publishedAt": "2026-11-13T08:30:42Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "shortsAspectRatio": {
-              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sardefault.jpg",
-              "width": 1080,
-              "height": 1920
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "i9Ys0YSLY3I"
-        },
-        "snippet": {
-          "title": "Former Navy SEAL&#39;s BLUNT warning: Could be &#39;DRESS REHEARSAL&#39; for what&#39;s to come",
-          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
-          "channelTitle": "Fox News",
-          "publishedAt": "2026-11-18T21:45:11Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/i9Ys0YSLY3I/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "XZ346Kmhvp4"
-        },
-        "snippet": {
-          "title": "🔴 Breaking News - කඩුවෙල ගින්නෙන් එකම පවුලේ සිව්දෙනෙකු මරුට - Hiru News",
-          "channelId": "UCckltLEhFLv8Xz_lQhYfwmg",
-          "channelTitle": "Hiru News",
-          "publishedAt": "2026-11-19T02:43:35Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "fhd": {
-              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/fhddefault.jpg",
-              "width": 1920,
-              "height": 1080
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "d5Gn99ZLrww"
-        },
-        "snippet": {
-          "title": "Breaking News LastNight Lixty Five YearOld Gwen Stefani WasReported To Be In ANew Relationship",
-          "channelId": "UCQM-dK5zrA-mX0Ai-lo9wlw",
-          "channelTitle": "yus2604-p9q",
-          "publishedAt": "2026-11-20T07:33:53Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "kLLjpq-UKV4"
-        },
-        "snippet": {
-          "title": "बंगाल में हुआ बड़ा खेला #shorts #news #breaking",
-          "channelId": "UCBbpLKJLhIbDd_wX4ubU_Cw",
-          "channelTitle": "DB Live",
-          "publishedAt": "2026-11-20T04:00:11Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "N5gP1CV4drA"
-        },
-        "snippet": {
-          "title": "Today Breaking News  | ഈ മണിക്കൂറിലെ പ്രധാന വാർത്ത | Top Headlines Of The Hour | 19.11.2026",
-          "channelId": "UC-mMi78WJST4N5o8_i1FoXw",
-          "channelTitle": "News18 Kerala",
-          "publishedAt": "2026-11-19T03:39:21Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
-          "videoId": "JLJ2j_o-Lf8"
-        },
-        "snippet": {
-          "title": "Morning Joe 11/19/26 | 🅼🆂🅽🅱️🅲 Breaking News Today  November 19, 2026",
-          "channelId": "UCsprC8uh2-jT-YvdXXGQjAw",
-          "channelTitle": "Feb Guitar Music",
-          "publishedAt": "2026-11-19T11:59:13Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/JLJ2j_o-Lf8/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -4727,36 +4289,36 @@
       },
       {
         "id": {
-          "videoId": "e0jJOZ6BZrk"
+          "videoId": "nGBNDBm5fw0"
         },
         "snippet": {
-          "title": "Today Breaking News, 19 November 2026, दिनभर की बड़ी खबरें, Yogi, Rahul Gandhi, PM Modi, Donald Trump",
-          "channelId": "UCEW9foRmk4UdbzacT8KCYkA",
-          "channelTitle": "News Ganga",
-          "publishedAt": "2026-11-19T14:12:59Z",
+          "title": "Breaking news! What is going on?!!😱#news",
+          "channelId": "UCxOFklfBbHIdjxHaLw0KkKg",
+          "channelTitle": "Amanda Maley",
+          "publishedAt": "2026-11-18T19:05:29Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/default.jpg",
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/e0jJOZ6BZrk/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/nGBNDBm5fw0/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -4765,41 +4327,360 @@
       },
       {
         "id": {
-          "videoId": "Zhn9ACEFGes"
+          "videoId": "avOcx9LXJNs"
         },
         "snippet": {
-          "title": "🔴BREAKING NEWS -  සසුනෙන් නෙරපූ රාජාංගනයේ සද්ධාරතන අත්අඩංගුවට - Hiru News",
-          "channelId": "UCckltLEhFLv8Xz_lQhYfwmg",
-          "channelTitle": "Hiru News",
-          "publishedAt": "2026-11-18T07:56:18Z",
+          "title": "Breaking down China&#39;s unexpected call to &#39;comprehensively ban&#39; nuclear weapons | BBC News",
+          "channelId": "UC16niRr50-MSBwiO3YDb3RA",
+          "channelTitle": "BBC News",
+          "publishedAt": "2026-11-19T14:15:13Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/default.jpg",
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "qhd": {
+              "url": "https://i.ytimg.com/vi/avOcx9LXJNs/qhddefault.jpg",
+              "width": 2560,
+              "height": 1440
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "jGYj8P6qVKA"
+        },
+        "snippet": {
+          "title": "Breaking news: 83-year-old Michèle Lamy and 28-year-old Jaden Smith have announced their engagement.",
+          "channelId": "UCbG0d7Ouu8A0qu-uDR7QNrA",
+          "channelTitle": "hames roller",
+          "publishedAt": "2026-11-13T08:30:42Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "shortsAspectRatio": {
+              "url": "https://i.ytimg.com/vi/jGYj8P6qVKA/sardefault.jpg",
+              "width": 1080,
+              "height": 1920
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "kLLjpq-UKV4"
+        },
+        "snippet": {
+          "title": "बंगाल में हुआ बड़ा खेला #shorts #news #breaking",
+          "channelId": "UCBbpLKJLhIbDd_wX4ubU_Cw",
+          "channelTitle": "DB Live",
+          "publishedAt": "2026-11-20T04:00:11Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/kLLjpq-UKV4/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "cbcmGyg6anc"
+        },
+        "snippet": {
+          "title": "Breaking News:  &#39;बागेश्वर सरकार को सड़क मार्ग से लाए, देखना चाहता था..&#39;",
+          "channelId": "UC9CYT9gSNLevX5ey2_6CK0Q",
+          "channelTitle": "NDTV India",
+          "publishedAt": "2026-11-20T10:14:57Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/cbcmGyg6anc/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "d5Gn99ZLrww"
+        },
+        "snippet": {
+          "title": "Breaking News LastNight Lixty Five YearOld Gwen Stefani WasReported To Be In ANew Relationship",
+          "channelId": "UCQM-dK5zrA-mX0Ai-lo9wlw",
+          "channelTitle": "yus2604-p9q",
+          "publishedAt": "2026-11-20T07:33:53Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/d5Gn99ZLrww/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "VFM5GacR964"
+        },
+        "snippet": {
+          "title": "അമ്മയെ മകൻ ചപ്പാത്തിക്കോലുകൊണ്ട് തലക്കടിച്ചു| Breaking News Malayalam| VISMAYA NEWS",
+          "channelId": "UCoOQDJS5K6v3g__qPcullxg",
+          "channelTitle": "Vismaya News",
+          "publishedAt": "2026-11-20T11:26:19Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/VFM5GacR964/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "N5gP1CV4drA"
+        },
+        "snippet": {
+          "title": "Today Breaking News  | ഈ മണിക്കൂറിലെ പ്രധാന വാർത്ത | Top Headlines Of The Hour | 19.11.2026",
+          "channelId": "UC-mMi78WJST4N5o8_i1FoXw",
+          "channelTitle": "News18 Kerala",
+          "publishedAt": "2026-11-19T03:39:21Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/N5gP1CV4drA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "WmHs0TxhZA0"
+        },
+        "snippet": {
+          "title": "BREAKING: Ruhle FACT CHECKS Trump on Nvidia, FAA ground stop and the midterms",
+          "channelId": "UCaXkIU1QidjPwiAYu6GcHjg",
+          "channelTitle": "MS NOW",
+          "publishedAt": "2026-11-16T19:48:21Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "shortsAspectRatio": {
+              "url": "https://i.ytimg.com/vi/WmHs0TxhZA0/sardefault.jpg",
+              "width": 1080,
+              "height": 1920
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "XZ346Kmhvp4"
+        },
+        "snippet": {
+          "title": "🔴 Breaking News - කඩුවෙල ගින්නෙන් එකම පවුලේ සිව්දෙනෙකු මරුට - Hiru News",
+          "channelId": "UCckltLEhFLv8Xz_lQhYfwmg",
+          "channelTitle": "Hiru News",
+          "publishedAt": "2026-11-19T02:43:35Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             },
             "fhd": {
-              "url": "https://i.ytimg.com/vi/Zhn9ACEFGes/fhddefault.jpg",
+              "url": "https://i.ytimg.com/vi/XZ346Kmhvp4/fhddefault.jpg",
               "width": 1920,
               "height": 1080
             }
@@ -4808,36 +4689,36 @@
       },
       {
         "id": {
-          "videoId": "aXHgTLkKBaI"
+          "videoId": "jsrndaqdFJs"
         },
         "snippet": {
-          "title": "UNTV: Hataw Balita Ngayon | November 16, 2026",
-          "channelId": "UC3XaG-7UVi2vD8ZZEMNnnpw",
-          "channelTitle": "UNTV News and Rescue",
-          "publishedAt": "2026-11-15T23:00:23Z",
+          "title": "Watters: This is EERIE…",
+          "channelId": "UCXIJgqnII2ZOINSWNOGFThA",
+          "channelTitle": "Fox News",
+          "publishedAt": "2026-11-17T03:00:11Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/default.jpg",
+              "url": "https://i.ytimg.com/vi/jsrndaqdFJs/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/jsrndaqdFJs/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/jsrndaqdFJs/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/jsrndaqdFJs/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/aXHgTLkKBaI/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/jsrndaqdFJs/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -4846,36 +4727,155 @@
       },
       {
         "id": {
-          "videoId": "xb1YXv9PUKA"
+          "videoId": "qbeSWXSMMVY"
         },
         "snippet": {
-          "title": "Shooting-Range Instructors Disarm Man Moments Before Potential Tragedy | #News #Breakingnews",
-          "channelId": "UCf24hpj7gnQIerexiXcdwBA",
-          "channelTitle": "Signal News",
-          "publishedAt": "2026-11-11T10:46:51Z",
+          "title": "ABC World News Tonight with David Muir Full Broadcast - Nov. 16, 2026",
+          "channelId": "UCBi2mrWuNuyYy4gbM6fU18Q",
+          "channelTitle": "ABC News",
+          "publishedAt": "2026-11-17T02:35:12Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/default.jpg",
+              "url": "https://i.ytimg.com/vi/qbeSWXSMMVY/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/qbeSWXSMMVY/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/qbeSWXSMMVY/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/qbeSWXSMMVY/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/xb1YXv9PUKA/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/qbeSWXSMMVY/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "RGvMdG-b4F0"
+        },
+        "snippet": {
+          "title": "US soldier files whistleblower complaint over deadly Iran strike",
+          "channelId": "UCupvZG-5ko_eiXAupbDfxWw",
+          "channelTitle": "CNN",
+          "publishedAt": "2026-11-16T19:27:01Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "fhd": {
+              "url": "https://i.ytimg.com/vi/RGvMdG-b4F0/fhddefault.jpg",
+              "width": 1920,
+              "height": 1080
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "N4YBgvK7vmE"
+        },
+        "snippet": {
+          "title": "BREAKING NEWS: USMAN APPEARS TO HAVE BEEN RELEASED FROM BARS",
+          "channelId": "UCQBukXI6gX32wnI5yH3fimw",
+          "channelTitle": "DeepWaters MMA",
+          "publishedAt": "2026-11-16T12:47:23Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/N4YBgvK7vmE/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/N4YBgvK7vmE/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/N4YBgvK7vmE/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/N4YBgvK7vmE/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/N4YBgvK7vmE/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "eXOQgx7xubQ"
+        },
+        "snippet": {
+          "title": "Iran targets Kuwait airbase | BBC News",
+          "channelId": "UC16niRr50-MSBwiO3YDb3RA",
+          "channelTitle": "BBC News",
+          "publishedAt": "2026-11-18T22:04:36Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/eXOQgx7xubQ/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/eXOQgx7xubQ/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/eXOQgx7xubQ/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/eXOQgx7xubQ/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/eXOQgx7xubQ/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -4967,49 +4967,6 @@
       },
       {
         "id": {
-          "videoId": "5WI5LuIcOiA"
-        },
-        "snippet": {
-          "title": "Full Highlights | Pakistan vs Sri Lanka | 2nd Test Day 3 | Test Series 2026 | M9V1J",
-          "channelId": "UC-fzWbU1zavz77kP1gPPdSg",
-          "channelTitle": "Sports Central by DRM",
-          "publishedAt": "2026-11-19T12:17:16Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            },
-            "uhd": {
-              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/uhddefault.jpg",
-              "width": 3840,
-              "height": 2160
-            }
-          }
-        }
-      },
-      {
-        "id": {
           "videoId": "uzrrPFhBCFc"
         },
         "snippet": {
@@ -5045,6 +5002,49 @@
             },
             "uhd": {
               "url": "https://i.ytimg.com/vi/uzrrPFhBCFc/uhddefault.jpg",
+              "width": 3840,
+              "height": 2160
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "5WI5LuIcOiA"
+        },
+        "snippet": {
+          "title": "Full Highlights | Pakistan vs Sri Lanka | 2nd Test Day 3 | Test Series 2026 | M9V1J",
+          "channelId": "UC-fzWbU1zavz77kP1gPPdSg",
+          "channelTitle": "Sports Central by DRM",
+          "publishedAt": "2026-11-19T12:17:16Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            },
+            "uhd": {
+              "url": "https://i.ytimg.com/vi/5WI5LuIcOiA/uhddefault.jpg",
               "width": 3840,
               "height": 2160
             }
@@ -5430,44 +5430,6 @@
       },
       {
         "id": {
-          "videoId": "ugdZTDj18gU"
-        },
-        "snippet": {
-          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
-          "channelId": "UCOQNJjhXwvAScuELTT_i7cQ",
-          "channelTitle": "Sony LIV",
-          "publishedAt": "2026-11-14T15:49:51Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
           "videoId": "c3G8jorMwJU"
         },
         "snippet": {
@@ -5506,36 +5468,74 @@
       },
       {
         "id": {
-          "videoId": "zJpzg60sJqU"
+          "videoId": "Ce_WiVLs-u8"
         },
         "snippet": {
-          "title": "Cricket demand skills not gender 🔥 #womenscricket #indiancricket #shorts #cricket #highlights #edit",
-          "channelId": "UCsZGmvKbJ-MDjxYOpfZneyg",
-          "channelTitle": "𝕍𝕀ℕℤℂℝ𝕀ℂ",
-          "publishedAt": "2026-11-20T10:31:04Z",
+          "title": "Australia v England 2026-27 | Second ODI",
+          "channelId": "UCkBY0aHJP9BwjZLDYxAQrKg",
+          "channelTitle": "cricket.com.au",
+          "publishedAt": "2026-11-15T11:52:17Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/default.jpg",
+              "url": "https://i.ytimg.com/vi/Ce_WiVLs-u8/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/Ce_WiVLs-u8/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/Ce_WiVLs-u8/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/Ce_WiVLs-u8/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/zJpzg60sJqU/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/Ce_WiVLs-u8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "TiLcDSjuDP8"
+        },
+        "snippet": {
+          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
+          "channelId": "UC_WKb6N9iTGc77hxwXLDrbA",
+          "channelTitle": "Sony Sports Network",
+          "publishedAt": "2026-11-14T15:49:31Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
@@ -5663,44 +5663,6 @@
       },
       {
         "id": {
-          "videoId": "TiLcDSjuDP8"
-        },
-        "snippet": {
-          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
-          "channelId": "UC_WKb6N9iTGc77hxwXLDrbA",
-          "channelTitle": "Sony Sports Network",
-          "publishedAt": "2026-11-14T15:49:31Z",
-          "thumbnails": {
-            "default": {
-              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/default.jpg",
-              "width": 120,
-              "height": 90
-            },
-            "medium": {
-              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/mqdefault.jpg",
-              "width": 320,
-              "height": 180
-            },
-            "high": {
-              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/hqdefault.jpg",
-              "width": 480,
-              "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/TiLcDSjuDP8/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
-            }
-          }
-        }
-      },
-      {
-        "id": {
           "videoId": "WukQbI3enfg"
         },
         "snippet": {
@@ -5782,41 +5744,79 @@
       },
       {
         "id": {
-          "videoId": "h8m2JLD4fbQ"
+          "videoId": "ugdZTDj18gU"
         },
         "snippet": {
-          "title": "Highlights | South Africa vs Bangladesh | 1st Test | Day 1 | Bangladesh tour of South Africa 2026",
-          "channelId": "UCNU0Vv6U1xZS82cIQrgDeqw",
-          "channelTitle": "Rabbitholebd Sports",
-          "publishedAt": "2026-11-15T16:31:35Z",
+          "title": "India&#39;s Dramatic Last Ball Win | IND vs PAK |English | Highlights | DP World Men’s U19 Asia Cup 2026",
+          "channelId": "UCOQNJjhXwvAScuELTT_i7cQ",
+          "channelTitle": "Sony LIV",
+          "publishedAt": "2026-11-14T15:49:51Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/default.jpg",
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/ugdZTDj18gU/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        }
+      },
+      {
+        "id": {
+          "videoId": "K530yo9QzpI"
+        },
+        "snippet": {
+          "title": "Highlights | South Africa vs Bangladesh | 1st Test | Day 2 | Bangladesh tour of South Africa 2026",
+          "channelId": "UCNU0Vv6U1xZS82cIQrgDeqw",
+          "channelTitle": "Rabbitholebd Sports",
+          "publishedAt": "2026-11-16T16:31:13Z",
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             },
             "fhd": {
-              "url": "https://i.ytimg.com/vi/h8m2JLD4fbQ/fhddefault.jpg",
+              "url": "https://i.ytimg.com/vi/K530yo9QzpI/fhddefault.jpg",
               "width": 1920,
               "height": 1080
             }
@@ -5825,36 +5825,36 @@
       },
       {
         "id": {
-          "videoId": "tubFTFJwiiA"
+          "videoId": "FeHfJ5UjSeI"
         },
         "snippet": {
-          "title": "Ind vs Nz 5th ODI Match Highlights &amp; BTS #indvsnz #highlights",
-          "channelId": "UCoix7viEJdY37U0V2soWBVA",
-          "channelTitle": "Raghavonstrike",
-          "publishedAt": "2026-11-16T15:36:07Z",
+          "title": "#boxcricket #cricket #cricketshorts #crickethighlights #sports #shorts #viratkohli #cricketfans",
+          "channelId": "UCOOg41T8NUdhielNLTUxfhw",
+          "channelTitle": "ball battle box cricket ",
+          "publishedAt": "2026-11-20T04:42:21Z",
           "thumbnails": {
             "default": {
-              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/default.jpg",
+              "url": "https://i.ytimg.com/vi/FeHfJ5UjSeI/default.jpg",
               "width": 120,
               "height": 90
             },
             "medium": {
-              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/mqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/FeHfJ5UjSeI/mqdefault.jpg",
               "width": 320,
               "height": 180
             },
             "high": {
-              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/hqdefault.jpg",
+              "url": "https://i.ytimg.com/vi/FeHfJ5UjSeI/hqdefault.jpg",
               "width": 480,
               "height": 360
             },
             "standard": {
-              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/sddefault.jpg",
+              "url": "https://i.ytimg.com/vi/FeHfJ5UjSeI/sddefault.jpg",
               "width": 640,
               "height": 480
             },
             "maxres": {
-              "url": "https://i.ytimg.com/vi/tubFTFJwiiA/maxresdefault.jpg",
+              "url": "https://i.ytimg.com/vi/FeHfJ5UjSeI/maxresdefault.jpg",
               "width": 1280,
               "height": 720
             }
