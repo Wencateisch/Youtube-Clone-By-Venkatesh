@@ -215,6 +215,34 @@ function isQuotaReason(reason) {
   return reason === "quotaExceeded" || reason === "dailyLimitExceeded";
 }
 
+/* ------------------------- backend proxy ------------------------- */
+
+// When a backend is configured, searches go through it first: it caches each
+// query for every user and spends the key pool there instead of in the app.
+// Any failure simply falls through to the direct API below.
+function backendBase() {
+  const raw = String(CONFIG.backendUrl || "").trim().replace(/\/+$/, "");
+  return /^https?:\/\//i.test(raw) ? raw : "";
+}
+
+async function fetchBackendSearch(q, signal) {
+  const base = backendBase();
+  if (!base) return null;
+  const params = new URLSearchParams({ q, maxResults: String(CONFIG.maxResults || 24) });
+  const region = regionCode();
+  if (region) params.set("regionCode", region);
+  try {
+    const res = await fetch(`${base}/api/search?${params.toString()}`, { signal });
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (!data || !Array.isArray(data.items)) return null;
+    return { items: data.items, degraded: Boolean(data.degraded), cached: Boolean(data.cached) };
+  } catch (err) {
+    if (err && err.name === "AbortError") throw err;
+    return null;
+  }
+}
+
 // Every API call goes through here. A quota failure moves to the next
 // configured key and retries; any other failure stops at once, so one broken
 // key cannot burn through the rest of the list.
@@ -842,6 +870,22 @@ async function fetchVideos(query) {
   showSkeletons(8);
 
   try {
+    // A personal key means the user's own quota, so it goes straight to Google.
+    const proxied = customApiKey() ? null : await fetchBackendSearch(q, lastController.signal);
+    if (proxied && proxied.items.length) {
+      if (proxied.degraded) {
+        showFeed(proxied.items, searchLimitedMessage("showing popular videos."), {
+          action: addKeyAction(),
+        });
+        return;
+      }
+      const proxiedItems = proxied.items;
+      currentResults = proxiedItems;
+      await enrichDurations(proxiedItems);
+      writeSearchCache(q, proxiedItems);
+      showFeed(proxiedItems, `Results for "${q}"`);
+      return;
+    }
     const data = await fetchApi(
       "search",
       { part: "snippet", type: "video", maxResults: CONFIG.maxResults, q },
